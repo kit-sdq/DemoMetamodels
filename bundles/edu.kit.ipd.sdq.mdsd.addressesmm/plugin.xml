@@ -10,7 +10,7 @@
       <!-- @generated addresses -->
       <package
             uri="http://edu.kit.ipd.sdq.mdsd.addresses"
-            class="addresses.AddressesPackage"
+            class="edu.kit.ipd.sdq.mdsd.addresses.AddressesPackage"
             genModel="model/addresses.genmodel"/>
    </extension>
 

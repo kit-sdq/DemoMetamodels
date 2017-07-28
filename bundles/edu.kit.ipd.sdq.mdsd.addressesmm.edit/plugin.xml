@@ -10,7 +10,7 @@
       <!-- @generated addresses -->
       <factory
             uri="http://edu.kit.ipd.sdq.mdsd.addresses"
-            class="addresses.provider.AddressesItemProviderAdapterFactory"
+            class="edu.kit.ipd.sdq.mdsd.addresses.provider.AddressesItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

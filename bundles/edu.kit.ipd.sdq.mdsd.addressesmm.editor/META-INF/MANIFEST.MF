@@ -4,11 +4,11 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: edu.kit.ipd.sdq.mdsd.addressesmm.editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: addresses.presentation.AddressesEditorPlugin$Implementation
+Bundle-Activator: edu.kit.ipd.sdq.mdsd.addresses.presentation.AddressesEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: addresses.presentation
+Export-Package: edu.kit.ipd.sdq.mdsd.addresses.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  edu.kit.ipd.sdq.mdsd.addressesmm.edit;visibility:=reexport,

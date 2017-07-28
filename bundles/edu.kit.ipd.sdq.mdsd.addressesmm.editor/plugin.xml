@@ -12,9 +12,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="addresses.presentation.AddressesModelWizardID"
+            id="edu.kit.ipd.sdq.mdsd.addresses.presentation.AddressesModelWizardID"
             name="%_UI_AddressesModelWizard_label"
-            class="addresses.presentation.AddressesModelWizard"
+            class="edu.kit.ipd.sdq.mdsd.addresses.presentation.AddressesModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/AddressesModelFile.gif">
          <description>%_UI_AddressesModelWizard_description</description>
@@ -25,13 +25,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated addresses -->
       <editor
-            id="addresses.presentation.AddressesEditorID"
+            id="edu.kit.ipd.sdq.mdsd.addresses.presentation.AddressesEditorID"
             name="%_UI_AddressesEditor_label"
             icon="icons/full/obj16/AddressesModelFile.gif"
             extensions="addresses"
-            class="addresses.presentation.AddressesEditor"
-            contributorClass="addresses.presentation.AddressesActionBarContributor">
+            class="edu.kit.ipd.sdq.mdsd.addresses.presentation.AddressesEditor"
+            contributorClass="edu.kit.ipd.sdq.mdsd.addresses.presentation.AddressesActionBarContributor">
       </editor>
    </extension>
-
 </plugin>
