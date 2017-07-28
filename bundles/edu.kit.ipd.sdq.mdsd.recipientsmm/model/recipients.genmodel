@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.ipd.sdq.mdsd.recipientsmm/src" modelPluginID="edu.kit.ipd.sdq.mdsd.recipientsmm"
+    modelName="Recipients" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>recipients.ecore</foreignModel>
+  <genPackages prefix="Recipients" basePackage="edu.kit.ipd.sdq.mdsd" disposableProviderFactory="true"
+      ecorePackage="recipients.ecore#/">
+    <genClasses image="false" ecoreClass="recipients.ecore#//IdentifiedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute recipients.ecore#//IdentifiedElement/id"/>
+    </genClasses>
+    <genClasses ecoreClass="recipients.ecore#//Recipient">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference recipients.ecore#//Recipient/locatedAt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference recipients.ecore#//Recipient/locatedIn"/>
+    </genClasses>
+    <genClasses ecoreClass="recipients.ecore#//Location">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute recipients.ecore#//Location/number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute recipients.ecore#//Location/street"/>
+    </genClasses>
+    <genClasses ecoreClass="recipients.ecore#//City">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute recipients.ecore#//City/zipCode"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

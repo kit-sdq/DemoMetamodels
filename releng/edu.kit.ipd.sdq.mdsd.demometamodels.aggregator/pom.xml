@@ -15,5 +15,9 @@
     <module>../../bundles/edu.kit.ipd.sdq.mdsd.addressesmm</module>
     <module>../../bundles/edu.kit.ipd.sdq.mdsd.addressesmm.edit</module>
     <module>../../bundles/edu.kit.ipd.sdq.mdsd.addressesmm.editor</module>
+    <module>../../features/edu.kit.ipd.sdq.mdsd.recipientsmm.feature</module>
+    <module>../../bundles/edu.kit.ipd.sdq.mdsd.recipientsmm</module>
+    <module>../../bundles/edu.kit.ipd.sdq.mdsd.recipientsmm.edit</module>
+    <module>../../bundles/edu.kit.ipd.sdq.mdsd.recipientsmm.editor</module>
   </modules>
 </project>

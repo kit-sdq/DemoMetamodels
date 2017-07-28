@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="edu.kit.ipd.sdq.mdsd.recipientsmm.feature"
+      label="recipientsmm"
+      version="1.0.0.qualifier"
+      provider-name="SDQ">
+   <description url="http://www.example.com/description">
+      [TODO Enter Feature Description here.]
+   </description>
+   <copyright url="http://www.example.com/copyright">
+      [TODO Enter Copyright Description here.]
+   </copyright>
+   <license url="http://www.example.com/license">
+      [TODO Enter License Description here.]
+   </license>
+   <requires>
+      <import feature="org.eclipse.emf.ecore.source"/>
+   </requires>
+   <plugin
+         id="edu.kit.ipd.sdq.mdsd.recipientsmm"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+   <plugin
+         id="edu.kit.ipd.sdq.mdsd.recipientsmm.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+   <plugin
+         id="edu.kit.ipd.sdq.mdsd.recipientsmm.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+</feature>
