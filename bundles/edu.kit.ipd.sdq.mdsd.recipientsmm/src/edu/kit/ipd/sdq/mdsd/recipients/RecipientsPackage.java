@@ -113,13 +113,22 @@ public interface RecipientsPackage extends EPackage {
 	int RECIPIENT__ID = IDENTIFIED_ELEMENT__ID;
 
 	/**
+	 * The feature id for the '<em><b>Business</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECIPIENT__BUSINESS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Located At</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECIPIENT__LOCATED_AT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+	int RECIPIENT__LOCATED_AT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Located In</b></em>' reference.
@@ -128,7 +137,7 @@ public interface RecipientsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECIPIENT__LOCATED_IN = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+	int RECIPIENT__LOCATED_IN = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Recipient</em>' class.
@@ -137,7 +146,7 @@ public interface RecipientsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECIPIENT_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+	int RECIPIENT_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Recipient</em>' class.
@@ -282,6 +291,17 @@ public interface RecipientsPackage extends EPackage {
 	EClass getRecipient();
 
 	/**
+	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.mdsd.recipients.Recipient#isBusiness <em>Business</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Business</em>'.
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.Recipient#isBusiness()
+	 * @see #getRecipient()
+	 * @generated
+	 */
+	EAttribute getRecipient_Business();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link edu.kit.ipd.sdq.mdsd.recipients.Recipient#getLocatedAt <em>Located At</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -406,6 +426,14 @@ public interface RecipientsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass RECIPIENT = eINSTANCE.getRecipient();
+
+		/**
+		 * The meta object literal for the '<em><b>Business</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RECIPIENT__BUSINESS = eINSTANCE.getRecipient_Business();
 
 		/**
 		 * The meta object literal for the '<em><b>Located At</b></em>' containment reference feature.

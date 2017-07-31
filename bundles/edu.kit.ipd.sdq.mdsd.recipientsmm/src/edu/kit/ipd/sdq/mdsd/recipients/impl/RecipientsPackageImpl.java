@@ -144,8 +144,17 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRecipient_Business() {
+		return (EAttribute)recipientEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getRecipient_LocatedAt() {
-		return (EReference)recipientEClass.getEStructuralFeatures().get(0);
+		return (EReference)recipientEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -154,7 +163,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * @generated
 	 */
 	public EReference getRecipient_LocatedIn() {
-		return (EReference)recipientEClass.getEStructuralFeatures().get(1);
+		return (EReference)recipientEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -234,6 +243,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 		createEAttribute(identifiedElementEClass, IDENTIFIED_ELEMENT__ID);
 
 		recipientEClass = createEClass(RECIPIENT);
+		createEAttribute(recipientEClass, RECIPIENT__BUSINESS);
 		createEReference(recipientEClass, RECIPIENT__LOCATED_AT);
 		createEReference(recipientEClass, RECIPIENT__LOCATED_IN);
 
@@ -282,6 +292,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 		initEAttribute(getIdentifiedElement_Id(), ecorePackage.getEString(), "id", null, 1, 1, IdentifiedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(recipientEClass, Recipient.class, "Recipient", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRecipient_Business(), ecorePackage.getEBoolean(), "business", "false", 1, 1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRecipient_LocatedAt(), this.getLocation(), null, "locatedAt", null, 1, 1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRecipient_LocatedIn(), this.getCity(), null, "locatedIn", null, 1, 1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link edu.kit.ipd.sdq.mdsd.recipients.impl.RecipientImpl#isBusiness <em>Business</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.mdsd.recipients.impl.RecipientImpl#getLocatedAt <em>Located At</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.mdsd.recipients.impl.RecipientImpl#getLocatedIn <em>Located In</em>}</li>
  * </ul>
@@ -30,6 +31,26 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
+	/**
+	 * The default value of the '{@link #isBusiness() <em>Business</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isBusiness()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean BUSINESS_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isBusiness() <em>Business</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isBusiness()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean business = BUSINESS_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getLocatedAt() <em>Located At</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -67,6 +88,27 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 	@Override
 	protected EClass eStaticClass() {
 		return RecipientsPackage.Literals.RECIPIENT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isBusiness() {
+		return business;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBusiness(boolean newBusiness) {
+		boolean oldBusiness = business;
+		business = newBusiness;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, RecipientsPackage.RECIPIENT__BUSINESS, oldBusiness, business));
 	}
 
 	/**
@@ -172,6 +214,8 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case RecipientsPackage.RECIPIENT__BUSINESS:
+				return isBusiness();
 			case RecipientsPackage.RECIPIENT__LOCATED_AT:
 				return getLocatedAt();
 			case RecipientsPackage.RECIPIENT__LOCATED_IN:
@@ -189,6 +233,9 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case RecipientsPackage.RECIPIENT__BUSINESS:
+				setBusiness((Boolean)newValue);
+				return;
 			case RecipientsPackage.RECIPIENT__LOCATED_AT:
 				setLocatedAt((Location)newValue);
 				return;
@@ -207,6 +254,9 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case RecipientsPackage.RECIPIENT__BUSINESS:
+				setBusiness(BUSINESS_EDEFAULT);
+				return;
 			case RecipientsPackage.RECIPIENT__LOCATED_AT:
 				setLocatedAt((Location)null);
 				return;
@@ -225,12 +275,30 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case RecipientsPackage.RECIPIENT__BUSINESS:
+				return business != BUSINESS_EDEFAULT;
 			case RecipientsPackage.RECIPIENT__LOCATED_AT:
 				return locatedAt != null;
 			case RecipientsPackage.RECIPIENT__LOCATED_IN:
 				return locatedIn != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (business: ");
+		result.append(business);
+		result.append(')');
+		return result.toString();
 	}
 
 } //RecipientImpl

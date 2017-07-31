@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -47,9 +48,32 @@ public class RecipientItemProvider extends IdentifiedElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addBusinessPropertyDescriptor(object);
 			addLocatedInPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Business feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addBusinessPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Recipient_business_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Recipient_business_feature", "_UI_Recipient_type"),
+				 RecipientsPackage.Literals.RECIPIENT__BUSINESS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -142,6 +166,9 @@ public class RecipientItemProvider extends IdentifiedElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Recipient.class)) {
+			case RecipientsPackage.RECIPIENT__BUSINESS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case RecipientsPackage.RECIPIENT__LOCATED_AT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
