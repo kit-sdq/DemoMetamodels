@@ -6,6 +6,12 @@
    <feature id="edu.kit.ipd.sdq.mdsd.addressesmm.feature.source" version="1.0.0.qualifier">
       <category name="demometamodels"/>
    </feature>
+   <feature url="features/edu.kit.ipd.sdq.mdsd.recipientsmm.feature_1.0.0.qualifier.jar" id="edu.kit.ipd.sdq.mdsd.recipientsmm.feature" version="1.0.0.qualifier">
+      <category name="demometamodels"/>
+   </feature>
+   <feature id="edu.kit.ipd.sdq.mdsd.recipientsmm.feature.source" version="1.0.0.qualifier">
+      <category name="demometamodels"/>
+   </feature>
    <category-def name="demometamodels" label="Demo Metamodels">
       <description>
 	Ecore metamodels based on EMF for demonstrating MDSD techniques 
