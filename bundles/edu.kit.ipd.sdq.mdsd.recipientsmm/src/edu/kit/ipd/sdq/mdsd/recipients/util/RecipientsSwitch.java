@@ -72,6 +72,13 @@ public class RecipientsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case RecipientsPackage.RECIPIENTS: {
+				Recipients recipients = (Recipients)theEObject;
+				T result = caseRecipients(recipients);
+				if (result == null) result = caseIdentifiedElement(recipients);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case RecipientsPackage.RECIPIENT: {
 				Recipient recipient = (Recipient)theEObject;
 				T result = caseRecipient(recipient);
@@ -154,6 +161,21 @@ public class RecipientsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCity(City object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Recipients</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Recipients</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRecipients(Recipients object) {
 		return null;
 	}
 

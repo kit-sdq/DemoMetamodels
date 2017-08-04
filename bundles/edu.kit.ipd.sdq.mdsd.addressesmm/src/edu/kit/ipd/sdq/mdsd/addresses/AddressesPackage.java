@@ -150,13 +150,31 @@ public interface AddressesPackage extends EPackage {
 	int ADDRESS = 2;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDRESS__ID = ADDRESSES__ID;
+
+	/**
+	 * The feature id for the '<em><b>Addresses</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDRESS__ADDRESSES = ADDRESSES__ADDRESSES;
+
+	/**
 	 * The feature id for the '<em><b>Number</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADDRESS__NUMBER = 0;
+	int ADDRESS__NUMBER = ADDRESSES_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Street</b></em>' attribute.
@@ -165,7 +183,7 @@ public interface AddressesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDRESS__STREET = 1;
+	int ADDRESS__STREET = ADDRESSES_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Zip Code</b></em>' attribute.
@@ -174,7 +192,7 @@ public interface AddressesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDRESS__ZIP_CODE = 2;
+	int ADDRESS__ZIP_CODE = ADDRESSES_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Address</em>' class.
@@ -183,7 +201,7 @@ public interface AddressesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDRESS_FEATURE_COUNT = 3;
+	int ADDRESS_FEATURE_COUNT = ADDRESSES_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Address</em>' class.
@@ -192,7 +210,7 @@ public interface AddressesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDRESS_OPERATION_COUNT = 0;
+	int ADDRESS_OPERATION_COUNT = ADDRESSES_OPERATION_COUNT + 0;
 
 
 	/**

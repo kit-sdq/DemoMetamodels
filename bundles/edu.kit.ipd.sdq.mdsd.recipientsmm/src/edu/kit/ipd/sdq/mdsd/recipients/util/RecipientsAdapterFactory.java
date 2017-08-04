@@ -72,6 +72,10 @@ public class RecipientsAdapterFactory extends AdapterFactoryImpl {
 				return createIdentifiedElementAdapter();
 			}
 			@Override
+			public Adapter caseRecipients(Recipients object) {
+				return createRecipientsAdapter();
+			}
+			@Override
 			public Adapter caseRecipient(Recipient object) {
 				return createRecipientAdapter();
 			}
@@ -156,6 +160,20 @@ public class RecipientsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.mdsd.recipients.Recipients <em>Recipients</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.Recipients
+	 * @generated
+	 */
+	public Adapter createRecipientsAdapter() {
 		return null;
 	}
 

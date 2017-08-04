@@ -9,7 +9,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="addresses" upperBound="-1"
         eType="#//Address" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Address">
+  <eClassifiers xsi:type="ecore:EClass" name="Address" eSuperTypes="#//Addresses">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="street" lowerBound="1"

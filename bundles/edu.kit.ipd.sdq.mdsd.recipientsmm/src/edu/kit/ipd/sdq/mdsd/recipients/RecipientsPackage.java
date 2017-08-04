@@ -101,7 +101,73 @@ public interface RecipientsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.mdsd.recipients.impl.RecipientsPackageImpl#getRecipient()
 	 * @generated
 	 */
-	int RECIPIENT = 1;
+	int RECIPIENT = 2;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.mdsd.recipients.impl.LocationImpl <em>Location</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.impl.LocationImpl
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.impl.RecipientsPackageImpl#getLocation()
+	 * @generated
+	 */
+	int LOCATION = 3;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.mdsd.recipients.impl.CityImpl <em>City</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.impl.CityImpl
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.impl.RecipientsPackageImpl#getCity()
+	 * @generated
+	 */
+	int CITY = 4;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.mdsd.recipients.impl.RecipientsImpl <em>Recipients</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.impl.RecipientsImpl
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.impl.RecipientsPackageImpl#getRecipients()
+	 * @generated
+	 */
+	int RECIPIENTS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECIPIENTS__ID = IDENTIFIED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Recipients</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECIPIENTS__RECIPIENTS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Recipients</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECIPIENTS_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Recipients</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECIPIENTS_OPERATION_COUNT = IDENTIFIED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -158,16 +224,6 @@ public interface RecipientsPackage extends EPackage {
 	int RECIPIENT_OPERATION_COUNT = IDENTIFIED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.mdsd.recipients.impl.LocationImpl <em>Location</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.mdsd.recipients.impl.LocationImpl
-	 * @see edu.kit.ipd.sdq.mdsd.recipients.impl.RecipientsPackageImpl#getLocation()
-	 * @generated
-	 */
-	int LOCATION = 2;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -211,16 +267,6 @@ public interface RecipientsPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOCATION_OPERATION_COUNT = IDENTIFIED_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.mdsd.recipients.impl.CityImpl <em>City</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.mdsd.recipients.impl.CityImpl
-	 * @see edu.kit.ipd.sdq.mdsd.recipients.impl.RecipientsPackageImpl#getCity()
-	 * @generated
-	 */
-	int CITY = 3;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -377,6 +423,27 @@ public interface RecipientsPackage extends EPackage {
 	EAttribute getCity_ZipCode();
 
 	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.mdsd.recipients.Recipients <em>Recipients</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Recipients</em>'.
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.Recipients
+	 * @generated
+	 */
+	EClass getRecipients();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.mdsd.recipients.Recipients#getRecipients <em>Recipients</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Recipients</em>'.
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.Recipients#getRecipients()
+	 * @see #getRecipients()
+	 * @generated
+	 */
+	EReference getRecipients_Recipients();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -494,6 +561,24 @@ public interface RecipientsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CITY__ZIP_CODE = eINSTANCE.getCity_ZipCode();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.mdsd.recipients.impl.RecipientsImpl <em>Recipients</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.mdsd.recipients.impl.RecipientsImpl
+		 * @see edu.kit.ipd.sdq.mdsd.recipients.impl.RecipientsPackageImpl#getRecipients()
+		 * @generated
+		 */
+		EClass RECIPIENTS = eINSTANCE.getRecipients();
+
+		/**
+		 * The meta object literal for the '<em><b>Recipients</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RECIPIENTS__RECIPIENTS = eINSTANCE.getRecipients_Recipients();
 
 	}
 

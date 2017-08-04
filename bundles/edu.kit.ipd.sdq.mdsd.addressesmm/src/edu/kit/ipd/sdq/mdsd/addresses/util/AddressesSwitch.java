@@ -82,6 +82,8 @@ public class AddressesSwitch<T> extends Switch<T> {
 			case AddressesPackage.ADDRESS: {
 				Address address = (Address)theEObject;
 				T result = caseAddress(address);
+				if (result == null) result = caseAddresses(address);
+				if (result == null) result = caseIdentifiedElement(address);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

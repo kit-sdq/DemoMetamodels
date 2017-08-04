@@ -56,6 +56,7 @@ public class RecipientsFactoryImpl extends EFactoryImpl implements RecipientsFac
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case RecipientsPackage.RECIPIENTS: return createRecipients();
 			case RecipientsPackage.RECIPIENT: return createRecipient();
 			case RecipientsPackage.LOCATION: return createLocation();
 			case RecipientsPackage.CITY: return createCity();
@@ -92,6 +93,16 @@ public class RecipientsFactoryImpl extends EFactoryImpl implements RecipientsFac
 	public City createCity() {
 		CityImpl city = new CityImpl();
 		return city;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Recipients createRecipients() {
+		RecipientsImpl recipients = new RecipientsImpl();
+		return recipients;
 	}
 
 	/**

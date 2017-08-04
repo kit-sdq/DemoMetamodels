@@ -49,6 +49,15 @@ public interface RecipientsFactory extends EFactory {
 	City createCity();
 
 	/**
+	 * Returns a new object of class '<em>Recipients</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Recipients</em>'.
+	 * @generated
+	 */
+	Recipients createRecipients();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

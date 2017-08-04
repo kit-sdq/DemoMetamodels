@@ -6,6 +6,7 @@ import edu.kit.ipd.sdq.mdsd.recipients.City;
 import edu.kit.ipd.sdq.mdsd.recipients.IdentifiedElement;
 import edu.kit.ipd.sdq.mdsd.recipients.Location;
 import edu.kit.ipd.sdq.mdsd.recipients.Recipient;
+import edu.kit.ipd.sdq.mdsd.recipients.Recipients;
 import edu.kit.ipd.sdq.mdsd.recipients.RecipientsFactory;
 import edu.kit.ipd.sdq.mdsd.recipients.RecipientsPackage;
 
@@ -50,6 +51,13 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * @generated
 	 */
 	private EClass cityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass recipientsEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -216,6 +224,24 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getRecipients() {
+		return recipientsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRecipients_Recipients() {
+		return (EReference)recipientsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public RecipientsFactory getRecipientsFactory() {
 		return (RecipientsFactory)getEFactoryInstance();
 	}
@@ -241,6 +267,9 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 		// Create classes and their features
 		identifiedElementEClass = createEClass(IDENTIFIED_ELEMENT);
 		createEAttribute(identifiedElementEClass, IDENTIFIED_ELEMENT__ID);
+
+		recipientsEClass = createEClass(RECIPIENTS);
+		createEReference(recipientsEClass, RECIPIENTS__RECIPIENTS);
 
 		recipientEClass = createEClass(RECIPIENT);
 		createEAttribute(recipientEClass, RECIPIENT__BUSINESS);
@@ -283,6 +312,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		recipientsEClass.getESuperTypes().add(this.getIdentifiedElement());
 		recipientEClass.getESuperTypes().add(this.getIdentifiedElement());
 		locationEClass.getESuperTypes().add(this.getIdentifiedElement());
 		cityEClass.getESuperTypes().add(this.getIdentifiedElement());
@@ -290,6 +320,9 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 		// Initialize classes, features, and operations; add parameters
 		initEClass(identifiedElementEClass, IdentifiedElement.class, "IdentifiedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIdentifiedElement_Id(), ecorePackage.getEString(), "id", null, 1, 1, IdentifiedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(recipientsEClass, Recipients.class, "Recipients", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRecipients_Recipients(), this.getRecipient(), null, "recipients", null, 1, -1, Recipients.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(recipientEClass, Recipient.class, "Recipient", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRecipient_Business(), ecorePackage.getEBoolean(), "business", "false", 1, 1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

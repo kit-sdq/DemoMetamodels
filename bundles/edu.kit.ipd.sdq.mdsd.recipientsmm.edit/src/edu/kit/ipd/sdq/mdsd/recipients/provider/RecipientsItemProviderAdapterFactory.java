@@ -141,6 +141,29 @@ public class RecipientsItemProviderAdapterFactory extends RecipientsAdapterFacto
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.mdsd.recipients.Recipients} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RecipientsItemProvider recipientsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.mdsd.recipients.Recipients}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRecipientsAdapter() {
+		if (recipientsItemProvider == null) {
+			recipientsItemProvider = new RecipientsItemProvider(this);
+		}
+
+		return recipientsItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -239,6 +262,7 @@ public class RecipientsItemProviderAdapterFactory extends RecipientsAdapterFacto
 	 * @generated
 	 */
 	public void dispose() {
+		if (recipientsItemProvider != null) recipientsItemProvider.dispose();
 		if (recipientItemProvider != null) recipientItemProvider.dispose();
 		if (locationItemProvider != null) locationItemProvider.dispose();
 		if (cityItemProvider != null) cityItemProvider.dispose();
