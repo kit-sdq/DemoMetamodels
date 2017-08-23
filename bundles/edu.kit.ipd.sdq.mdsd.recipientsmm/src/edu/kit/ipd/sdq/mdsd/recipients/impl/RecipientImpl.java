@@ -62,7 +62,7 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 	protected Location locatedAt;
 
 	/**
-	 * The cached value of the '{@link #getLocatedIn() <em>Located In</em>}' reference.
+	 * The cached value of the '{@link #getLocatedIn() <em>Located In</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLocatedIn()
@@ -160,14 +160,6 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 	 * @generated
 	 */
 	public City getLocatedIn() {
-		if (locatedIn != null && locatedIn.eIsProxy()) {
-			InternalEObject oldLocatedIn = (InternalEObject)locatedIn;
-			locatedIn = (City)eResolveProxy(oldLocatedIn);
-			if (locatedIn != oldLocatedIn) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RecipientsPackage.RECIPIENT__LOCATED_IN, oldLocatedIn, locatedIn));
-			}
-		}
 		return locatedIn;
 	}
 
@@ -176,8 +168,14 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public City basicGetLocatedIn() {
-		return locatedIn;
+	public NotificationChain basicSetLocatedIn(City newLocatedIn, NotificationChain msgs) {
+		City oldLocatedIn = locatedIn;
+		locatedIn = newLocatedIn;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RecipientsPackage.RECIPIENT__LOCATED_IN, oldLocatedIn, newLocatedIn);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -186,10 +184,17 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 	 * @generated
 	 */
 	public void setLocatedIn(City newLocatedIn) {
-		City oldLocatedIn = locatedIn;
-		locatedIn = newLocatedIn;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RecipientsPackage.RECIPIENT__LOCATED_IN, oldLocatedIn, locatedIn));
+		if (newLocatedIn != locatedIn) {
+			NotificationChain msgs = null;
+			if (locatedIn != null)
+				msgs = ((InternalEObject)locatedIn).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RecipientsPackage.RECIPIENT__LOCATED_IN, null, msgs);
+			if (newLocatedIn != null)
+				msgs = ((InternalEObject)newLocatedIn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RecipientsPackage.RECIPIENT__LOCATED_IN, null, msgs);
+			msgs = basicSetLocatedIn(newLocatedIn, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, RecipientsPackage.RECIPIENT__LOCATED_IN, newLocatedIn, newLocatedIn));
 	}
 
 	/**
@@ -202,6 +207,8 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 		switch (featureID) {
 			case RecipientsPackage.RECIPIENT__LOCATED_AT:
 				return basicSetLocatedAt(null, msgs);
+			case RecipientsPackage.RECIPIENT__LOCATED_IN:
+				return basicSetLocatedIn(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -219,8 +226,7 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 			case RecipientsPackage.RECIPIENT__LOCATED_AT:
 				return getLocatedAt();
 			case RecipientsPackage.RECIPIENT__LOCATED_IN:
-				if (resolve) return getLocatedIn();
-				return basicGetLocatedIn();
+				return getLocatedIn();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

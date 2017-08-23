@@ -197,7 +197,7 @@ public interface RecipientsPackage extends EPackage {
 	int RECIPIENT__LOCATED_AT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Located In</b></em>' reference.
+	 * The feature id for the '<em><b>Located In</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -359,10 +359,10 @@ public interface RecipientsPackage extends EPackage {
 	EReference getRecipient_LocatedAt();
 
 	/**
-	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.mdsd.recipients.Recipient#getLocatedIn <em>Located In</em>}'.
+	 * Returns the meta object for the containment reference '{@link edu.kit.ipd.sdq.mdsd.recipients.Recipient#getLocatedIn <em>Located In</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Located In</em>'.
+	 * @return the meta object for the containment reference '<em>Located In</em>'.
 	 * @see edu.kit.ipd.sdq.mdsd.recipients.Recipient#getLocatedIn()
 	 * @see #getRecipient()
 	 * @generated
@@ -511,7 +511,7 @@ public interface RecipientsPackage extends EPackage {
 		EReference RECIPIENT__LOCATED_AT = eINSTANCE.getRecipient_LocatedAt();
 
 		/**
-		 * The meta object literal for the '<em><b>Located In</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Located In</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

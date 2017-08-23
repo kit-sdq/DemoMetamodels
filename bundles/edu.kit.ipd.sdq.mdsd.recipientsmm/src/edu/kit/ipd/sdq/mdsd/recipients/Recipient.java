@@ -76,26 +76,26 @@ public interface Recipient extends IdentifiedElement {
 	void setLocatedAt(Location value);
 
 	/**
-	 * Returns the value of the '<em><b>Located In</b></em>' reference.
+	 * Returns the value of the '<em><b>Located In</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Located In</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Located In</em>' reference.
+	 * @return the value of the '<em>Located In</em>' containment reference.
 	 * @see #setLocatedIn(City)
 	 * @see edu.kit.ipd.sdq.mdsd.recipients.RecipientsPackage#getRecipient_LocatedIn()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	City getLocatedIn();
 
 	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.mdsd.recipients.Recipient#getLocatedIn <em>Located In</em>}' reference.
+	 * Sets the value of the '{@link edu.kit.ipd.sdq.mdsd.recipients.Recipient#getLocatedIn <em>Located In</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Located In</em>' reference.
+	 * @param value the new value of the '<em>Located In</em>' containment reference.
 	 * @see #getLocatedIn()
 	 * @generated
 	 */
