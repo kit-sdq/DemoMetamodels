@@ -245,7 +245,7 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 
 		// Add supertypes to classes
 		addressesEClass.getESuperTypes().add(this.getIdentifiedElement());
-		addressEClass.getESuperTypes().add(this.getAddresses());
+		addressEClass.getESuperTypes().add(this.getIdentifiedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(identifiedElementEClass, IdentifiedElement.class, "IdentifiedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

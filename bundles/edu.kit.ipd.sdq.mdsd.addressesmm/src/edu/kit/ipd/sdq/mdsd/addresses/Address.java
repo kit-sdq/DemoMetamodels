@@ -20,7 +20,7 @@ package edu.kit.ipd.sdq.mdsd.addresses;
  * @model
  * @generated
  */
-public interface Address extends Addresses {
+public interface Address extends IdentifiedElement {
 	/**
 	 * Returns the value of the '<em><b>Number</b></em>' attribute.
 	 * <!-- begin-user-doc -->
