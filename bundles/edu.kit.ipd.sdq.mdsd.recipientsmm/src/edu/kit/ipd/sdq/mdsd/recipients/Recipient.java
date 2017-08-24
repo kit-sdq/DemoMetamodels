@@ -12,6 +12,7 @@ package edu.kit.ipd.sdq.mdsd.recipients;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link edu.kit.ipd.sdq.mdsd.recipients.Recipient#getParent <em>Parent</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.mdsd.recipients.Recipient#isBusiness <em>Business</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.mdsd.recipients.Recipient#getLocatedAt <em>Located At</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.mdsd.recipients.Recipient#getLocatedIn <em>Located In</em>}</li>
@@ -22,6 +23,34 @@ package edu.kit.ipd.sdq.mdsd.recipients;
  * @generated
  */
 public interface Recipient extends IdentifiedElement {
+	/**
+	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link edu.kit.ipd.sdq.mdsd.recipients.Recipients#getRecipients <em>Recipients</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parent</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parent</em>' container reference.
+	 * @see #setParent(Recipients)
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.RecipientsPackage#getRecipient_Parent()
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.Recipients#getRecipients
+	 * @model opposite="recipients" required="true" transient="false"
+	 * @generated
+	 */
+	Recipients getParent();
+
+	/**
+	 * Sets the value of the '{@link edu.kit.ipd.sdq.mdsd.recipients.Recipient#getParent <em>Parent</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Parent</em>' container reference.
+	 * @see #getParent()
+	 * @generated
+	 */
+	void setParent(Recipients value);
+
 	/**
 	 * Returns the value of the '<em><b>Business</b></em>' attribute.
 	 * The default value is <code>"false"</code>.
@@ -51,6 +80,7 @@ public interface Recipient extends IdentifiedElement {
 
 	/**
 	 * Returns the value of the '<em><b>Located At</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link edu.kit.ipd.sdq.mdsd.recipients.Location#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Located At</em>' containment reference isn't clear,
@@ -60,7 +90,8 @@ public interface Recipient extends IdentifiedElement {
 	 * @return the value of the '<em>Located At</em>' containment reference.
 	 * @see #setLocatedAt(Location)
 	 * @see edu.kit.ipd.sdq.mdsd.recipients.RecipientsPackage#getRecipient_LocatedAt()
-	 * @model containment="true" required="true"
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.Location#getParent
+	 * @model opposite="parent" containment="true" required="true"
 	 * @generated
 	 */
 	Location getLocatedAt();
@@ -77,6 +108,7 @@ public interface Recipient extends IdentifiedElement {
 
 	/**
 	 * Returns the value of the '<em><b>Located In</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link edu.kit.ipd.sdq.mdsd.recipients.City#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Located In</em>' reference isn't clear,
@@ -86,7 +118,8 @@ public interface Recipient extends IdentifiedElement {
 	 * @return the value of the '<em>Located In</em>' containment reference.
 	 * @see #setLocatedIn(City)
 	 * @see edu.kit.ipd.sdq.mdsd.recipients.RecipientsPackage#getRecipient_LocatedIn()
-	 * @model containment="true" required="true"
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.City#getParent
+	 * @model opposite="parent" containment="true" required="true"
 	 * @generated
 	 */
 	City getLocatedIn();

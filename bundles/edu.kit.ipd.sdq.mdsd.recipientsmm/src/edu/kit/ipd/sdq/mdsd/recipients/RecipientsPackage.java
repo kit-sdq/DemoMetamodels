@@ -179,13 +179,22 @@ public interface RecipientsPackage extends EPackage {
 	int RECIPIENT__ID = IDENTIFIED_ELEMENT__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECIPIENT__PARENT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Business</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECIPIENT__BUSINESS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+	int RECIPIENT__BUSINESS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Located At</b></em>' containment reference.
@@ -194,7 +203,7 @@ public interface RecipientsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECIPIENT__LOCATED_AT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+	int RECIPIENT__LOCATED_AT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Located In</b></em>' containment reference.
@@ -203,7 +212,7 @@ public interface RecipientsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECIPIENT__LOCATED_IN = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+	int RECIPIENT__LOCATED_IN = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Recipient</em>' class.
@@ -212,7 +221,7 @@ public interface RecipientsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECIPIENT_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
+	int RECIPIENT_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Recipient</em>' class.
@@ -233,13 +242,22 @@ public interface RecipientsPackage extends EPackage {
 	int LOCATION__ID = IDENTIFIED_ELEMENT__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION__PARENT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Number</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION__NUMBER = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+	int LOCATION__NUMBER = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Street</b></em>' attribute.
@@ -248,7 +266,7 @@ public interface RecipientsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION__STREET = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+	int LOCATION__STREET = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Location</em>' class.
@@ -257,7 +275,7 @@ public interface RecipientsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+	int LOCATION_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Location</em>' class.
@@ -278,13 +296,22 @@ public interface RecipientsPackage extends EPackage {
 	int CITY__ID = IDENTIFIED_ELEMENT__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CITY__PARENT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Zip Code</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CITY__ZIP_CODE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+	int CITY__ZIP_CODE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>City</em>' class.
@@ -293,7 +320,7 @@ public interface RecipientsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITY_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+	int CITY_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>City</em>' class.
@@ -335,6 +362,17 @@ public interface RecipientsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getRecipient();
+
+	/**
+	 * Returns the meta object for the container reference '{@link edu.kit.ipd.sdq.mdsd.recipients.Recipient#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.Recipient#getParent()
+	 * @see #getRecipient()
+	 * @generated
+	 */
+	EReference getRecipient_Parent();
 
 	/**
 	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.mdsd.recipients.Recipient#isBusiness <em>Business</em>}'.
@@ -380,6 +418,17 @@ public interface RecipientsPackage extends EPackage {
 	EClass getLocation();
 
 	/**
+	 * Returns the meta object for the container reference '{@link edu.kit.ipd.sdq.mdsd.recipients.Location#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.Location#getParent()
+	 * @see #getLocation()
+	 * @generated
+	 */
+	EReference getLocation_Parent();
+
+	/**
 	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.mdsd.recipients.Location#getNumber <em>Number</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -410,6 +459,17 @@ public interface RecipientsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCity();
+
+	/**
+	 * Returns the meta object for the container reference '{@link edu.kit.ipd.sdq.mdsd.recipients.City#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.City#getParent()
+	 * @see #getCity()
+	 * @generated
+	 */
+	EReference getCity_Parent();
 
 	/**
 	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.mdsd.recipients.City#getZipCode <em>Zip Code</em>}'.
@@ -495,6 +555,14 @@ public interface RecipientsPackage extends EPackage {
 		EClass RECIPIENT = eINSTANCE.getRecipient();
 
 		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RECIPIENT__PARENT = eINSTANCE.getRecipient_Parent();
+
+		/**
 		 * The meta object literal for the '<em><b>Business</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -529,6 +597,14 @@ public interface RecipientsPackage extends EPackage {
 		EClass LOCATION = eINSTANCE.getLocation();
 
 		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOCATION__PARENT = eINSTANCE.getLocation_Parent();
+
+		/**
 		 * The meta object literal for the '<em><b>Number</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -553,6 +629,14 @@ public interface RecipientsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CITY = eINSTANCE.getCity();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CITY__PARENT = eINSTANCE.getCity_Parent();
 
 		/**
 		 * The meta object literal for the '<em><b>Zip Code</b></em>' attribute feature.

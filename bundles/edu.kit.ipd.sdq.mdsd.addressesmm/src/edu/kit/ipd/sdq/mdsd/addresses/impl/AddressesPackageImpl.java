@@ -154,8 +154,8 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAddress_Number() {
-		return (EAttribute)addressEClass.getEStructuralFeatures().get(0);
+	public EReference getAddress_Parent() {
+		return (EReference)addressEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -163,7 +163,7 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAddress_Street() {
+	public EAttribute getAddress_Number() {
 		return (EAttribute)addressEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -172,8 +172,17 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAddress_ZipCode() {
+	public EAttribute getAddress_Street() {
 		return (EAttribute)addressEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAddress_ZipCode() {
+		return (EAttribute)addressEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -211,6 +220,7 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 		createEReference(addressesEClass, ADDRESSES__ADDRESSES);
 
 		addressEClass = createEClass(ADDRESS);
+		createEReference(addressEClass, ADDRESS__PARENT);
 		createEAttribute(addressEClass, ADDRESS__NUMBER);
 		createEAttribute(addressEClass, ADDRESS__STREET);
 		createEAttribute(addressEClass, ADDRESS__ZIP_CODE);
@@ -252,9 +262,10 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 		initEAttribute(getIdentifiedElement_Id(), ecorePackage.getEString(), "id", null, 1, 1, IdentifiedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(addressesEClass, Addresses.class, "Addresses", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAddresses_Addresses(), this.getAddress(), null, "addresses", null, 0, -1, Addresses.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAddresses_Addresses(), this.getAddress(), this.getAddress_Parent(), "addresses", null, 0, -1, Addresses.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(addressEClass, Address.class, "Address", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAddress_Parent(), this.getAddresses(), this.getAddresses_Addresses(), "parent", null, 1, 1, Address.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAddress_Number(), ecorePackage.getEInt(), "number", null, 1, 1, Address.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAddress_Street(), ecorePackage.getEString(), "street", null, 1, 1, Address.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAddress_ZipCode(), ecorePackage.getEString(), "zipCode", null, 1, 1, Address.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

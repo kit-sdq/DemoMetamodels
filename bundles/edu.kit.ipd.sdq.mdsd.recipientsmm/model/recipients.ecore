@@ -7,23 +7,29 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Recipients" eSuperTypes="#//IdentifiedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="recipients" lowerBound="1"
-        upperBound="-1" eType="#//Recipient" containment="true"/>
+        upperBound="-1" eType="#//Recipient" containment="true" eOpposite="#//Recipient/parent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Recipient" eSuperTypes="#//IdentifiedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//Recipients" eOpposite="#//Recipients/recipients"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="business" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="locatedAt" lowerBound="1"
-        eType="#//Location" containment="true"/>
+        eType="#//Location" containment="true" eOpposite="#//Location/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="locatedIn" lowerBound="1"
-        eType="#//City" containment="true"/>
+        eType="#//City" containment="true" eOpposite="#//City/parent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Location" eSuperTypes="#//IdentifiedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//Recipient" eOpposite="#//Recipient/locatedAt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="street" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="City" eSuperTypes="#//IdentifiedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//Recipient" eOpposite="#//Recipient/locatedIn"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="zipCode" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

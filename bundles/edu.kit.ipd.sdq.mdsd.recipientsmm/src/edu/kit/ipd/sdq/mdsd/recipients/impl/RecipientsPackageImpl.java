@@ -152,8 +152,17 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getRecipient_Parent() {
+		return (EReference)recipientEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getRecipient_Business() {
-		return (EAttribute)recipientEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)recipientEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -162,7 +171,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * @generated
 	 */
 	public EReference getRecipient_LocatedAt() {
-		return (EReference)recipientEClass.getEStructuralFeatures().get(1);
+		return (EReference)recipientEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -171,7 +180,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * @generated
 	 */
 	public EReference getRecipient_LocatedIn() {
-		return (EReference)recipientEClass.getEStructuralFeatures().get(2);
+		return (EReference)recipientEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -188,8 +197,17 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getLocation_Parent() {
+		return (EReference)locationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getLocation_Number() {
-		return (EAttribute)locationEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)locationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -198,7 +216,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * @generated
 	 */
 	public EAttribute getLocation_Street() {
-		return (EAttribute)locationEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)locationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -215,8 +233,17 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCity_Parent() {
+		return (EReference)cityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getCity_ZipCode() {
-		return (EAttribute)cityEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)cityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -272,15 +299,18 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 		createEReference(recipientsEClass, RECIPIENTS__RECIPIENTS);
 
 		recipientEClass = createEClass(RECIPIENT);
+		createEReference(recipientEClass, RECIPIENT__PARENT);
 		createEAttribute(recipientEClass, RECIPIENT__BUSINESS);
 		createEReference(recipientEClass, RECIPIENT__LOCATED_AT);
 		createEReference(recipientEClass, RECIPIENT__LOCATED_IN);
 
 		locationEClass = createEClass(LOCATION);
+		createEReference(locationEClass, LOCATION__PARENT);
 		createEAttribute(locationEClass, LOCATION__NUMBER);
 		createEAttribute(locationEClass, LOCATION__STREET);
 
 		cityEClass = createEClass(CITY);
+		createEReference(cityEClass, CITY__PARENT);
 		createEAttribute(cityEClass, CITY__ZIP_CODE);
 	}
 
@@ -322,18 +352,21 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 		initEAttribute(getIdentifiedElement_Id(), ecorePackage.getEString(), "id", null, 1, 1, IdentifiedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(recipientsEClass, Recipients.class, "Recipients", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRecipients_Recipients(), this.getRecipient(), null, "recipients", null, 1, -1, Recipients.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRecipients_Recipients(), this.getRecipient(), this.getRecipient_Parent(), "recipients", null, 1, -1, Recipients.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(recipientEClass, Recipient.class, "Recipient", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRecipient_Parent(), this.getRecipients(), this.getRecipients_Recipients(), "parent", null, 1, 1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRecipient_Business(), ecorePackage.getEBoolean(), "business", "false", 1, 1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRecipient_LocatedAt(), this.getLocation(), null, "locatedAt", null, 1, 1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRecipient_LocatedIn(), this.getCity(), null, "locatedIn", null, 1, 1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRecipient_LocatedAt(), this.getLocation(), this.getLocation_Parent(), "locatedAt", null, 1, 1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRecipient_LocatedIn(), this.getCity(), this.getCity_Parent(), "locatedIn", null, 1, 1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationEClass, Location.class, "Location", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLocation_Parent(), this.getRecipient(), this.getRecipient_LocatedAt(), "parent", null, 1, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLocation_Number(), ecorePackage.getEInt(), "number", null, 1, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLocation_Street(), ecorePackage.getEString(), "street", null, 1, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cityEClass, City.class, "City", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCity_Parent(), this.getRecipient(), this.getRecipient_LocatedIn(), "parent", null, 1, 1, City.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCity_ZipCode(), ecorePackage.getEString(), "zipCode", null, 1, 1, City.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

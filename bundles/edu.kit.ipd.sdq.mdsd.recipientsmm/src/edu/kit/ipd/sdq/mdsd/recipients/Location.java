@@ -12,6 +12,7 @@ package edu.kit.ipd.sdq.mdsd.recipients;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link edu.kit.ipd.sdq.mdsd.recipients.Location#getParent <em>Parent</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.mdsd.recipients.Location#getNumber <em>Number</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.mdsd.recipients.Location#getStreet <em>Street</em>}</li>
  * </ul>
@@ -21,6 +22,34 @@ package edu.kit.ipd.sdq.mdsd.recipients;
  * @generated
  */
 public interface Location extends IdentifiedElement {
+	/**
+	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link edu.kit.ipd.sdq.mdsd.recipients.Recipient#getLocatedAt <em>Located At</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parent</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parent</em>' container reference.
+	 * @see #setParent(Recipient)
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.RecipientsPackage#getLocation_Parent()
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.Recipient#getLocatedAt
+	 * @model opposite="locatedAt" required="true" transient="false"
+	 * @generated
+	 */
+	Recipient getParent();
+
+	/**
+	 * Sets the value of the '{@link edu.kit.ipd.sdq.mdsd.recipients.Location#getParent <em>Parent</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Parent</em>' container reference.
+	 * @see #getParent()
+	 * @generated
+	 */
+	void setParent(Recipient value);
+
 	/**
 	 * Returns the value of the '<em><b>Number</b></em>' attribute.
 	 * <!-- begin-user-doc -->

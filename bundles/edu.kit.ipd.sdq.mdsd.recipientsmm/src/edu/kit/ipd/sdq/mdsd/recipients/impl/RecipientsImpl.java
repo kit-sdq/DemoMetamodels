@@ -14,8 +14,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -68,9 +67,24 @@ public class RecipientsImpl extends IdentifiedElementImpl implements Recipients 
 	 */
 	public EList<Recipient> getRecipients() {
 		if (recipients == null) {
-			recipients = new EObjectContainmentEList<Recipient>(Recipient.class, this, RecipientsPackage.RECIPIENTS__RECIPIENTS);
+			recipients = new EObjectContainmentWithInverseEList<Recipient>(Recipient.class, this, RecipientsPackage.RECIPIENTS__RECIPIENTS, RecipientsPackage.RECIPIENT__PARENT);
 		}
 		return recipients;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case RecipientsPackage.RECIPIENTS__RECIPIENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getRecipients()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**

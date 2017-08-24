@@ -159,13 +159,22 @@ public interface AddressesPackage extends EPackage {
 	int ADDRESS__ID = IDENTIFIED_ELEMENT__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDRESS__PARENT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Number</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADDRESS__NUMBER = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+	int ADDRESS__NUMBER = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Street</b></em>' attribute.
@@ -174,7 +183,7 @@ public interface AddressesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDRESS__STREET = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+	int ADDRESS__STREET = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Zip Code</b></em>' attribute.
@@ -183,7 +192,7 @@ public interface AddressesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDRESS__ZIP_CODE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+	int ADDRESS__ZIP_CODE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Address</em>' class.
@@ -192,7 +201,7 @@ public interface AddressesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDRESS_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
+	int ADDRESS_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Address</em>' class.
@@ -255,6 +264,17 @@ public interface AddressesPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getAddress();
+
+	/**
+	 * Returns the meta object for the container reference '{@link edu.kit.ipd.sdq.mdsd.addresses.Address#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see edu.kit.ipd.sdq.mdsd.addresses.Address#getParent()
+	 * @see #getAddress()
+	 * @generated
+	 */
+	EReference getAddress_Parent();
 
 	/**
 	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.mdsd.addresses.Address#getNumber <em>Number</em>}'.
@@ -357,6 +377,14 @@ public interface AddressesPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ADDRESS = eINSTANCE.getAddress();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ADDRESS__PARENT = eINSTANCE.getAddress_Parent();
 
 		/**
 		 * The meta object literal for the '<em><b>Number</b></em>' attribute feature.

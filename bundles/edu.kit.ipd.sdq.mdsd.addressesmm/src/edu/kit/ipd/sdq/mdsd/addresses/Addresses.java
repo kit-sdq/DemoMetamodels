@@ -24,6 +24,7 @@ public interface Addresses extends IdentifiedElement {
 	/**
 	 * Returns the value of the '<em><b>Addresses</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.mdsd.addresses.Address}.
+	 * It is bidirectional and its opposite is '{@link edu.kit.ipd.sdq.mdsd.addresses.Address#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Addresses</em>' containment reference list isn't clear,
@@ -32,7 +33,8 @@ public interface Addresses extends IdentifiedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Addresses</em>' containment reference list.
 	 * @see edu.kit.ipd.sdq.mdsd.addresses.AddressesPackage#getAddresses_Addresses()
-	 * @model containment="true"
+	 * @see edu.kit.ipd.sdq.mdsd.addresses.Address#getParent
+	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
 	EList<Address> getAddresses();

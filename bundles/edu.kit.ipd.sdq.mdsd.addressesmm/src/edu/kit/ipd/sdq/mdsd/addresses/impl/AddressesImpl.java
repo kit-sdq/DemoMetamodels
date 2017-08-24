@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -67,9 +67,24 @@ public class AddressesImpl extends IdentifiedElementImpl implements Addresses {
 	 */
 	public EList<Address> getAddresses() {
 		if (addresses == null) {
-			addresses = new EObjectContainmentEList<Address>(Address.class, this, AddressesPackage.ADDRESSES__ADDRESSES);
+			addresses = new EObjectContainmentWithInverseEList<Address>(Address.class, this, AddressesPackage.ADDRESSES__ADDRESSES, AddressesPackage.ADDRESS__PARENT);
 		}
 		return addresses;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case AddressesPackage.ADDRESSES__ADDRESSES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAddresses()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**

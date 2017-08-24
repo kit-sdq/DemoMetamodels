@@ -11,6 +11,7 @@ package edu.kit.ipd.sdq.mdsd.addresses;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link edu.kit.ipd.sdq.mdsd.addresses.Address#getParent <em>Parent</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.mdsd.addresses.Address#getNumber <em>Number</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.mdsd.addresses.Address#getStreet <em>Street</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.mdsd.addresses.Address#getZipCode <em>Zip Code</em>}</li>
@@ -21,6 +22,34 @@ package edu.kit.ipd.sdq.mdsd.addresses;
  * @generated
  */
 public interface Address extends IdentifiedElement {
+	/**
+	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link edu.kit.ipd.sdq.mdsd.addresses.Addresses#getAddresses <em>Addresses</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parent</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parent</em>' container reference.
+	 * @see #setParent(Addresses)
+	 * @see edu.kit.ipd.sdq.mdsd.addresses.AddressesPackage#getAddress_Parent()
+	 * @see edu.kit.ipd.sdq.mdsd.addresses.Addresses#getAddresses
+	 * @model opposite="addresses" required="true" transient="false"
+	 * @generated
+	 */
+	Addresses getParent();
+
+	/**
+	 * Sets the value of the '{@link edu.kit.ipd.sdq.mdsd.addresses.Address#getParent <em>Parent</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Parent</em>' container reference.
+	 * @see #getParent()
+	 * @generated
+	 */
+	void setParent(Addresses value);
+
 	/**
 	 * Returns the value of the '<em><b>Number</b></em>' attribute.
 	 * <!-- begin-user-doc -->

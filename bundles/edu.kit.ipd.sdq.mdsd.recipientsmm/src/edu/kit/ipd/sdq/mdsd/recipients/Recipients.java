@@ -24,6 +24,7 @@ public interface Recipients extends IdentifiedElement {
 	/**
 	 * Returns the value of the '<em><b>Recipients</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.mdsd.recipients.Recipient}.
+	 * It is bidirectional and its opposite is '{@link edu.kit.ipd.sdq.mdsd.recipients.Recipient#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Recipients</em>' containment reference list isn't clear,
@@ -32,7 +33,8 @@ public interface Recipients extends IdentifiedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Recipients</em>' containment reference list.
 	 * @see edu.kit.ipd.sdq.mdsd.recipients.RecipientsPackage#getRecipients_Recipients()
-	 * @model containment="true" required="true"
+	 * @see edu.kit.ipd.sdq.mdsd.recipients.Recipient#getParent
+	 * @model opposite="parent" containment="true" required="true"
 	 * @generated
 	 */
 	EList<Recipient> getRecipients();

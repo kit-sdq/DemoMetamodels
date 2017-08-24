@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,7 +53,6 @@ public abstract class IdentifiedElementImpl extends MinimalEObjectImpl.Container
 	 */
 	protected IdentifiedElementImpl() {
 		super();
-		this.id = EcoreUtil.generateUUID();
 	}
 
 	/**

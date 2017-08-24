@@ -3,13 +3,17 @@
 package edu.kit.ipd.sdq.mdsd.addresses.impl;
 
 import edu.kit.ipd.sdq.mdsd.addresses.Address;
+import edu.kit.ipd.sdq.mdsd.addresses.Addresses;
 import edu.kit.ipd.sdq.mdsd.addresses.AddressesPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link edu.kit.ipd.sdq.mdsd.addresses.impl.AddressImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.mdsd.addresses.impl.AddressImpl#getNumber <em>Number</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.mdsd.addresses.impl.AddressImpl#getStreet <em>Street</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.mdsd.addresses.impl.AddressImpl#getZipCode <em>Zip Code</em>}</li>
@@ -111,6 +116,47 @@ public class AddressImpl extends IdentifiedElementImpl implements Address {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Addresses getParent() {
+		if (eContainerFeatureID() != AddressesPackage.ADDRESS__PARENT) return null;
+		return (Addresses)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetParent(Addresses newParent, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newParent, AddressesPackage.ADDRESS__PARENT, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setParent(Addresses newParent) {
+		if (newParent != eInternalContainer() || (eContainerFeatureID() != AddressesPackage.ADDRESS__PARENT && newParent != null)) {
+			if (EcoreUtil.isAncestor(this, newParent))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newParent != null)
+				msgs = ((InternalEObject)newParent).eInverseAdd(this, AddressesPackage.ADDRESSES__ADDRESSES, Addresses.class, msgs);
+			msgs = basicSetParent(newParent, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AddressesPackage.ADDRESS__PARENT, newParent, newParent));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public int getNumber() {
 		return number;
 	}
@@ -175,8 +221,54 @@ public class AddressImpl extends IdentifiedElementImpl implements Address {
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case AddressesPackage.ADDRESS__PARENT:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetParent((Addresses)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case AddressesPackage.ADDRESS__PARENT:
+				return basicSetParent(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case AddressesPackage.ADDRESS__PARENT:
+				return eInternalContainer().eInverseRemove(this, AddressesPackage.ADDRESSES__ADDRESSES, Addresses.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case AddressesPackage.ADDRESS__PARENT:
+				return getParent();
 			case AddressesPackage.ADDRESS__NUMBER:
 				return getNumber();
 			case AddressesPackage.ADDRESS__STREET:
@@ -195,6 +287,9 @@ public class AddressImpl extends IdentifiedElementImpl implements Address {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case AddressesPackage.ADDRESS__PARENT:
+				setParent((Addresses)newValue);
+				return;
 			case AddressesPackage.ADDRESS__NUMBER:
 				setNumber((Integer)newValue);
 				return;
@@ -216,6 +311,9 @@ public class AddressImpl extends IdentifiedElementImpl implements Address {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case AddressesPackage.ADDRESS__PARENT:
+				setParent((Addresses)null);
+				return;
 			case AddressesPackage.ADDRESS__NUMBER:
 				setNumber(NUMBER_EDEFAULT);
 				return;
@@ -237,6 +335,8 @@ public class AddressImpl extends IdentifiedElementImpl implements Address {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case AddressesPackage.ADDRESS__PARENT:
+				return getParent() != null;
 			case AddressesPackage.ADDRESS__NUMBER:
 				return number != NUMBER_EDEFAULT;
 			case AddressesPackage.ADDRESS__STREET:
