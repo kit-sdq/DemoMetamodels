@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated families -->
+      <package
+            uri="edu.kit.ipd.sdq.metamodels.families"
+            class="edu.kit.ipd.sdq.metamodels.families.FamiliesPackage"
+            genModel="model/families.genmodel"/>
+   </extension>
+
+</plugin>
