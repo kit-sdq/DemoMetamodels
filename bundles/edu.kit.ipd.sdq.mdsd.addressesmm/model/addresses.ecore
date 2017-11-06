@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="addresses" nsURI="http://edu.kit.ipd.sdq.mdsd.addresses" nsPrefix="edu.kit.ipd.sdq.mdsd.addresses">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="addresses" nsURI="http://edu.kit.ipd.sdq.metamodels.addresses" nsPrefix="edu.kit.ipd.sdq.metamodels.addresses">
   <eClassifiers xsi:type="ecore:EClass" name="IdentifiedElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>

@@ -12,9 +12,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="edu.kit.ipd.sdq.mdsd.recipients.presentation.RecipientsModelWizardID"
+            id="edu.kit.ipd.sdq.metamodels.recipients.presentation.RecipientsModelWizardID"
             name="%_UI_RecipientsModelWizard_label"
-            class="edu.kit.ipd.sdq.mdsd.recipients.presentation.RecipientsModelWizard"
+            class="edu.kit.ipd.sdq.metamodels.recipients.presentation.RecipientsModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/RecipientsModelFile.gif">
          <description>%_UI_RecipientsModelWizard_description</description>
@@ -25,12 +25,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated recipients -->
       <editor
-            id="edu.kit.ipd.sdq.mdsd.recipients.presentation.RecipientsEditorID"
+            id="edu.kit.ipd.sdq.metamodels.recipients.presentation.RecipientsEditorID"
             name="%_UI_RecipientsEditor_label"
             icon="icons/full/obj16/RecipientsModelFile.gif"
             extensions="recipients"
-            class="edu.kit.ipd.sdq.mdsd.recipients.presentation.RecipientsEditor"
-            contributorClass="edu.kit.ipd.sdq.mdsd.recipients.presentation.RecipientsActionBarContributor">
+            class="edu.kit.ipd.sdq.metamodels.recipients.presentation.RecipientsEditor"
+            contributorClass="edu.kit.ipd.sdq.metamodels.recipients.presentation.RecipientsActionBarContributor">
       </editor>
    </extension>
 

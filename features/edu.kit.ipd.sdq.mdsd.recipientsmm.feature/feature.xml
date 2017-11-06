@@ -1,35 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="edu.kit.ipd.sdq.mdsd.recipientsmm.feature"
-      label="recipientsmm"
+      id="edu.kit.ipd.sdq.metamodels.recipients.feature"
+      label="%featureName"
       version="1.0.0.qualifier"
-      provider-name="SDQ">
-   <description url="http://www.example.com/description">
-      [TODO Enter Feature Description here.]
+      provider-name="%providerName" >
+
+   <description>
+      %description
    </description>
-   <copyright url="http://www.example.com/copyright">
-      [TODO Enter Copyright Description here.]
+
+   <copyright url="%copyrightURL">
+      %copyright
    </copyright>
-   <license url="http://www.example.com/license">
-      [TODO Enter License Description here.]
+
+   <license url="%licenseURL">
+      %license
    </license>
+
    <requires>
-      <import feature="org.eclipse.emf.ecore.source"/>
+      <import feature="org.eclipse.xtend.sdk" version="2.10.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.emf.ecore" version="2.12.0" match="greaterOrEqual"/>
    </requires>
+   
    <plugin
-         id="edu.kit.ipd.sdq.mdsd.recipientsmm"
+         id="edu.kit.ipd.sdq.metamodels.recipients"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
    <plugin
-         id="edu.kit.ipd.sdq.mdsd.recipientsmm.edit"
+         id="edu.kit.ipd.sdq.metamodels.recipients.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
    <plugin
-         id="edu.kit.ipd.sdq.mdsd.recipientsmm.editor"
+         id="edu.kit.ipd.sdq.metamodels.recipients.editor"
          download-size="0"
          install-size="0"
          version="0.0.0"

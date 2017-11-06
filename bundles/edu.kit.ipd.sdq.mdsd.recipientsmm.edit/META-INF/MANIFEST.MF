@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: edu.kit.ipd.sdq.mdsd.recipientsmm.edit;singleton:=true
+Bundle-SymbolicName: edu.kit.ipd.sdq.metamodels.recipients.edit;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: edu.kit.ipd.sdq.mdsd.recipients.provider.RecipientsEditPlugin$Implementation
+Bundle-Activator: edu.kit.ipd.sdq.metamodels.recipients.provider.RecipientsEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: edu.kit.ipd.sdq.mdsd.recipients.provider
+Export-Package: edu.kit.ipd.sdq.metamodels.recipients.provider
 Require-Bundle: org.eclipse.core.runtime,
- edu.kit.ipd.sdq.mdsd.recipientsmm;visibility:=reexport,
+ edu.kit.ipd.sdq.metamodels.recipients;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

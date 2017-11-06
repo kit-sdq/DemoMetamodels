@@ -12,9 +12,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="edu.kit.ipd.sdq.mdsd.addresses.presentation.AddressesModelWizardID"
+            id="edu.kit.ipd.sdq.metamodels.addresses.presentation.AddressesModelWizardID"
             name="%_UI_AddressesModelWizard_label"
-            class="edu.kit.ipd.sdq.mdsd.addresses.presentation.AddressesModelWizard"
+            class="edu.kit.ipd.sdq.metamodels.addresses.presentation.AddressesModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/AddressesModelFile.gif">
          <description>%_UI_AddressesModelWizard_description</description>
@@ -25,12 +25,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated addresses -->
       <editor
-            id="edu.kit.ipd.sdq.mdsd.addresses.presentation.AddressesEditorID"
+            id="edu.kit.ipd.sdq.metamodels.addresses.presentation.AddressesEditorID"
             name="%_UI_AddressesEditor_label"
             icon="icons/full/obj16/AddressesModelFile.gif"
             extensions="addresses"
-            class="edu.kit.ipd.sdq.mdsd.addresses.presentation.AddressesEditor"
-            contributorClass="edu.kit.ipd.sdq.mdsd.addresses.presentation.AddressesActionBarContributor">
+            class="edu.kit.ipd.sdq.metamodels.addresses.presentation.AddressesEditor"
+            contributorClass="edu.kit.ipd.sdq.metamodels.addresses.presentation.AddressesActionBarContributor">
       </editor>
    </extension>
 </plugin>
