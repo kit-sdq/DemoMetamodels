@@ -11,13 +11,21 @@
   <artifactId>edu.kit.ipd.sdq.metamodels.demo.aggregator</artifactId>
   <packaging>pom</packaging>
   <modules>
-    <module>../../features/edu.kit.ipd.sdq.metamodels.addresses.feature</module>
     <module>../../bundles/edu.kit.ipd.sdq.metamodels.addresses</module>
     <module>../../bundles/edu.kit.ipd.sdq.metamodels.addresses.edit</module>
     <module>../../bundles/edu.kit.ipd.sdq.metamodels.addresses.editor</module>
-    <module>../../features/edu.kit.ipd.sdq.metamodels.recipients.feature</module>
     <module>../../bundles/edu.kit.ipd.sdq.metamodels.recipients</module>
     <module>../../bundles/edu.kit.ipd.sdq.metamodels.recipients.edit</module>
     <module>../../bundles/edu.kit.ipd.sdq.metamodels.recipients.editor</module>
+	<module>../../bundles/edu.kit.ipd.sdq.metamodels.families</module>
+    <module>../../bundles/edu.kit.ipd.sdq.metamodels.families.edit</module>
+    <module>../../bundles/edu.kit.ipd.sdq.metamodels.families.editor</module>
+	<module>../../bundles/edu.kit.ipd.sdq.metamodels.persons</module>
+    <module>../../bundles/edu.kit.ipd.sdq.metamodels.persons.edit</module>
+    <module>../../bundles/edu.kit.ipd.sdq.metamodels.persons.editor</module>
+	<module>../../features/edu.kit.ipd.sdq.metamodels.addresses.feature</module>
+	<module>../../features/edu.kit.ipd.sdq.metamodels.recipients.feature</module>
+	<module>../../features/edu.kit.ipd.sdq.metamodels.families.feature</module>
+	<module>../../features/edu.kit.ipd.sdq.metamodels.persons.feature</module>
   </modules>
 </project>

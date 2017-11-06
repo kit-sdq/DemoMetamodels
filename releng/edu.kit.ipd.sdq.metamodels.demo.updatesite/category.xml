@@ -12,6 +12,18 @@
    <feature id="edu.kit.ipd.sdq.metamodels.recipients.feature.source" version="1.0.0.qualifier">
       <category name="demometamodels"/>
    </feature>
+   <feature url="features/edu.kit.ipd.sdq.metamodels.families.feature_1.0.0.qualifier.jar" id="edu.kit.ipd.sdq.metamodels.families.feature" version="1.0.0.qualifier">
+      <category name="demometamodels"/>
+   </feature>
+   <feature id="edu.kit.ipd.sdq.metamodels.families.feature.source" version="1.0.0.qualifier">
+      <category name="demometamodels"/>
+   </feature>
+   <feature url="features/edu.kit.ipd.sdq.metamodels.persons.feature_1.0.0.qualifier.jar" id="edu.kit.ipd.sdq.metamodels.persons.feature" version="1.0.0.qualifier">
+      <category name="demometamodels"/>
+   </feature>
+   <feature id="edu.kit.ipd.sdq.metamodels.persons.feature.source" version="1.0.0.qualifier">
+      <category name="demometamodels"/>
+   </feature>
    <category-def name="demometamodels" label="Demo Metamodels">
       <description>
 	Ecore metamodels based on EMF for demonstrating MDSD techniques 
