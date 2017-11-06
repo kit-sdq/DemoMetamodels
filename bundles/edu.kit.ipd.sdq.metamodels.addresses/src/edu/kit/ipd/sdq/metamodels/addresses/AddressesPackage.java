@@ -38,7 +38,7 @@ public interface AddressesPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://edu.kit.ipd.sdq.metamodels.addresses";
+	String eNS_URI = "edu.kit.ipd.sdq.metamodels.persons";
 
 	/**
 	 * The package namespace name.
@@ -46,7 +46,7 @@ public interface AddressesPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "edu.kit.ipd.sdq.metamodels.addresses";
+	String eNS_PREFIX = "addresses";
 
 	/**
 	 * The singleton instance of the package.

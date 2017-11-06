@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated addresses -->
       <package
-            uri="http://edu.kit.ipd.sdq.metamodels.addresses"
+            uri="edu.kit.ipd.sdq.metamodels.persons"
             class="edu.kit.ipd.sdq.metamodels.addresses.AddressesPackage"
             genModel="model/addresses.genmodel"/>
    </extension>
