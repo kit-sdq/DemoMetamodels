@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="edu.kit.ipd.sdq.metamodels.families.feature"
+      label="%featureName"
+      version="1.0.0.qualifier"
+      provider-name="%providerName" >
+
+   <description>
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import feature="org.eclipse.xtend.sdk" version="2.10.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.emf.ecore" version="2.12.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="edu.kit.ipd.sdq.metamodels.families"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+		 
+	<plugin
+         id="edu.kit.ipd.sdq.metamodels.families.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+		 
+	<plugin
+         id="edu.kit.ipd.sdq.metamodels.families.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
