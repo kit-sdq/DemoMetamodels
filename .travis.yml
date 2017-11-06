@@ -1,5 +1,4 @@
 language: java
-sudo: required
 jdk:
   - oraclejdk8
 cache:  
@@ -8,13 +7,12 @@ cache:
 
 before_install:
     - git clone --depth 1 https://github.com/kit-sdq/BuildUtilities.git /tmp/BuildUtilities
-    - . /tmp/BuildUtilities/travis-ci/installMaven.sh
 install: true
 
 script: mvn clean verify
 
 after_success:
-- . /tmp/BuildUtilities/travis-ci/deploy.sh demometamodels releng/edu.kit.ipd.sdq.mdsd.demometamodels.updatesite.aggregated final kit-sdq updatesite
+- . /tmp/BuildUtilities/travis-ci/deploy.sh metamodels/demo releng/edu.kit.ipd.sdq.metamodels.demo.updatesite.aggregated final kit-sdq updatesite
 
 notifications:
   slack:
