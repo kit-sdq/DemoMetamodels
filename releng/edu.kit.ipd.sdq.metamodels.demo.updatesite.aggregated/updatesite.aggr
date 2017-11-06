@@ -2,7 +2,7 @@
 <aggregator:Aggregation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:aggregator="http://www.eclipse.org/cbi/p2repo/2011/aggregator/1.1.0" label="demometamodels Update Site" buildRoot="target">
   <validationSets label="main">
     <contributions label="local">
-      <repositories location="../edu.kit.ipd.sdq.metamodels.demometamodels.updatesite/target/repository"/>
+      <repositories location="../edu.kit.ipd.sdq.metamodels.demo.updatesite/target/repository"/>
     </contributions>
     <contributions label="externals">
       <repositories location="http://sdqbuild.ipd.kit.edu/nexus/content/groups/eclipse-oxygen-complete/" mirrorArtifacts="false">

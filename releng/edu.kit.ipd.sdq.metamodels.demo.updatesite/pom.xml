@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>edu.kit.ipd.sdq.metamodels.demometamodels</groupId>
+		<groupId>edu.kit.ipd.sdq</groupId>
 		<artifactId>parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
-		<relativePath>../edu.kit.ipd.sdq.metamodels.demometamodels.parent</relativePath>
+		<relativePath>../edu.kit.ipd.sdq.metamodels.demo.parent</relativePath>
 	</parent>
-	<artifactId>edu.kit.ipd.sdq.metamodels.demometamodels.updatesite</artifactId>
-	<name>demometamodels Update Site</name>
+	<artifactId>edu.kit.ipd.sdq.metamodels.demo.updatesite</artifactId>
+	<name>Demo Metamodels Update Site</name>
 	<packaging>eclipse-repository</packaging>
 </project>
