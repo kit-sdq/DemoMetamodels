@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated addresses -->
       <factory
-            uri="edu.kit.ipd.sdq.metamodels.persons"
+            uri="edu.kit.ipd.sdq.metamodels.addresses"
             class="edu.kit.ipd.sdq.metamodels.addresses.provider.AddressesItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

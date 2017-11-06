@@ -38,7 +38,7 @@ public interface RecipientsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "edu.kit.ipd.sdq.metamodels.persons";
+	String eNS_URI = "edu.kit.ipd.sdq.metamodels.recipients";
 
 	/**
 	 * The package namespace name.
