@@ -12,6 +12,5 @@
   <modules>
     <module>releng/edu.kit.ipd.sdq.metamodels.demo.aggregator</module>
     <module>releng/edu.kit.ipd.sdq.metamodels.demo.updatesite</module>
-    <module>releng/edu.kit.ipd.sdq.metamodels.demo.updatesite.aggregated</module>
   </modules>
 </project>

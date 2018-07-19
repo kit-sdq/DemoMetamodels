@@ -12,7 +12,7 @@ install: true
 script: mvn clean verify
 
 after_success:
-- . /tmp/BuildUtilities/travis-ci/deploy.sh metamodels/demo releng/edu.kit.ipd.sdq.metamodels.demo.updatesite.aggregated final kit-sdq updatesite
+- . /tmp/BuildUtilities/travis-ci/deploy.sh metamodels/demo releng/edu.kit.ipd.sdq.metamodels.demo.updatesite repository kit-sdq updatesite
 
 notifications:
   slack:
