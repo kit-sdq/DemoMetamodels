@@ -98,6 +98,7 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Recipients getParent() {
 		if (eContainerFeatureID() != RecipientsPackage.RECIPIENT__PARENT) return null;
 		return (Recipients)eInternalContainer();
@@ -118,6 +119,7 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParent(Recipients newParent) {
 		if (newParent != eInternalContainer() || (eContainerFeatureID() != RecipientsPackage.RECIPIENT__PARENT && newParent != null)) {
 			if (EcoreUtil.isAncestor(this, newParent))
@@ -139,6 +141,7 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isBusiness() {
 		return business;
 	}
@@ -148,6 +151,7 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBusiness(boolean newBusiness) {
 		boolean oldBusiness = business;
 		business = newBusiness;
@@ -160,6 +164,7 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Location getLocatedAt() {
 		return locatedAt;
 	}
@@ -184,6 +189,7 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLocatedAt(Location newLocatedAt) {
 		if (newLocatedAt != locatedAt) {
 			NotificationChain msgs = null;
@@ -203,6 +209,7 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public City getLocatedIn() {
 		return locatedIn;
 	}
@@ -227,6 +234,7 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLocatedIn(City newLocatedIn) {
 		if (newLocatedIn != locatedIn) {
 			NotificationChain msgs = null;
@@ -394,7 +402,7 @@ public class RecipientImpl extends IdentifiedElementImpl implements Recipient {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (business: ");
 		result.append(business);
 		result.append(')');

@@ -7,13 +7,15 @@
   <foreignModel>persons.ecore</foreignModel>
   <genPackages prefix="Persons" basePackage="edu.kit.ipd.sdq.metamodels" disposableProviderFactory="true"
       ecorePackage="persons.ecore#/">
+    <genClasses ecoreClass="persons.ecore#//PersonRegister">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persons.ecore#//PersonRegister/persons"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persons.ecore#//PersonRegister/id"/>
+    </genClasses>
     <genClasses ecoreClass="persons.ecore#//Person">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persons.ecore#//Person/fullName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persons.ecore#//Person/birthday"/>
     </genClasses>
     <genClasses ecoreClass="persons.ecore#//Male"/>
     <genClasses ecoreClass="persons.ecore#//Female"/>
-    <genClasses ecoreClass="persons.ecore#//PersonsRoot">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference persons.ecore#//PersonsRoot/persons"/>
-    </genClasses>
   </genPackages>
 </genmodel:GenModel>

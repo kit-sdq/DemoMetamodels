@@ -92,6 +92,7 @@ public abstract class PersonImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFullName() {
 		return fullName;
 	}
@@ -101,6 +102,7 @@ public abstract class PersonImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFullName(String newFullName) {
 		String oldFullName = fullName;
 		fullName = newFullName;
@@ -113,6 +115,7 @@ public abstract class PersonImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getBirthday() {
 		return birthday;
 	}
@@ -122,6 +125,7 @@ public abstract class PersonImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBirthday(Date newBirthday) {
 		Date oldBirthday = birthday;
 		birthday = newBirthday;
@@ -206,7 +210,7 @@ public abstract class PersonImpl extends MinimalEObjectImpl.Container implements
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (fullName: ");
 		result.append(fullName);
 		result.append(", birthday: ");

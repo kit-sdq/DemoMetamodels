@@ -65,6 +65,7 @@ public class AddressesImpl extends IdentifiedElementImpl implements Addresses {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Address> getAddresses() {
 		if (addresses == null) {
 			addresses = new EObjectContainmentWithInverseEList<Address>(Address.class, this, AddressesPackage.ADDRESSES__ADDRESSES, AddressesPackage.ADDRESS__PARENT);

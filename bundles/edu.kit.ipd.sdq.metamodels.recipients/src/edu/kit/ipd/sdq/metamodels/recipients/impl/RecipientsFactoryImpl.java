@@ -70,6 +70,7 @@ public class RecipientsFactoryImpl extends EFactoryImpl implements RecipientsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Recipient createRecipient() {
 		RecipientImpl recipient = new RecipientImpl();
 		return recipient;
@@ -80,6 +81,7 @@ public class RecipientsFactoryImpl extends EFactoryImpl implements RecipientsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Location createLocation() {
 		LocationImpl location = new LocationImpl();
 		return location;
@@ -90,6 +92,7 @@ public class RecipientsFactoryImpl extends EFactoryImpl implements RecipientsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public City createCity() {
 		CityImpl city = new CityImpl();
 		return city;
@@ -100,6 +103,7 @@ public class RecipientsFactoryImpl extends EFactoryImpl implements RecipientsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Recipients createRecipients() {
 		RecipientsImpl recipients = new RecipientsImpl();
 		return recipients;
@@ -110,6 +114,7 @@ public class RecipientsFactoryImpl extends EFactoryImpl implements RecipientsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RecipientsPackage getRecipientsPackage() {
 		return (RecipientsPackage)getEPackage();
 	}
