@@ -14,6 +14,9 @@
 		<module>../../bundles/edu.kit.ipd.sdq.metamodels.addresses</module>
 		<module>../../bundles/edu.kit.ipd.sdq.metamodels.addresses.edit</module>
 		<module>../../bundles/edu.kit.ipd.sdq.metamodels.addresses.editor</module>
+		<module>../../bundles/edu.kit.ipd.sdq.metamodels.ensurance</module>
+		<module>../../bundles/edu.kit.ipd.sdq.metamodels.ensurance.edit</module>
+		<module>../../bundles/edu.kit.ipd.sdq.metamodels.ensurance.editor</module>
 		<module>../../bundles/edu.kit.ipd.sdq.metamodels.recipients</module>
 		<module>../../bundles/edu.kit.ipd.sdq.metamodels.recipients.edit</module>
 		<module>../../bundles/edu.kit.ipd.sdq.metamodels.recipients.editor</module>
@@ -24,6 +27,7 @@
 		<module>../../bundles/edu.kit.ipd.sdq.metamodels.persons.edit</module>
 		<module>../../bundles/edu.kit.ipd.sdq.metamodels.persons.editor</module>
 		<module>../../features/edu.kit.ipd.sdq.metamodels.addresses.feature</module>
+		<module>../../features/edu.kit.ipd.sdq.metamodels.ensurance.feature</module>
 		<module>../../features/edu.kit.ipd.sdq.metamodels.recipients.feature</module>
 		<module>../../features/edu.kit.ipd.sdq.metamodels.families.feature</module>
 		<module>../../features/edu.kit.ipd.sdq.metamodels.persons.feature</module>
