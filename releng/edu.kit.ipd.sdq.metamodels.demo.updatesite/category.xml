@@ -24,10 +24,10 @@
    <feature id="edu.kit.ipd.sdq.metamodels.persons.feature.source" version="1.3.0.qualifier">
       <category name="demometamodels"/>
    </feature>
-   <feature url="features/edu.kit.ipd.sdq.metamodels.ensurance.feature_1.3.0.qualifier.jar" id="edu.kit.ipd.sdq.metamodels.ensurance.feature" version="1.3.0.qualifier">
+   <feature url="features/edu.kit.ipd.sdq.metamodels.insurance.feature_1.3.0.qualifier.jar" id="edu.kit.ipd.sdq.metamodels.insurance.feature" version="1.3.0.qualifier">
       <category name="demometamodels"/>
    </feature>
-   <feature id="edu.kit.ipd.sdq.metamodels.ensurance.feature.source" version="1.3.0.qualifier">
+   <feature id="edu.kit.ipd.sdq.metamodels.insurance.feature.source" version="1.3.0.qualifier">
       <category name="demometamodels"/>
    </feature>
    <category-def name="demometamodels" label="Demo Metamodels">
