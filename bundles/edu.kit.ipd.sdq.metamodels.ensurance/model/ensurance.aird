@@ -3,6 +3,7 @@
   <viewpoint:DAnalysis uid="_T52JAGrEEeqek6MsJmxUyg" selectedViews="_UGJfoGrEEeqek6MsJmxUyg" version="14.3.0.201909031200">
     <semanticResources>ensurance.ecore</semanticResources>
     <semanticResources>ensurance.genmodel</semanticResources>
+    <semanticResources>../.polyglot.build.properties</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_UGJfoGrEEeqek6MsJmxUyg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_UZAKMWrEEeqek6MsJmxUyg" name="ensurance" repPath="#_UYz88GrEEeqek6MsJmxUyg" changeId="689609ad-175e-4dc2-be31-154f7b8bba6c">
