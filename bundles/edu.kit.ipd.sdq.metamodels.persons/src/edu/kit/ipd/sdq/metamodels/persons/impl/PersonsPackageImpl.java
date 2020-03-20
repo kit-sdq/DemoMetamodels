@@ -78,7 +78,7 @@ public class PersonsPackageImpl extends EPackageImpl implements PersonsPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link PersonsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -92,7 +92,8 @@ public class PersonsPackageImpl extends EPackageImpl implements PersonsPackage {
 		if (isInited) return (PersonsPackage)EPackage.Registry.INSTANCE.getEPackage(PersonsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		PersonsPackageImpl thePersonsPackage = (PersonsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof PersonsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new PersonsPackageImpl());
+		Object registeredPersonsPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		PersonsPackageImpl thePersonsPackage = registeredPersonsPackage instanceof PersonsPackageImpl ? (PersonsPackageImpl)registeredPersonsPackage : new PersonsPackageImpl();
 
 		isInited = true;
 
@@ -105,7 +106,6 @@ public class PersonsPackageImpl extends EPackageImpl implements PersonsPackage {
 		// Mark meta-data to indicate it can't be changed
 		thePersonsPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(PersonsPackage.eNS_URI, thePersonsPackage);
 		return thePersonsPackage;
@@ -116,6 +116,7 @@ public class PersonsPackageImpl extends EPackageImpl implements PersonsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPersonRegister() {
 		return personRegisterEClass;
 	}
@@ -125,6 +126,7 @@ public class PersonsPackageImpl extends EPackageImpl implements PersonsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPersonRegister_Persons() {
 		return (EReference)personRegisterEClass.getEStructuralFeatures().get(0);
 	}
@@ -134,6 +136,7 @@ public class PersonsPackageImpl extends EPackageImpl implements PersonsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPersonRegister_Id() {
 		return (EAttribute)personRegisterEClass.getEStructuralFeatures().get(1);
 	}
@@ -143,6 +146,7 @@ public class PersonsPackageImpl extends EPackageImpl implements PersonsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPerson() {
 		return personEClass;
 	}
@@ -152,6 +156,7 @@ public class PersonsPackageImpl extends EPackageImpl implements PersonsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPerson_FullName() {
 		return (EAttribute)personEClass.getEStructuralFeatures().get(0);
 	}
@@ -161,6 +166,7 @@ public class PersonsPackageImpl extends EPackageImpl implements PersonsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPerson_Birthday() {
 		return (EAttribute)personEClass.getEStructuralFeatures().get(1);
 	}
@@ -170,6 +176,7 @@ public class PersonsPackageImpl extends EPackageImpl implements PersonsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMale() {
 		return maleEClass;
 	}
@@ -179,6 +186,7 @@ public class PersonsPackageImpl extends EPackageImpl implements PersonsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFemale() {
 		return femaleEClass;
 	}
@@ -188,6 +196,7 @@ public class PersonsPackageImpl extends EPackageImpl implements PersonsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PersonsFactory getPersonsFactory() {
 		return (PersonsFactory)getEFactoryInstance();
 	}

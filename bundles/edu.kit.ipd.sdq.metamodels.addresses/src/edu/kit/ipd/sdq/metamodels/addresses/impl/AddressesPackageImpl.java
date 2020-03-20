@@ -71,7 +71,7 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link AddressesPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -85,7 +85,8 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 		if (isInited) return (AddressesPackage)EPackage.Registry.INSTANCE.getEPackage(AddressesPackage.eNS_URI);
 
 		// Obtain or create and register package
-		AddressesPackageImpl theAddressesPackage = (AddressesPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof AddressesPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new AddressesPackageImpl());
+		Object registeredAddressesPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		AddressesPackageImpl theAddressesPackage = registeredAddressesPackage instanceof AddressesPackageImpl ? (AddressesPackageImpl)registeredAddressesPackage : new AddressesPackageImpl();
 
 		isInited = true;
 
@@ -98,7 +99,6 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 		// Mark meta-data to indicate it can't be changed
 		theAddressesPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(AddressesPackage.eNS_URI, theAddressesPackage);
 		return theAddressesPackage;
@@ -109,6 +109,7 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIdentifiedElement() {
 		return identifiedElementEClass;
 	}
@@ -118,6 +119,7 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getIdentifiedElement_Id() {
 		return (EAttribute)identifiedElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -127,6 +129,7 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAddresses() {
 		return addressesEClass;
 	}
@@ -136,6 +139,7 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAddresses_Addresses() {
 		return (EReference)addressesEClass.getEStructuralFeatures().get(0);
 	}
@@ -145,6 +149,7 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAddress() {
 		return addressEClass;
 	}
@@ -154,6 +159,7 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAddress_Parent() {
 		return (EReference)addressEClass.getEStructuralFeatures().get(0);
 	}
@@ -163,6 +169,7 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAddress_Number() {
 		return (EAttribute)addressEClass.getEStructuralFeatures().get(1);
 	}
@@ -172,6 +179,7 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAddress_Street() {
 		return (EAttribute)addressEClass.getEStructuralFeatures().get(2);
 	}
@@ -181,6 +189,7 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAddress_ZipCode() {
 		return (EAttribute)addressEClass.getEStructuralFeatures().get(3);
 	}
@@ -190,6 +199,7 @@ public class AddressesPackageImpl extends EPackageImpl implements AddressesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AddressesFactory getAddressesFactory() {
 		return (AddressesFactory)getEFactoryInstance();
 	}

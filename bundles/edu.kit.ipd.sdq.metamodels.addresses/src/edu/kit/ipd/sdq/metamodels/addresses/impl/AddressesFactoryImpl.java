@@ -68,6 +68,7 @@ public class AddressesFactoryImpl extends EFactoryImpl implements AddressesFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Addresses createAddresses() {
 		AddressesImpl addresses = new AddressesImpl();
 		return addresses;
@@ -78,6 +79,7 @@ public class AddressesFactoryImpl extends EFactoryImpl implements AddressesFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Address createAddress() {
 		AddressImpl address = new AddressImpl();
 		return address;
@@ -88,6 +90,7 @@ public class AddressesFactoryImpl extends EFactoryImpl implements AddressesFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AddressesPackage getAddressesPackage() {
 		return (AddressesPackage)getEPackage();
 	}

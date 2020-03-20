@@ -90,6 +90,7 @@ public class FamilyRegisterImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Family> getFamilies() {
 		if (families == null) {
 			families = new EObjectContainmentEList<Family>(Family.class, this, FamiliesPackage.FAMILY_REGISTER__FAMILIES);
@@ -102,6 +103,7 @@ public class FamilyRegisterImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
 		return id;
 	}
@@ -111,6 +113,7 @@ public class FamilyRegisterImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
 		String oldId = id;
 		id = newId;
@@ -211,7 +214,7 @@ public class FamilyRegisterImpl extends MinimalEObjectImpl.Container implements 
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (id: ");
 		result.append(id);
 		result.append(')');

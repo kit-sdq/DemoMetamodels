@@ -116,6 +116,7 @@ public class AddressImpl extends IdentifiedElementImpl implements Address {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Addresses getParent() {
 		if (eContainerFeatureID() != AddressesPackage.ADDRESS__PARENT) return null;
 		return (Addresses)eInternalContainer();
@@ -136,6 +137,7 @@ public class AddressImpl extends IdentifiedElementImpl implements Address {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParent(Addresses newParent) {
 		if (newParent != eInternalContainer() || (eContainerFeatureID() != AddressesPackage.ADDRESS__PARENT && newParent != null)) {
 			if (EcoreUtil.isAncestor(this, newParent))
@@ -157,6 +159,7 @@ public class AddressImpl extends IdentifiedElementImpl implements Address {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getNumber() {
 		return number;
 	}
@@ -166,6 +169,7 @@ public class AddressImpl extends IdentifiedElementImpl implements Address {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNumber(int newNumber) {
 		int oldNumber = number;
 		number = newNumber;
@@ -178,6 +182,7 @@ public class AddressImpl extends IdentifiedElementImpl implements Address {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStreet() {
 		return street;
 	}
@@ -187,6 +192,7 @@ public class AddressImpl extends IdentifiedElementImpl implements Address {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStreet(String newStreet) {
 		String oldStreet = street;
 		street = newStreet;
@@ -199,6 +205,7 @@ public class AddressImpl extends IdentifiedElementImpl implements Address {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getZipCode() {
 		return zipCode;
 	}
@@ -208,6 +215,7 @@ public class AddressImpl extends IdentifiedElementImpl implements Address {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setZipCode(String newZipCode) {
 		String oldZipCode = zipCode;
 		zipCode = newZipCode;
@@ -356,7 +364,7 @@ public class AddressImpl extends IdentifiedElementImpl implements Address {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (number: ");
 		result.append(number);
 		result.append(", street: ");

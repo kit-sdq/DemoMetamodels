@@ -7,6 +7,10 @@
   <foreignModel>families.ecore</foreignModel>
   <genPackages prefix="Families" basePackage="edu.kit.ipd.sdq.metamodels" disposableProviderFactory="true"
       ecorePackage="families.ecore#/">
+    <genClasses ecoreClass="families.ecore#//FamilyRegister">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference families.ecore#//FamilyRegister/families"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute families.ecore#//FamilyRegister/id"/>
+    </genClasses>
     <genClasses ecoreClass="families.ecore#//Family">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute families.ecore#//Family/lastName"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference families.ecore#//Family/sons"/>
@@ -20,9 +24,6 @@
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference families.ecore#//Member/familyDaughter"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference families.ecore#//Member/familyFather"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference families.ecore#//Member/familyMother"/>
-    </genClasses>
-    <genClasses ecoreClass="families.ecore#//FamiliesRoot">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference families.ecore#//FamiliesRoot/families"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

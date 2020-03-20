@@ -65,6 +65,7 @@ public class RecipientsImpl extends IdentifiedElementImpl implements Recipients 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Recipient> getRecipients() {
 		if (recipients == null) {
 			recipients = new EObjectContainmentWithInverseEList<Recipient>(Recipient.class, this, RecipientsPackage.RECIPIENTS__RECIPIENTS, RecipientsPackage.RECIPIENT__PARENT);

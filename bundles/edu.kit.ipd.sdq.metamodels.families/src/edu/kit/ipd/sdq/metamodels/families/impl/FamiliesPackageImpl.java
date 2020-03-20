@@ -71,7 +71,7 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link FamiliesPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -85,7 +85,8 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 		if (isInited) return (FamiliesPackage)EPackage.Registry.INSTANCE.getEPackage(FamiliesPackage.eNS_URI);
 
 		// Obtain or create and register package
-		FamiliesPackageImpl theFamiliesPackage = (FamiliesPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof FamiliesPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new FamiliesPackageImpl());
+		Object registeredFamiliesPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		FamiliesPackageImpl theFamiliesPackage = registeredFamiliesPackage instanceof FamiliesPackageImpl ? (FamiliesPackageImpl)registeredFamiliesPackage : new FamiliesPackageImpl();
 
 		isInited = true;
 
@@ -98,7 +99,6 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 		// Mark meta-data to indicate it can't be changed
 		theFamiliesPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(FamiliesPackage.eNS_URI, theFamiliesPackage);
 		return theFamiliesPackage;
@@ -109,6 +109,7 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFamilyRegister() {
 		return familyRegisterEClass;
 	}
@@ -118,6 +119,7 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFamilyRegister_Families() {
 		return (EReference)familyRegisterEClass.getEStructuralFeatures().get(0);
 	}
@@ -127,6 +129,7 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFamilyRegister_Id() {
 		return (EAttribute)familyRegisterEClass.getEStructuralFeatures().get(1);
 	}
@@ -136,6 +139,7 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFamily() {
 		return familyEClass;
 	}
@@ -145,6 +149,7 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFamily_LastName() {
 		return (EAttribute)familyEClass.getEStructuralFeatures().get(0);
 	}
@@ -154,6 +159,7 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFamily_Sons() {
 		return (EReference)familyEClass.getEStructuralFeatures().get(1);
 	}
@@ -163,6 +169,7 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFamily_Daughters() {
 		return (EReference)familyEClass.getEStructuralFeatures().get(2);
 	}
@@ -172,6 +179,7 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFamily_Father() {
 		return (EReference)familyEClass.getEStructuralFeatures().get(3);
 	}
@@ -181,6 +189,7 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFamily_Mother() {
 		return (EReference)familyEClass.getEStructuralFeatures().get(4);
 	}
@@ -190,6 +199,7 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMember() {
 		return memberEClass;
 	}
@@ -199,6 +209,7 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMember_FirstName() {
 		return (EAttribute)memberEClass.getEStructuralFeatures().get(0);
 	}
@@ -208,6 +219,7 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMember_FamilySon() {
 		return (EReference)memberEClass.getEStructuralFeatures().get(1);
 	}
@@ -217,6 +229,7 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMember_FamilyDaughter() {
 		return (EReference)memberEClass.getEStructuralFeatures().get(2);
 	}
@@ -226,6 +239,7 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMember_FamilyFather() {
 		return (EReference)memberEClass.getEStructuralFeatures().get(3);
 	}
@@ -235,6 +249,7 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMember_FamilyMother() {
 		return (EReference)memberEClass.getEStructuralFeatures().get(4);
 	}
@@ -244,6 +259,7 @@ public class FamiliesPackageImpl extends EPackageImpl implements FamiliesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FamiliesFactory getFamiliesFactory() {
 		return (FamiliesFactory)getEFactoryInstance();
 	}

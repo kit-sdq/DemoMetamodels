@@ -95,6 +95,7 @@ public class LocationImpl extends IdentifiedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Recipient getParent() {
 		if (eContainerFeatureID() != RecipientsPackage.LOCATION__PARENT) return null;
 		return (Recipient)eInternalContainer();
@@ -115,6 +116,7 @@ public class LocationImpl extends IdentifiedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParent(Recipient newParent) {
 		if (newParent != eInternalContainer() || (eContainerFeatureID() != RecipientsPackage.LOCATION__PARENT && newParent != null)) {
 			if (EcoreUtil.isAncestor(this, newParent))
@@ -136,6 +138,7 @@ public class LocationImpl extends IdentifiedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getNumber() {
 		return number;
 	}
@@ -145,6 +148,7 @@ public class LocationImpl extends IdentifiedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNumber(int newNumber) {
 		int oldNumber = number;
 		number = newNumber;
@@ -157,6 +161,7 @@ public class LocationImpl extends IdentifiedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStreet() {
 		return street;
 	}
@@ -166,6 +171,7 @@ public class LocationImpl extends IdentifiedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStreet(String newStreet) {
 		String oldStreet = street;
 		street = newStreet;
@@ -304,7 +310,7 @@ public class LocationImpl extends IdentifiedElementImpl implements Location {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (number: ");
 		result.append(number);
 		result.append(", street: ");

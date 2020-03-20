@@ -13,3 +13,4 @@ Export-Package: edu.kit.ipd.sdq.metamodels.addresses,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: edu.kit.ipd.sdq.metamodels.addresses
