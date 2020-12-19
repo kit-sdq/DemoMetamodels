@@ -74,6 +74,7 @@ public class CityImpl extends IdentifiedElementImpl implements City {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Recipient getParent() {
 		if (eContainerFeatureID() != RecipientsPackage.CITY__PARENT) return null;
 		return (Recipient)eInternalContainer();
@@ -94,6 +95,7 @@ public class CityImpl extends IdentifiedElementImpl implements City {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParent(Recipient newParent) {
 		if (newParent != eInternalContainer() || (eContainerFeatureID() != RecipientsPackage.CITY__PARENT && newParent != null)) {
 			if (EcoreUtil.isAncestor(this, newParent))
@@ -115,6 +117,7 @@ public class CityImpl extends IdentifiedElementImpl implements City {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getZipCode() {
 		return zipCode;
 	}
@@ -124,6 +127,7 @@ public class CityImpl extends IdentifiedElementImpl implements City {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setZipCode(String newZipCode) {
 		String oldZipCode = zipCode;
 		zipCode = newZipCode;
@@ -252,7 +256,7 @@ public class CityImpl extends IdentifiedElementImpl implements City {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (zipCode: ");
 		result.append(zipCode);
 		result.append(')');

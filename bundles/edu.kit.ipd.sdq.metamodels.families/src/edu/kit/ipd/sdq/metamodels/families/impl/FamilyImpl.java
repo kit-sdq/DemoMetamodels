@@ -124,6 +124,7 @@ public class FamilyImpl extends MinimalEObjectImpl.Container implements Family {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLastName() {
 		return lastName;
 	}
@@ -133,6 +134,7 @@ public class FamilyImpl extends MinimalEObjectImpl.Container implements Family {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLastName(String newLastName) {
 		String oldLastName = lastName;
 		lastName = newLastName;
@@ -145,6 +147,7 @@ public class FamilyImpl extends MinimalEObjectImpl.Container implements Family {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Member> getSons() {
 		if (sons == null) {
 			sons = new EObjectContainmentWithInverseEList<Member>(Member.class, this, FamiliesPackage.FAMILY__SONS, FamiliesPackage.MEMBER__FAMILY_SON);
@@ -157,6 +160,7 @@ public class FamilyImpl extends MinimalEObjectImpl.Container implements Family {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Member> getDaughters() {
 		if (daughters == null) {
 			daughters = new EObjectContainmentWithInverseEList<Member>(Member.class, this, FamiliesPackage.FAMILY__DAUGHTERS, FamiliesPackage.MEMBER__FAMILY_DAUGHTER);
@@ -169,6 +173,7 @@ public class FamilyImpl extends MinimalEObjectImpl.Container implements Family {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Member getFather() {
 		return father;
 	}
@@ -193,6 +198,7 @@ public class FamilyImpl extends MinimalEObjectImpl.Container implements Family {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFather(Member newFather) {
 		if (newFather != father) {
 			NotificationChain msgs = null;
@@ -212,6 +218,7 @@ public class FamilyImpl extends MinimalEObjectImpl.Container implements Family {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Member getMother() {
 		return mother;
 	}
@@ -236,6 +243,7 @@ public class FamilyImpl extends MinimalEObjectImpl.Container implements Family {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMother(Member newMother) {
 		if (newMother != mother) {
 			NotificationChain msgs = null;
@@ -405,7 +413,7 @@ public class FamilyImpl extends MinimalEObjectImpl.Container implements Family {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (lastName: ");
 		result.append(lastName);
 		result.append(')');

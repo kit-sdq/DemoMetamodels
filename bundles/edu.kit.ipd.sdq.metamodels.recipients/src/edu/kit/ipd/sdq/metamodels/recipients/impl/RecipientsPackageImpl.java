@@ -87,7 +87,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link RecipientsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -101,7 +101,8 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 		if (isInited) return (RecipientsPackage)EPackage.Registry.INSTANCE.getEPackage(RecipientsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		RecipientsPackageImpl theRecipientsPackage = (RecipientsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof RecipientsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new RecipientsPackageImpl());
+		Object registeredRecipientsPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		RecipientsPackageImpl theRecipientsPackage = registeredRecipientsPackage instanceof RecipientsPackageImpl ? (RecipientsPackageImpl)registeredRecipientsPackage : new RecipientsPackageImpl();
 
 		isInited = true;
 
@@ -114,7 +115,6 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 		// Mark meta-data to indicate it can't be changed
 		theRecipientsPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(RecipientsPackage.eNS_URI, theRecipientsPackage);
 		return theRecipientsPackage;
@@ -125,6 +125,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIdentifiedElement() {
 		return identifiedElementEClass;
 	}
@@ -134,6 +135,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getIdentifiedElement_Id() {
 		return (EAttribute)identifiedElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -143,6 +145,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRecipient() {
 		return recipientEClass;
 	}
@@ -152,6 +155,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRecipient_Parent() {
 		return (EReference)recipientEClass.getEStructuralFeatures().get(0);
 	}
@@ -161,6 +165,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRecipient_Business() {
 		return (EAttribute)recipientEClass.getEStructuralFeatures().get(1);
 	}
@@ -170,6 +175,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRecipient_LocatedAt() {
 		return (EReference)recipientEClass.getEStructuralFeatures().get(2);
 	}
@@ -179,6 +185,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRecipient_LocatedIn() {
 		return (EReference)recipientEClass.getEStructuralFeatures().get(3);
 	}
@@ -188,6 +195,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLocation() {
 		return locationEClass;
 	}
@@ -197,6 +205,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLocation_Parent() {
 		return (EReference)locationEClass.getEStructuralFeatures().get(0);
 	}
@@ -206,6 +215,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLocation_Number() {
 		return (EAttribute)locationEClass.getEStructuralFeatures().get(1);
 	}
@@ -215,6 +225,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLocation_Street() {
 		return (EAttribute)locationEClass.getEStructuralFeatures().get(2);
 	}
@@ -224,6 +235,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCity() {
 		return cityEClass;
 	}
@@ -233,6 +245,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCity_Parent() {
 		return (EReference)cityEClass.getEStructuralFeatures().get(0);
 	}
@@ -242,6 +255,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCity_ZipCode() {
 		return (EAttribute)cityEClass.getEStructuralFeatures().get(1);
 	}
@@ -251,6 +265,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRecipients() {
 		return recipientsEClass;
 	}
@@ -260,6 +275,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRecipients_Recipients() {
 		return (EReference)recipientsEClass.getEStructuralFeatures().get(0);
 	}
@@ -269,6 +285,7 @@ public class RecipientsPackageImpl extends EPackageImpl implements RecipientsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RecipientsFactory getRecipientsFactory() {
 		return (RecipientsFactory)getEFactoryInstance();
 	}

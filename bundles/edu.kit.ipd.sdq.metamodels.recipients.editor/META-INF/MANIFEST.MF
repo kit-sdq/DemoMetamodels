@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: edu.kit.ipd.sdq.metamodels.recipients.editor;singleton:=true
-Bundle-Version: 1.2.0.qualifier
+Bundle-Version: 1.4.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: edu.kit.ipd.sdq.metamodels.recipients.presentation.RecipientsEditorPlugin$Implementation
 Bundle-Vendor: %providerName
@@ -16,3 +16,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: edu.kit.ipd.sdq.metamodels.recipients.editor

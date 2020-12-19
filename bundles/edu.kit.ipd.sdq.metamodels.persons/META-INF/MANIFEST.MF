@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: edu.kit.ipd.sdq.metamodels.persons;singleton:=true
-Bundle-Version: 1.2.0.qualifier
+Bundle-Version: 1.4.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
@@ -13,3 +13,4 @@ Export-Package: edu.kit.ipd.sdq.metamodels.persons,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: edu.kit.ipd.sdq.metamodels.persons
