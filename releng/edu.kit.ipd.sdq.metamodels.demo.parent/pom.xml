@@ -9,11 +9,9 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
 		<tycho.version>1.5.1</tycho.version>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven.compiler.source>1.8</maven.compiler.source>
 	</properties>
+
 	<repositories>
 		<repository>
 			<id>Eclipse 2019-12</id>
@@ -22,23 +20,16 @@
 			<url>http://ftp-stud.hs-esslingen.de/pub/Mirrors/eclipse/releases/2019-12/</url>
 		</repository>
 	</repositories>
+
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.0</version>
-				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-				</configuration>
-			</plugin>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-maven-plugin</artifactId>
 				<version>${tycho.version}</version>
 				<extensions>true</extensions>
 			</plugin>
+
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
@@ -63,6 +54,7 @@
 					</environments>
 				</configuration>
 			</plugin>
+
 			<!-- Creates source versions of bundles -->
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
@@ -77,6 +69,7 @@
 					</execution>
 				</executions>
 			</plugin>
+
 			<!-- Creates source versions of features -->
 			<plugin>
 				<groupId>org.eclipse.tycho.extras</groupId>
@@ -92,6 +85,7 @@
 					</execution>
 				</executions>
 			</plugin>
+
 			<!-- Correctly handles source features on p2 update site -->
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
