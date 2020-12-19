@@ -18,7 +18,6 @@
    </license>
 
    <requires>
-      <import feature="org.eclipse.xtend.sdk" version="2.18.0" match="greaterOrEqual"/>
       <import feature="org.eclipse.emf.ecore" version="2.12.0" match="greaterOrEqual"/>
    </requires>
    
