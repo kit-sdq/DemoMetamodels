@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: edu.kit.ipd.sdq.metamodels.insurance.editor;singleton:=true
 Automatic-Module-Name: edu.kit.ipd.sdq.metamodels.insurance.editor
-Bundle-Version: 1.4.0
+Bundle-Version: 1.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: edu.kit.ipd.sdq.metamodels.insurance.presentation.InsuranceEditorPlugin$Implementation
 Bundle-Vendor: %providerName
