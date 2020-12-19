@@ -10,7 +10,7 @@ before_install:
     - . /tmp/BuildUtilities/travis-ci/setupenvironment.sh
 install: true
 
-script: mvn clean verify
+script: ./mvnw -B clean verify
 
 after_success:
 - . /tmp/BuildUtilities/travis-ci/deploy.sh metamodels/demo releng/edu.kit.ipd.sdq.metamodels.demo.updatesite repository kit-sdq updatesite
