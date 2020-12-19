@@ -13,7 +13,6 @@ xtend-gen/
 *.xtendbin
 
 # Maven
-bundles/*/target/*
-features/*/target/*
-releng/*/target/*
-releng/*/workspace/*
+target/
+.polyglot.build.properties
+.mvn/wrapper/maven-wrapper.jar
