@@ -55,6 +55,7 @@ public class InsuranceClientItemProvider extends ItemProviderAdapter implements 
 
 			addNamePropertyDescriptor(object);
 			addSocialSecurityNumberPropertyDescriptor(object);
+			addGenderPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -89,6 +90,22 @@ public class InsuranceClientItemProvider extends ItemProviderAdapter implements 
 						"_UI_InsuranceClient_type"),
 				InsurancePackage.Literals.INSURANCE_CLIENT__SOCIAL_SECURITY_NUMBER, true, false, false,
 				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Gender feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGenderPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_InsuranceClient_gender_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_InsuranceClient_gender_feature",
+								"_UI_InsuranceClient_type"),
+						InsurancePackage.Literals.INSURANCE_CLIENT__GENDER, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -139,6 +156,7 @@ public class InsuranceClientItemProvider extends ItemProviderAdapter implements 
 		switch (notification.getFeatureID(InsuranceClient.class)) {
 		case InsurancePackage.INSURANCE_CLIENT__NAME:
 		case InsurancePackage.INSURANCE_CLIENT__SOCIAL_SECURITY_NUMBER:
+		case InsurancePackage.INSURANCE_CLIENT__GENDER:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
