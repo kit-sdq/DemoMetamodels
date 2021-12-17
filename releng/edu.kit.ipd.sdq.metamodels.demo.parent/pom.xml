@@ -10,6 +10,11 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<tycho.version>2.1.0</tycho.version>
+		<mwe.version>1.6.1</mwe.version>
+		<mwe2.version>2.12.1</mwe2.version>
+		<emf-codegen.version>2.22.0</emf-codegen.version>
+		<ecore-codegen.version>2.26.0</ecore-codegen.version>
+		<xtext.version>2.25.0</xtext.version>
 	</properties>
 
 	<repositories>
@@ -111,5 +116,138 @@
 				</executions>
 			</plugin>
 		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<!-- Configure exec-maven-plugin for launching MWE2 -->
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>3.0.0</version>
+					<dependencies>
+						<dependency>
+							<groupId>org.eclipse.emf</groupId>
+							<artifactId>org.eclipse.emf.mwe2.launch</artifactId>
+							<version>${mwe2.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.eclipse.xtext</groupId>
+							<artifactId>org.eclipse.xtext.common.types</artifactId>
+							<version>${xtext.version}</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
+
+	<profiles>
+		<!-- Runs "workflow/clean.mwe2" workflow in clean phase, if existing -->
+		<profile>
+			<id>mwe2-cleanup</id>
+			<activation>
+				<file>
+					<exists>workflow/clean.mwe2</exists>
+				</file>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>clean-mwe2</id>
+								<phase>clean</phase>
+								<goals>
+									<goal>java</goal>
+								</goals>
+								<configuration>
+									<mainClass>org.eclipse.emf.mwe2.launch.runtime.Mwe2Launcher</mainClass>
+									<arguments>
+										<argument>/${project.basedir}/workflow/clean.mwe2</argument>
+										<argument>-p</argument>
+										<argument>rootPath=/${project.basedir}/..</argument>
+									</arguments>
+									<classpathScope>compile</classpathScope>
+									<includePluginDependencies>true</includePluginDependencies>
+									<cleanupDaemonThreads>false</cleanupDaemonThreads>
+									<!-- see https://bugs.eclipse.org/bugs/show_bug.cgi?id=475098#c3 -->
+								</configuration>
+							</execution>
+						</executions>
+						<dependencies>
+							<dependency>
+								<groupId>org.eclipse.emf</groupId>
+								<artifactId>org.eclipse.emf.mwe.utils</artifactId>
+								<version>${mwe.version}</version>
+							</dependency>
+						</dependencies>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<!-- Runs "workflow/generate.mwe2" workflow in generate-source phase, if existing, with dependencies for Ecore
+			metamodel code generation. -->
+		<profile>
+			<id>mwe2-execution</id>
+			<activation>
+				<file>
+					<exists>workflow/generate.mwe2</exists>
+				</file>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>execute-mwe2</id>
+								<phase>generate-sources</phase>
+								<goals>
+									<goal>java</goal>
+								</goals>
+								<configuration>
+									<mainClass>org.eclipse.emf.mwe2.launch.runtime.Mwe2Launcher</mainClass>
+									<arguments>
+										<argument>/${project.basedir}/workflow/generate.mwe2</argument>
+										<argument>-p</argument>
+										<argument>rootPath=/${project.basedir}/..</argument>
+									</arguments>
+									<classpathScope>compile</classpathScope>
+									<includePluginDependencies>true</includePluginDependencies>
+									<cleanupDaemonThreads>false</cleanupDaemonThreads>
+									<!-- see https://bugs.eclipse.org/bugs/show_bug.cgi?id=475098#c3 -->
+								</configuration>
+							</execution>
+						</executions>
+						<dependencies>
+							<dependency>
+								<groupId>org.eclipse.emf</groupId>
+								<artifactId>org.eclipse.emf.mwe2.lib</artifactId>
+								<version>${mwe2.version}</version>
+							</dependency>
+							<dependency>
+								<groupId>org.eclipse.emf</groupId>
+								<artifactId>org.eclipse.emf.codegen</artifactId>
+								<version>${emf-codegen.version}</version>
+							</dependency>
+							<dependency>
+								<groupId>org.eclipse.emf</groupId>
+								<artifactId>org.eclipse.emf.codegen.ecore</artifactId>
+								<version>${ecore-codegen.version}</version>
+							</dependency>
+							<dependency>
+								<groupId>org.eclipse.emf</groupId>
+								<artifactId>org.eclipse.emf.mwe.utils</artifactId>
+								<version>${mwe.version}</version>
+							</dependency>
+						</dependencies>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>

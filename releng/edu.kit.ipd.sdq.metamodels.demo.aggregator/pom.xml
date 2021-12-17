@@ -11,6 +11,7 @@
 	<artifactId>edu.kit.ipd.sdq.metamodels.demo.aggregator</artifactId>
 	<packaging>pom</packaging>
 	<modules>
+		<module>../../releng/edu.kit.ipd.sdq.metamodels.workflow</module>
 		<module>../../bundles/edu.kit.ipd.sdq.metamodels.addresses</module>
 		<module>../../bundles/edu.kit.ipd.sdq.metamodels.addresses.edit</module>
 		<module>../../bundles/edu.kit.ipd.sdq.metamodels.addresses.editor</module>
