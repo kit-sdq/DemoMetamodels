@@ -11,9 +11,9 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Insurance" basePackage="edu.kit.ipd.sdq.metamodels" disposableProviderFactory="true"
       ecorePackage="insurance.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="insurance.ecore#//Sex">
-      <genEnumLiterals ecoreEnumLiteral="insurance.ecore#//Sex/MALE"/>
-      <genEnumLiterals ecoreEnumLiteral="insurance.ecore#//Sex/FEMALE"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="insurance.ecore#//Gender">
+      <genEnumLiterals ecoreEnumLiteral="insurance.ecore#//Gender/MALE"/>
+      <genEnumLiterals ecoreEnumLiteral="insurance.ecore#//Gender/FEMALE"/>
     </genEnums>
     <genClasses ecoreClass="insurance.ecore#//InsuranceDatabase">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference insurance.ecore#//InsuranceDatabase/insuranceclient"/>
@@ -21,6 +21,7 @@
     <genClasses ecoreClass="insurance.ecore#//InsuranceClient">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute insurance.ecore#//InsuranceClient/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute insurance.ecore#//InsuranceClient/socialSecurityNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute insurance.ecore#//InsuranceClient/gender"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

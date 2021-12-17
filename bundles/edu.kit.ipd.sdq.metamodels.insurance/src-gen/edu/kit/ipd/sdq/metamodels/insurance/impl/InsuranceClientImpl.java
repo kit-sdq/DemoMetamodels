@@ -2,6 +2,7 @@
  */
 package edu.kit.ipd.sdq.metamodels.insurance.impl;
 
+import edu.kit.ipd.sdq.metamodels.insurance.Gender;
 import edu.kit.ipd.sdq.metamodels.insurance.InsuranceClient;
 import edu.kit.ipd.sdq.metamodels.insurance.InsurancePackage;
 
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.metamodels.insurance.impl.InsuranceClientImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.metamodels.insurance.impl.InsuranceClientImpl#getSocialSecurityNumber <em>Social Security Number</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.metamodels.insurance.impl.InsuranceClientImpl#getGender <em>Gender</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +68,26 @@ public class InsuranceClientImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String socialSecurityNumber = SOCIAL_SECURITY_NUMBER_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getGender() <em>Gender</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGender()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Gender GENDER_EDEFAULT = Gender.MALE;
+
+	/**
+	 * The cached value of the '{@link #getGender() <em>Gender</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGender()
+	 * @generated
+	 * @ordered
+	 */
+	protected Gender gender = GENDER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -136,6 +158,28 @@ public class InsuranceClientImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Gender getGender() {
+		return gender;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGender(Gender newGender) {
+		Gender oldGender = gender;
+		gender = newGender == null ? GENDER_EDEFAULT : newGender;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, InsurancePackage.INSURANCE_CLIENT__GENDER, oldGender,
+					gender));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -143,6 +187,8 @@ public class InsuranceClientImpl extends MinimalEObjectImpl.Container implements
 			return getName();
 		case InsurancePackage.INSURANCE_CLIENT__SOCIAL_SECURITY_NUMBER:
 			return getSocialSecurityNumber();
+		case InsurancePackage.INSURANCE_CLIENT__GENDER:
+			return getGender();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -160,6 +206,9 @@ public class InsuranceClientImpl extends MinimalEObjectImpl.Container implements
 			return;
 		case InsurancePackage.INSURANCE_CLIENT__SOCIAL_SECURITY_NUMBER:
 			setSocialSecurityNumber((String) newValue);
+			return;
+		case InsurancePackage.INSURANCE_CLIENT__GENDER:
+			setGender((Gender) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -179,6 +228,9 @@ public class InsuranceClientImpl extends MinimalEObjectImpl.Container implements
 		case InsurancePackage.INSURANCE_CLIENT__SOCIAL_SECURITY_NUMBER:
 			setSocialSecurityNumber(SOCIAL_SECURITY_NUMBER_EDEFAULT);
 			return;
+		case InsurancePackage.INSURANCE_CLIENT__GENDER:
+			setGender(GENDER_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -196,6 +248,8 @@ public class InsuranceClientImpl extends MinimalEObjectImpl.Container implements
 		case InsurancePackage.INSURANCE_CLIENT__SOCIAL_SECURITY_NUMBER:
 			return SOCIAL_SECURITY_NUMBER_EDEFAULT == null ? socialSecurityNumber != null
 					: !SOCIAL_SECURITY_NUMBER_EDEFAULT.equals(socialSecurityNumber);
+		case InsurancePackage.INSURANCE_CLIENT__GENDER:
+			return gender != GENDER_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -215,6 +269,8 @@ public class InsuranceClientImpl extends MinimalEObjectImpl.Container implements
 		result.append(name);
 		result.append(", socialSecurityNumber: ");
 		result.append(socialSecurityNumber);
+		result.append(", gender: ");
+		result.append(gender);
 		result.append(')');
 		return result.toString();
 	}

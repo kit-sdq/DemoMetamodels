@@ -8,8 +8,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="InsuranceClient">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="socialSecurityNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" eType="#//Gender"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Sex">
+  <eClassifiers xsi:type="ecore:EEnum" name="Gender">
     <eLiterals name="MALE"/>
     <eLiterals name="FEMALE" value="1"/>
   </eClassifiers>

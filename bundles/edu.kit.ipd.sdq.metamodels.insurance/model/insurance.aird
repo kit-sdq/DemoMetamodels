@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis uid="_T52JAGrEEeqek6MsJmxUyg" selectedViews="_UGJfoGrEEeqek6MsJmxUyg" version="14.3.0.201909031200">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_T52JAGrEEeqek6MsJmxUyg" selectedViews="_UGJfoGrEEeqek6MsJmxUyg" version="14.5.1.202106111100">
     <semanticResources>insurance.ecore</semanticResources>
     <semanticResources>insurance.genmodel</semanticResources>
     <semanticResources>../.polyglot.build.properties</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_UGJfoGrEEeqek6MsJmxUyg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_UZAKMWrEEeqek6MsJmxUyg" name="insurance" repPath="#_UYz88GrEEeqek6MsJmxUyg" changeId="689609ad-175e-4dc2-be31-154f7b8bba6c">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_UZAKMWrEEeqek6MsJmxUyg" name="insurance" repPath="#_UYz88GrEEeqek6MsJmxUyg" changeId="f1cfa9fc-d87d-4872-ac4f-7120e0309964">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="insurance.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -47,6 +47,10 @@
             <children xmi:type="notation:Node" xmi:id="_hOsDMGrEEeqek6MsJmxUyg" type="3010" element="_hOkHYGrEEeqek6MsJmxUyg">
               <styles xmi:type="notation:FontStyle" xmi:id="_hOsDMWrEEeqek6MsJmxUyg" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_hOsqQGrEEeqek6MsJmxUyg"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_JHG8218NEey6NcU_y6112w" type="3010" element="_JG0B4F8NEey6NcU_y6112w">
+              <styles xmi:type="notation:FontStyle" xmi:id="_JHG83F8NEey6NcU_y6112w" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_JHG83V8NEey6NcU_y6112w"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_bh7UsmrEEeqek6MsJmxUyg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_bh7Us2rEEeqek6MsJmxUyg"/>
@@ -101,7 +105,7 @@
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_bh2cMGrEEeqek6MsJmxUyg" name="InsuranceClient" tooltipText="" incomingEdges="_q4f2EGrEEeqek6MsJmxUyg" width="12" height="10">
       <target xmi:type="ecore:EClass" href="insurance.ecore#//InsuranceClient"/>
       <semanticElements xmi:type="ecore:EClass" href="insurance.ecore#//InsuranceClient"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_kgCfMWrEEeqek6MsJmxUyg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_KnOrw18NEey6NcU_y6112w" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
@@ -121,25 +125,33 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_JG0B4F8NEey6NcU_y6112w" name="gender : Gender = MALE" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="insurance.ecore#//InsuranceClient/gender"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="insurance.ecore#//InsuranceClient/gender"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_KnOryF8NEey6NcU_y6112w" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_lm6AoGrEEeqek6MsJmxUyg" name="Sex" tooltipText="" width="12" height="10">
-      <target xmi:type="ecore:EEnum" href="insurance.ecore#//Sex"/>
-      <semanticElements xmi:type="ecore:EEnum" href="insurance.ecore#//Sex"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_lm6AoGrEEeqek6MsJmxUyg" name="Gender" tooltipText="" width="12" height="10">
+      <target xmi:type="ecore:EEnum" href="insurance.ecore#//Gender"/>
+      <semanticElements xmi:type="ecore:EEnum" href="insurance.ecore#//Gender"/>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_lm6AoWrEEeqek6MsJmxUyg" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="221,236,202">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_n7PawGrEEeqek6MsJmxUyg" name="MALE" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="insurance.ecore#//Sex/MALE"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="insurance.ecore#//Sex/MALE"/>
+        <target xmi:type="ecore:EEnumLiteral" href="insurance.ecore#//Gender/MALE"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="insurance.ecore#//Gender/MALE"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_n7PawWrEEeqek6MsJmxUyg" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_o9Ui0GrEEeqek6MsJmxUyg" name="FEMALE" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="insurance.ecore#//Sex/FEMALE"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="insurance.ecore#//Sex/FEMALE"/>
+        <target xmi:type="ecore:EEnumLiteral" href="insurance.ecore#//Gender/FEMALE"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="insurance.ecore#//Gender/FEMALE"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_o9Ui0WrEEeqek6MsJmxUyg" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>

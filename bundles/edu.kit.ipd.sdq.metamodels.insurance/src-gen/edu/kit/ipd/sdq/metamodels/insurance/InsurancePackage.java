@@ -123,13 +123,22 @@ public interface InsurancePackage extends EPackage {
 	int INSURANCE_CLIENT__SOCIAL_SECURITY_NUMBER = 1;
 
 	/**
+	 * The feature id for the '<em><b>Gender</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSURANCE_CLIENT__GENDER = 2;
+
+	/**
 	 * The number of structural features of the '<em>Client</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INSURANCE_CLIENT_FEATURE_COUNT = 2;
+	int INSURANCE_CLIENT_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Client</em>' class.
@@ -141,14 +150,14 @@ public interface InsurancePackage extends EPackage {
 	int INSURANCE_CLIENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.metamodels.insurance.Sex <em>Sex</em>}' enum.
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.metamodels.insurance.Gender <em>Gender</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.metamodels.insurance.Sex
-	 * @see edu.kit.ipd.sdq.metamodels.insurance.impl.InsurancePackageImpl#getSex()
+	 * @see edu.kit.ipd.sdq.metamodels.insurance.Gender
+	 * @see edu.kit.ipd.sdq.metamodels.insurance.impl.InsurancePackageImpl#getGender()
 	 * @generated
 	 */
-	int SEX = 2;
+	int GENDER = 2;
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase <em>Database</em>}'.
@@ -204,14 +213,25 @@ public interface InsurancePackage extends EPackage {
 	EAttribute getInsuranceClient_SocialSecurityNumber();
 
 	/**
-	 * Returns the meta object for enum '{@link edu.kit.ipd.sdq.metamodels.insurance.Sex <em>Sex</em>}'.
+	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.metamodels.insurance.InsuranceClient#getGender <em>Gender</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Sex</em>'.
-	 * @see edu.kit.ipd.sdq.metamodels.insurance.Sex
+	 * @return the meta object for the attribute '<em>Gender</em>'.
+	 * @see edu.kit.ipd.sdq.metamodels.insurance.InsuranceClient#getGender()
+	 * @see #getInsuranceClient()
 	 * @generated
 	 */
-	EEnum getSex();
+	EAttribute getInsuranceClient_Gender();
+
+	/**
+	 * Returns the meta object for enum '{@link edu.kit.ipd.sdq.metamodels.insurance.Gender <em>Gender</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Gender</em>'.
+	 * @see edu.kit.ipd.sdq.metamodels.insurance.Gender
+	 * @generated
+	 */
+	EEnum getGender();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -281,14 +301,22 @@ public interface InsurancePackage extends EPackage {
 		EAttribute INSURANCE_CLIENT__SOCIAL_SECURITY_NUMBER = eINSTANCE.getInsuranceClient_SocialSecurityNumber();
 
 		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.metamodels.insurance.Sex <em>Sex</em>}' enum.
+		 * The meta object literal for the '<em><b>Gender</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.metamodels.insurance.Sex
-		 * @see edu.kit.ipd.sdq.metamodels.insurance.impl.InsurancePackageImpl#getSex()
 		 * @generated
 		 */
-		EEnum SEX = eINSTANCE.getSex();
+		EAttribute INSURANCE_CLIENT__GENDER = eINSTANCE.getInsuranceClient_Gender();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.metamodels.insurance.Gender <em>Gender</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.metamodels.insurance.Gender
+		 * @see edu.kit.ipd.sdq.metamodels.insurance.impl.InsurancePackageImpl#getGender()
+		 * @generated
+		 */
+		EEnum GENDER = eINSTANCE.getGender();
 
 	}
 
