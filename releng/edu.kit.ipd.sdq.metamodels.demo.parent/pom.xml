@@ -9,7 +9,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<tycho.version>2.1.0</tycho.version>
+		<tycho.version>2.5.0</tycho.version>
 		<mwe.version>1.6.1</mwe.version>
 		<mwe2.version>2.12.1</mwe2.version>
 		<emf-codegen.version>2.22.0</emf-codegen.version>
