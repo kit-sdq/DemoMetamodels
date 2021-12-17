@@ -7,10 +7,8 @@ tmp/
 *.swp
 *.class
 
-# Xtend
-xtend-gen/
-*._trace
-*.xtendbin
+# EMF
+src-gen/
 
 # Maven
 target/
