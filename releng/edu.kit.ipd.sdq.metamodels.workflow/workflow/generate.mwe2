@@ -9,11 +9,13 @@ var insurancePluginName = "edu.kit.ipd.sdq.metamodels.insurance"
 var personsPluginName = "edu.kit.ipd.sdq.metamodels.persons"
 var recipientsPluginName = "edu.kit.ipd.sdq.metamodels.recipients"
 
-Workflow {
+var workspaceRoot = "../../"
 
+Workflow {
+	
 	bean = StandaloneSetup {
 		scanClassPath = true
-		platformUri = "."
+		platformUri = workspaceRoot
 	}
 	
 	component = EcoreGenerator {
