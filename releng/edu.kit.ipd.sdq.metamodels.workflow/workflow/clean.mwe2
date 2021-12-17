@@ -2,31 +2,74 @@ module clean
 
 import org.eclipse.emf.mwe.utils.DirectoryCleaner
 
-var rootPath = ".."
 var addressesPluginName = "edu.kit.ipd.sdq.metamodels.addresses"
 var familiesPluginName = "edu.kit.ipd.sdq.metamodels.families"
 var insurancePluginName = "edu.kit.ipd.sdq.metamodels.insurance"
 var personsPluginName = "edu.kit.ipd.sdq.metamodels.persons"
 var recipientsPluginName = "edu.kit.ipd.sdq.metamodels.recipients"
 
+var workspaceRoot = "../../"
+
 Workflow {
 
 	component = DirectoryCleaner {
-		directory = "${rootPath}/${addressesPluginName}/src-gen"
-		directory = "${rootPath}/${addressesPluginName}.edit/src-gen"
-		directory = "${rootPath}/${addressesPluginName}.editor/src-gen"
-		directory = "${rootPath}/${familiesPluginName}/src-gen"
-		directory = "${rootPath}/${familiesPluginName}.edit/src-gen"
-		directory = "${rootPath}/${familiesPluginName}.editor/src-gen"
-		directory = "${rootPath}/${insurancePluginName}/src-gen"
-		directory = "${rootPath}/${insurancePluginName}.edit/src-gen"
-		directory = "${rootPath}/${insurancePluginName}.editor/src-gen"
-		directory = "${rootPath}/${personsPluginName}/src-gen"
-		directory = "${rootPath}/${personsPluginName}.edit/src-gen"
-		directory = "${rootPath}/${personsPluginName}.editor/src-gen"
-		directory = "${rootPath}/${recipientsPluginName}/src-gen"
-		directory = "${rootPath}/${recipientsPluginName}.edit/src-gen"
-		directory = "${rootPath}/${recipientsPluginName}.editor/src-gen"
+		directory = "${workspaceRoot}/bundles/${addressesPluginName}/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${addressesPluginName}.edit/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${addressesPluginName}.editor/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${familiesPluginName}/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${familiesPluginName}.edit/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${familiesPluginName}.editor/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${insurancePluginName}/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${insurancePluginName}.edit/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${insurancePluginName}.editor/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${personsPluginName}/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${personsPluginName}.edit/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${personsPluginName}.editor/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${recipientsPluginName}/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${recipientsPluginName}.edit/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${recipientsPluginName}.editor/src-gen"
 	}
 
 }
