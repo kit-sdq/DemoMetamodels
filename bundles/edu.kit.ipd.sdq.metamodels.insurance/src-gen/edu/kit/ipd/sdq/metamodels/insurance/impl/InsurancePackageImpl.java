@@ -2,11 +2,11 @@
  */
 package edu.kit.ipd.sdq.metamodels.insurance.impl;
 
+import edu.kit.ipd.sdq.metamodels.insurance.Gender;
 import edu.kit.ipd.sdq.metamodels.insurance.InsuranceClient;
 import edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase;
 import edu.kit.ipd.sdq.metamodels.insurance.InsuranceFactory;
 import edu.kit.ipd.sdq.metamodels.insurance.InsurancePackage;
-import edu.kit.ipd.sdq.metamodels.insurance.Sex;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -42,7 +42,7 @@ public class InsurancePackageImpl extends EPackageImpl implements InsurancePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum sexEEnum = null;
+	private EEnum genderEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -158,8 +158,17 @@ public class InsurancePackageImpl extends EPackageImpl implements InsurancePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getSex() {
-		return sexEEnum;
+	public EAttribute getInsuranceClient_Gender() {
+		return (EAttribute) insuranceClientEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getGender() {
+		return genderEEnum;
 	}
 
 	/**
@@ -197,9 +206,10 @@ public class InsurancePackageImpl extends EPackageImpl implements InsurancePacka
 		insuranceClientEClass = createEClass(INSURANCE_CLIENT);
 		createEAttribute(insuranceClientEClass, INSURANCE_CLIENT__NAME);
 		createEAttribute(insuranceClientEClass, INSURANCE_CLIENT__SOCIAL_SECURITY_NUMBER);
+		createEAttribute(insuranceClientEClass, INSURANCE_CLIENT__GENDER);
 
 		// Create enums
-		sexEEnum = createEEnum(SEX);
+		genderEEnum = createEEnum(GENDER);
 	}
 
 	/**
@@ -246,11 +256,13 @@ public class InsurancePackageImpl extends EPackageImpl implements InsurancePacka
 		initEAttribute(getInsuranceClient_SocialSecurityNumber(), ecorePackage.getEString(), "socialSecurityNumber",
 				null, 0, 1, InsuranceClient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInsuranceClient_Gender(), this.getGender(), "gender", null, 0, 1, InsuranceClient.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
-		initEEnum(sexEEnum, Sex.class, "Sex");
-		addEEnumLiteral(sexEEnum, Sex.MALE);
-		addEEnumLiteral(sexEEnum, Sex.FEMALE);
+		initEEnum(genderEEnum, Gender.class, "Gender");
+		addEEnumLiteral(genderEEnum, Gender.MALE);
+		addEEnumLiteral(genderEEnum, Gender.FEMALE);
 
 		// Create resource
 		createResource(eNS_URI);

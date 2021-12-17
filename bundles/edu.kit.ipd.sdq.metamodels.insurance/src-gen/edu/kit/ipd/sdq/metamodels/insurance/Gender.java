@@ -10,14 +10,15 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Sex</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Gender</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see edu.kit.ipd.sdq.metamodels.insurance.InsurancePackage#getSex()
+ * @see edu.kit.ipd.sdq.metamodels.insurance.InsurancePackage#getGender()
  * @model
  * @generated
  */
-public enum Sex implements Enumerator {
+public enum Gender implements Enumerator
+{
 	/**
 	 * The '<em><b>MALE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -61,33 +62,41 @@ public enum Sex implements Enumerator {
 	public static final int FEMALE_VALUE = 1;
 
 	/**
-	 * An array of all the '<em><b>Sex</b></em>' enumerators.
+	 * An array of all the '<em><b>Gender</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Sex[] VALUES_ARRAY = new Sex[] { MALE, FEMALE, };
+	private static final Gender[] VALUES_ARRAY =
+		new Gender[]
+		{
+			MALE,
+			FEMALE,
+		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Sex</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Gender</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<Sex> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<Gender> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Sex</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Gender</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Sex get(String literal) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Sex result = VALUES_ARRAY[i];
-			if (result.toString().equals(literal)) {
+	public static Gender get(String literal)
+	{
+		for (int i = 0; i < VALUES_ARRAY.length; ++i)
+		{
+			Gender result = VALUES_ARRAY[i];
+			if (result.toString().equals(literal))
+			{
 				return result;
 			}
 		}
@@ -95,17 +104,20 @@ public enum Sex implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Sex</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Gender</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Sex getByName(String name) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Sex result = VALUES_ARRAY[i];
-			if (result.getName().equals(name)) {
+	public static Gender getByName(String name)
+	{
+		for (int i = 0; i < VALUES_ARRAY.length; ++i)
+		{
+			Gender result = VALUES_ARRAY[i];
+			if (result.getName().equals(name))
+			{
 				return result;
 			}
 		}
@@ -113,19 +125,19 @@ public enum Sex implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Sex</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Gender</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Sex get(int value) {
-		switch (value) {
-		case MALE_VALUE:
-			return MALE;
-		case FEMALE_VALUE:
-			return FEMALE;
+	public static Gender get(int value)
+	{
+		switch (value)
+		{
+			case MALE_VALUE: return MALE;
+			case FEMALE_VALUE: return FEMALE;
 		}
 		return null;
 	}
@@ -157,7 +169,8 @@ public enum Sex implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private Sex(int value, String name, String literal) {
+	private Gender(int value, String name, String literal)
+	{
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -168,8 +181,9 @@ public enum Sex implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getValue() {
-		return value;
+	public int getValue()
+	{
+	  return value;
 	}
 
 	/**
@@ -177,8 +191,9 @@ public enum Sex implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public String getName()
+	{
+	  return name;
 	}
 
 	/**
@@ -186,8 +201,9 @@ public enum Sex implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLiteral() {
-		return literal;
+	public String getLiteral()
+	{
+	  return literal;
 	}
 
 	/**
@@ -197,8 +213,9 @@ public enum Sex implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return literal;
 	}
-
-} //Sex
+	
+} //Gender

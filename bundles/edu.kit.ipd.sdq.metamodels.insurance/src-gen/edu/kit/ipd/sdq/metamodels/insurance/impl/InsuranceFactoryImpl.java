@@ -74,8 +74,8 @@ public class InsuranceFactoryImpl extends EFactoryImpl implements InsuranceFacto
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-		case InsurancePackage.SEX:
-			return createSexFromString(eDataType, initialValue);
+		case InsurancePackage.GENDER:
+			return createGenderFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -89,8 +89,8 @@ public class InsuranceFactoryImpl extends EFactoryImpl implements InsuranceFacto
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-		case InsurancePackage.SEX:
-			return convertSexToString(eDataType, instanceValue);
+		case InsurancePackage.GENDER:
+			return convertGenderToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -121,8 +121,8 @@ public class InsuranceFactoryImpl extends EFactoryImpl implements InsuranceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Sex createSexFromString(EDataType eDataType, String initialValue) {
-		Sex result = Sex.get(initialValue);
+	public Gender createGenderFromString(EDataType eDataType, String initialValue) {
+		Gender result = Gender.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
 					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -134,7 +134,7 @@ public class InsuranceFactoryImpl extends EFactoryImpl implements InsuranceFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertSexToString(EDataType eDataType, Object instanceValue) {
+	public String convertGenderToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
