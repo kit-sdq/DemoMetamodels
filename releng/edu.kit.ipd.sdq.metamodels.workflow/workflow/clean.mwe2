@@ -1,0 +1,32 @@
+module clean
+
+import org.eclipse.emf.mwe.utils.DirectoryCleaner
+
+var rootPath = ".."
+var addressesPluginName = "edu.kit.ipd.sdq.metamodels.addresses"
+var familiesPluginName = "edu.kit.ipd.sdq.metamodels.families"
+var insurancePluginName = "edu.kit.ipd.sdq.metamodels.insurance"
+var personsPluginName = "edu.kit.ipd.sdq.metamodels.persons"
+var recipientsPluginName = "edu.kit.ipd.sdq.metamodels.recipients"
+
+Workflow {
+
+	component = DirectoryCleaner {
+		directory = "${rootPath}/${addressesPluginName}/src-gen"
+		directory = "${rootPath}/${addressesPluginName}.edit/src-gen"
+		directory = "${rootPath}/${addressesPluginName}.editor/src-gen"
+		directory = "${rootPath}/${familiesPluginName}/src-gen"
+		directory = "${rootPath}/${familiesPluginName}.edit/src-gen"
+		directory = "${rootPath}/${familiesPluginName}.editor/src-gen"
+		directory = "${rootPath}/${insurancePluginName}/src-gen"
+		directory = "${rootPath}/${insurancePluginName}.edit/src-gen"
+		directory = "${rootPath}/${insurancePluginName}.editor/src-gen"
+		directory = "${rootPath}/${personsPluginName}/src-gen"
+		directory = "${rootPath}/${personsPluginName}.edit/src-gen"
+		directory = "${rootPath}/${personsPluginName}.editor/src-gen"
+		directory = "${rootPath}/${recipientsPluginName}/src-gen"
+		directory = "${rootPath}/${recipientsPluginName}.edit/src-gen"
+		directory = "${rootPath}/${recipientsPluginName}.editor/src-gen"
+	}
+
+}

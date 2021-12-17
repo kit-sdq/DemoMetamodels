@@ -1,0 +1,58 @@
+module generate
+
+import org.eclipse.emf.mwe2.ecore.EcoreGenerator
+import org.eclipse.emf.mwe.utils.StandaloneSetup
+
+var addressesPluginName = "edu.kit.ipd.sdq.metamodels.addresses"
+var familiesPluginName = "edu.kit.ipd.sdq.metamodels.families"
+var insurancePluginName = "edu.kit.ipd.sdq.metamodels.insurance"
+var personsPluginName = "edu.kit.ipd.sdq.metamodels.persons"
+var recipientsPluginName = "edu.kit.ipd.sdq.metamodels.recipients"
+
+Workflow {
+
+	bean = StandaloneSetup {
+		scanClassPath = true
+		platformUri = "."
+	}
+	
+	component = EcoreGenerator {
+		srcPath = "platform:/resource/${addressesPluginName}/src-gen"
+		genModel = "platform:/resource/${addressesPluginName}/model/addresses.genmodel"
+		generateCustomClasses = false
+		generateEdit = true
+		generateEditor = true
+	}
+	
+	component = EcoreGenerator {
+		srcPath = "platform:/resource/${familiesPluginName}/src-gen"
+		genModel = "platform:/resource/${familiesPluginName}/model/families.genmodel"
+		generateCustomClasses = false
+		generateEdit = true
+		generateEditor = true
+	}
+	
+	component = EcoreGenerator {
+		srcPath = "platform:/resource/${insurancePluginName}/src-gen"
+		genModel = "platform:/resource/${insurancePluginName}/model/insurance.genmodel"
+		generateCustomClasses = false
+		generateEdit = true
+		generateEditor = true
+	}
+
+	component = EcoreGenerator {
+		srcPath = "platform:/resource/${personsPluginName}/src-gen"
+		genModel = "platform:/resource/${personsPluginName}/model/persons.genmodel"
+		generateCustomClasses = false
+		generateEdit = true
+		generateEditor = true
+	}
+
+	component = EcoreGenerator {
+		srcPath = "platform:/resource/${recipientsPluginName}/src-gen"
+		genModel = "platform:/resource/${recipientsPluginName}/model/recipients.genmodel"
+		generateCustomClasses = false
+		generateEdit = true
+		generateEditor = true
+	}
+}
