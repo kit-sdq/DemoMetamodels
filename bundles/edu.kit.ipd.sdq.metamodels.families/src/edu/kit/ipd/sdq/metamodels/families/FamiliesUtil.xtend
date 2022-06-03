@@ -53,16 +53,16 @@ class FamiliesUtil {
 		return member.family.register
 	}
 
-	/** Returns the eContainer of a Family casted as FamilyRegister, if it is contained in a FamilyRegister.
+	/** Returns the {@linkplain FamilyRegister} in which the family is contained.
 	 * 
 	 *  @param family the family to obtain the FamilyRegister from, must not be <code>null</code>
-	 *  @return <code>family.eContainer</code> as FamilyRegister, if it actually is one
-	 *  @throws UnsupportedOperationException if <code>family.eContainer</code> is not a FamilyRegister 
-	 *  to indicate that the case of eContainers of other types is case is not implemented / supported yet.  
+	 *  @return <code>family.eContainer</code> as {@linkplain FamilyRegister}, if it actually is one
+	 *  @throws UnsupportedOperationException if the container is not a {@linkplain FamilyRegister}  
 	 */
 	def static FamilyRegister getRegister(Family family) {
-		if (family.eContainer instanceof FamilyRegister) {
-			return family.eContainer as FamilyRegister
+		val container = family.eContainer
+		if (container instanceof FamilyRegister) {
+			return container
 		} else {
 			throw new UnsupportedOperationException(
 				"Cannot retrieve register of a family if it is not its direct container")
