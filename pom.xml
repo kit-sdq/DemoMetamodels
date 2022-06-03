@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>edu.kit.ipd.sdq</groupId>
 		<artifactId>parent</artifactId>
-		<version>1.6.1</version>
+		<version>1.7.0-SNAPSHOT</version>
 		<relativePath>releng/edu.kit.ipd.sdq.metamodels.demo.parent</relativePath>
 	</parent>
 	<artifactId>edu.kit.ipd.sdq.metamodels.demo.main</artifactId>
