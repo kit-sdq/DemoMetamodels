@@ -10,6 +10,9 @@ tmp/
 # EMF
 src-gen/
 
+#Xtend
+xtend-gen/
+
 # Maven
 target/
 .polyglot.build.properties
