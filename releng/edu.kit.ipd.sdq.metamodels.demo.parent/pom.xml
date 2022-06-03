@@ -23,6 +23,11 @@
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/releases/2021-12</url>
 		</repository>
+		<repository>
+			<id>XAnnotations</id>
+			<layout>p2</layout>
+			<url>https://kit-sdq.github.io/updatesite/release/xannotations/1.5.0/</url>
+		</repository>
 	</repositories>
 
 	<build>
