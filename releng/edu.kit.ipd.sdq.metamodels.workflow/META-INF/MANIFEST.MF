@@ -5,4 +5,4 @@ Bundle-SymbolicName: edu.kit.ipd.sdq.metamodels.workflow
 Bundle-Version: 1.7.0.qualifier
 Bundle-Vendor: KIT SDQ
 Automatic-Module-Name: edu.kit.ipd.sdq.metamodels.workflow
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
