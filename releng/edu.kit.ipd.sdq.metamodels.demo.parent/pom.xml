@@ -7,27 +7,29 @@
 	<version>1.7.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<properties>
+		<eclipse.version>2022-12</eclipse.version>
+		<sdq.xannotations.version>1.6.0</sdq.xannotations.version>
+		<maven-clean.version>3.2.0</maven-clean.version> <!-- https://search.maven.org/artifact/org.apache.maven.plugins/maven-clean-plugin -->
+		<tycho.version>3.0.1</tycho.version> <!-- https://search.maven.org/artifact/org.eclipse.tycho/tycho-maven-plugin -->
+		<mwe.version>1.8.0</mwe.version> <!-- https://search.maven.org/artifact/org.eclipse.emf/org.eclipse.emf.mwe.utils -->
+		<mwe2.version>2.14.0</mwe2.version> <!-- https://search.maven.org/artifact/org.eclipse.emf/org.eclipse.emf.mwe2.lib -->
+		<emf-codegen.version>2.22.0</emf-codegen.version> <!-- https://search.maven.org/artifact/org.eclipse.emf/org.eclipse.emf.codegen -->
+		<ecore-codegen.version>2.32.0</ecore-codegen.version> <!-- https://search.maven.org/artifact/org.eclipse.emf/org.eclipse.emf.codegen.ecore -->
+		<xtext.version>2.29.0</xtext.version> <!-- https://search.maven.org/artifact/org.eclipse.xtext/org.eclipse.xtext.common.types -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<maven-clean.version>3.1.0</maven-clean.version>
-		<tycho.version>2.5.0</tycho.version>
-		<mwe.version>1.6.1</mwe.version>
-		<mwe2.version>2.12.1</mwe2.version>
-		<emf-codegen.version>2.22.0</emf-codegen.version>
-		<ecore-codegen.version>2.26.0</ecore-codegen.version>
-		<xtext.version>2.25.0</xtext.version>
 	</properties>
 
 	<repositories>
 		<repository>
-			<id>Eclipse 2021-12</id>
+			<id>Eclipse</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/releases/2021-12</url>
+			<url>http://download.eclipse.org/releases/${eclipse.version}</url>
 		</repository>
 		<repository>
 			<id>XAnnotations</id>
 			<layout>p2</layout>
-			<url>https://kit-sdq.github.io/updatesite/release/xannotations/1.5.0/</url>
+			<url>https://kit-sdq.github.io/updatesite/release/xannotations/${sdq.xannotations.version}</url>
 		</repository>
 	</repositories>
 
@@ -111,6 +113,11 @@
 							<os>macosx</os>
 							<ws>cocoa</ws>
 							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>aarch64</arch>
 						</environment>
 					</environments>
 				</configuration>
