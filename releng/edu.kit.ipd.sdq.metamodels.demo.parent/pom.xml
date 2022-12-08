@@ -8,9 +8,9 @@
 	<packaging>pom</packaging>
 	<properties>
 		<eclipse.version>2022-12</eclipse.version>
-		<sdq.xannotations.version>1.5.0</sdq.xannotations.version>
+		<sdq.xannotations.version>1.6.0</sdq.xannotations.version>
 		<maven-clean.version>3.2.0</maven-clean.version> <!-- https://search.maven.org/artifact/org.apache.maven.plugins/maven-clean-plugin -->
-		<tycho.version>3.0.0</tycho.version> <!-- https://search.maven.org/artifact/org.eclipse.tycho/tycho-maven-plugin -->
+		<tycho.version>3.0.1</tycho.version> <!-- https://search.maven.org/artifact/org.eclipse.tycho/tycho-maven-plugin -->
 		<mwe.version>1.8.0</mwe.version> <!-- https://search.maven.org/artifact/org.eclipse.emf/org.eclipse.emf.mwe.utils -->
 		<mwe2.version>2.14.0</mwe2.version> <!-- https://search.maven.org/artifact/org.eclipse.emf/org.eclipse.emf.mwe2.lib -->
 		<emf-codegen.version>2.22.0</emf-codegen.version> <!-- https://search.maven.org/artifact/org.eclipse.emf/org.eclipse.emf.codegen -->
