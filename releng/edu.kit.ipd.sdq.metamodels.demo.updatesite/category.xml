@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/edu.kit.ipd.sdq.metamodels.addresses.feature_1.7.0.jar" id="edu.kit.ipd.sdq.metamodels.addresses.feature" version="1.7.0">
+   <feature url="features/edu.kit.ipd.sdq.metamodels.addresses.feature_1.8.0.qualifier.jar" id="edu.kit.ipd.sdq.metamodels.addresses.feature" version="1.8.0.qualifier">
       <category name="demometamodels"/>
    </feature>
-   <feature id="edu.kit.ipd.sdq.metamodels.addresses.feature.source" version="1.7.0">
+   <feature id="edu.kit.ipd.sdq.metamodels.addresses.feature.source" version="1.8.0.qualifier">
       <category name="demometamodels"/>
    </feature>
-   <feature url="features/edu.kit.ipd.sdq.metamodels.recipients.feature_1.7.0.jar" id="edu.kit.ipd.sdq.metamodels.recipients.feature" version="1.7.0">
+   <feature url="features/edu.kit.ipd.sdq.metamodels.recipients.feature_1.8.0.qualifier.jar" id="edu.kit.ipd.sdq.metamodels.recipients.feature" version="1.8.0.qualifier">
       <category name="demometamodels"/>
    </feature>
-   <feature id="edu.kit.ipd.sdq.metamodels.recipients.feature.source" version="1.7.0">
+   <feature id="edu.kit.ipd.sdq.metamodels.recipients.feature.source" version="1.8.0.qualifier">
       <category name="demometamodels"/>
    </feature>
-   <feature url="features/edu.kit.ipd.sdq.metamodels.families.feature_1.7.0.jar" id="edu.kit.ipd.sdq.metamodels.families.feature" version="1.7.0">
+   <feature url="features/edu.kit.ipd.sdq.metamodels.families.feature_1.8.0.qualifier.jar" id="edu.kit.ipd.sdq.metamodels.families.feature" version="1.8.0.qualifier">
       <category name="demometamodels"/>
    </feature>
-   <feature id="edu.kit.ipd.sdq.metamodels.families.feature.source" version="1.7.0">
+   <feature id="edu.kit.ipd.sdq.metamodels.families.feature.source" version="1.8.0.qualifier">
       <category name="demometamodels"/>
    </feature>
-   <feature url="features/edu.kit.ipd.sdq.metamodels.persons.feature_1.7.0.jar" id="edu.kit.ipd.sdq.metamodels.persons.feature" version="1.7.0">
+   <feature url="features/edu.kit.ipd.sdq.metamodels.persons.feature_1.8.0.qualifier.jar" id="edu.kit.ipd.sdq.metamodels.persons.feature" version="1.8.0.qualifier">
       <category name="demometamodels"/>
    </feature>
-   <feature id="edu.kit.ipd.sdq.metamodels.persons.feature.source" version="1.7.0">
+   <feature id="edu.kit.ipd.sdq.metamodels.persons.feature.source" version="1.8.0.qualifier">
       <category name="demometamodels"/>
    </feature>
-   <feature url="features/edu.kit.ipd.sdq.metamodels.insurance.feature_1.7.0.jar" id="edu.kit.ipd.sdq.metamodels.insurance.feature" version="1.7.0">
+   <feature url="features/edu.kit.ipd.sdq.metamodels.insurance.feature_1.8.0.qualifier.jar" id="edu.kit.ipd.sdq.metamodels.insurance.feature" version="1.8.0.qualifier">
       <category name="demometamodels"/>
    </feature>
-   <feature id="edu.kit.ipd.sdq.metamodels.insurance.feature.source" version="1.7.0">
+   <feature id="edu.kit.ipd.sdq.metamodels.insurance.feature.source" version="1.8.0.qualifier">
       <category name="demometamodels"/>
    </feature>
    <category-def name="demometamodels" label="Demo Metamodels">

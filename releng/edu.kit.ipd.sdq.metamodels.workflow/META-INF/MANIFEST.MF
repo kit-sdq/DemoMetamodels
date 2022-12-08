@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Demo Metamodels Workflow
 Bundle-SymbolicName: edu.kit.ipd.sdq.metamodels.workflow
-Bundle-Version: 1.7.0
+Bundle-Version: 1.8.0.qualifier
 Bundle-Vendor: KIT SDQ
 Automatic-Module-Name: edu.kit.ipd.sdq.metamodels.workflow
 Bundle-RequiredExecutionEnvironment: JavaSE-17
