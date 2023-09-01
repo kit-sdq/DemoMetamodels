@@ -32,5 +32,7 @@
 		<module>../../features/edu.kit.ipd.sdq.metamodels.recipients.feature</module>
 		<module>../../features/edu.kit.ipd.sdq.metamodels.families.feature</module>
 		<module>../../features/edu.kit.ipd.sdq.metamodels.persons.feature</module>
+		<module>../../bundles/edu.kit.ipd.sdq.metamodels.autosar</module>
+		<module>../../bundles/edu.kit.ipd.sdq.metamodels.simulink</module>
 	</modules>
 </project>
