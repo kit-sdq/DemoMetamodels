@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="autoSAR" nsURI="http://www.example.org/autoSAR" nsPrefix="autoSAR">
+  <eClassifiers xsi:type="ecore:EClass" name="SwComponent" abstract="true" eSuperTypes="#//AutoSARElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="port" upperBound="-1" eType="#//Port"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeSwComponent" eSuperTypes="#//SwComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atomicswcomponent" upperBound="-1"
+        eType="#//AtomicSwComponent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="swconnector" upperBound="-1"
+        eType="#//SwConnector" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AtomicSwComponent" eSuperTypes="#//SwComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="compositeswcomponent" eType="#//CompositeSwComponent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SwConnector" eSuperTypes="#//AutoSARElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DelegationSwConnector" eSuperTypes="#//SwConnector #//AutoSARElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="InnerPort" lowerBound="1"
+        eType="#//Port"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="OuterPort" lowerBound="1"
+        eType="#//Port"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AssemblySwConnector" eSuperTypes="#//SwConnector">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providedport" upperBound="-1"
+        eType="#//ProvidedPort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredport" upperBound="-1"
+        eType="#//RequiredPort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Port" abstract="true" eSuperTypes="#//AutoSARElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProvidedPort" eSuperTypes="#//Port">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portinterface" upperBound="-1"
+        eType="#//PortInterface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequiredPort" eSuperTypes="#//Port">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portinterface" upperBound="-1"
+        eType="#//PortInterface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortInterface" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClientServerInterface" abstract="true"
+      interface="true" eSuperTypes="#//PortInterface"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SenderReceiverInterface" abstract="true"
+      interface="true" eSuperTypes="#//DataInterface"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataInterface" abstract="true" interface="true"
+      eSuperTypes="#//PortInterface"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AutoSARModel" eSuperTypes="#//AutoSARElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="swcomponent" upperBound="-1"
+        eType="#//SwComponent" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AutoSARElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>
