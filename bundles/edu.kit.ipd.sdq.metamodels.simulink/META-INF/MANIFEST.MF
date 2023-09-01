@@ -1,13 +1,13 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: SimuLink;singleton:=true
-Automatic-Module-Name: SimuLink
-Bundle-Version: 0.1.0.qualifier
+Bundle-SymbolicName: edu.kit.ipd.sdq.metamodels.simulink;singleton:=true
+Automatic-Module-Name: edu.kit.ipd.sdq.metamodels.simulink
+Bundle-Version: 1.8.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: simulink,
  simulink.impl,
  simulink.util

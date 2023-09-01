@@ -9,8 +9,9 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated autoSAR -->
       <package
-            uri="http://www.example.org/autoSAR"
-            class="autoSAR.AutoSARPackage"
+            uri="edu.kit.ipd.sdq.metamodels.autosar"
+            class="edu.kit.ipd.sdq.metamodels.autosar.AutoSARPackage"
+
             genModel="model/autoSAR.genmodel"/>
    </extension>
 
