@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="simulink" nsURI="http://hu.bme.mit.massif/simulink/1.0" nsPrefix="simulink">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="simulink" nsURI="edu.kit.ipd.sdq.metamodels.simulink" nsPrefix="simulink">
   <eClassifiers xsi:type="ecore:EClass" name="SimulinkElement" abstract="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This EClass represents the abstract supertype of elements in Simulink systems that can be identified uniquely with a fully qualified name consisting of a name and a qualifier."/>
