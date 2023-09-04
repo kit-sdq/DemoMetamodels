@@ -27,12 +27,14 @@
 		<module>../../bundles/edu.kit.ipd.sdq.metamodels.persons</module>
 		<module>../../bundles/edu.kit.ipd.sdq.metamodels.persons.edit</module>
 		<module>../../bundles/edu.kit.ipd.sdq.metamodels.persons.editor</module>
+		<module>../../bundles/edu.kit.ipd.sdq.metamodels.autosar</module>
+		<module>../../bundles/edu.kit.ipd.sdq.metamodels.simulink</module>
 		<module>../../features/edu.kit.ipd.sdq.metamodels.addresses.feature</module>
 		<module>../../features/edu.kit.ipd.sdq.metamodels.insurance.feature</module>
 		<module>../../features/edu.kit.ipd.sdq.metamodels.recipients.feature</module>
 		<module>../../features/edu.kit.ipd.sdq.metamodels.families.feature</module>
 		<module>../../features/edu.kit.ipd.sdq.metamodels.persons.feature</module>
-		<module>../../bundles/edu.kit.ipd.sdq.metamodels.autosar</module>
-		<module>../../bundles/edu.kit.ipd.sdq.metamodels.simulink</module>
+		<module>../../features/edu.kit.ipd.sdq.metamodels.autosar.feature</module>
+		<module>../../features/edu.kit.ipd.sdq.metamodels.simulink.feature</module>
 	</modules>
 </project>

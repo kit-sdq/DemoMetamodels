@@ -30,7 +30,13 @@
    <feature id="edu.kit.ipd.sdq.metamodels.insurance.feature.source" version="1.8.0.qualifier">
       <category name="demometamodels"/>
    </feature>
+   <feature url="features/edu.kit.ipd.sdq.metamodels.autosar.feature_1.8.0.qualifier.jar" id="edu.kit.ipd.sdq.metamodels.autosar.feature" version="1.8.0.qualifier">
+      <category name="demometamodels"/>
+   </feature>
    <feature id="edu.kit.ipd.sdq.metamodels.autosar.feature.source" version="1.8.0.qualifier">
+      <category name="demometamodels"/>
+   </feature>
+   <feature url="features/edu.kit.ipd.sdq.metamodels.simulink.feature_1.8.0.qualifier.jar" id="edu.kit.ipd.sdq.metamodels.simulink.feature" version="1.8.0.qualifier">
       <category name="demometamodels"/>
    </feature>
    <feature id="edu.kit.ipd.sdq.metamodels.simulink.feature.source" version="1.8.0.qualifier">
