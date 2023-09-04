@@ -17,3 +17,7 @@ xtend-gen/
 target/
 .polyglot.build.properties
 .mvn/wrapper/maven-wrapper.jar
+.polyglot.pom.tycho
+.polyglot.META-INF
+pom.tycho
+.polyglot.feature.xml
