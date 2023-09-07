@@ -8,9 +8,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Export-Package: simulink,
- simulink.impl,
- simulink.util
+Export-Package: edu.kit.ipd.sdq.metamodels.simulink,
+ edu.kit.ipd.sdq.metamodels.simulink.impl,
+ edu.kit.ipd.sdq.metamodels.simulink.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy

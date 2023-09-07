@@ -8,9 +8,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Export-Package: autosar,
- autosar.impl,
- autosar.util
+Export-Package: edu.kit.ipd.sdq.metamodels.autosar,
+ edu.kit.ipd.sdq.metamodels.autosar.impl,
+ edu.kit.ipd.sdq.metamodels.autosar.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy

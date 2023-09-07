@@ -8,12 +8,11 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated simuLink -->
+      <!-- source uri="http://hu.bme.mit.massif/simulink/1.0" adapted for usage in Vitruvius (vitruv.tools) context -->
       <package
-            <!-- source uri="http://hu.bme.mit.massif/simulink/1.0" adapted for usage in Vitruvius (vitruv.tools) context -->
             uri="edu.kit.ipd.sdq.metamodels.simulink"
             class="edu.kit.ipd.sdq.metamodels.simulink.SimuLinkPackage"
-
-            genModel="model/simuLink.genmodel"/>
+            genModel="model/simulink.genmodel"/>
    </extension>
 
 </plugin>
