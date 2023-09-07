@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated simulink -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.kit.ipd.sdq.metamodels.simulink.presentation.SimuLinkModelWizardID"
+            name="%_UI_SimuLinkModelWizard_label"
+            class="edu.kit.ipd.sdq.metamodels.simulink.presentation.SimuLinkModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SimuLinkModelFile.gif">
+         <description>%_UI_SimuLinkModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated simulink -->
+      <editor
+            id="edu.kit.ipd.sdq.metamodels.simulink.presentation.SimuLinkEditorID"
+            name="%_UI_SimuLinkEditor_label"
+            icon="icons/full/obj16/SimuLinkModelFile.gif"
+            extensions="simulink"
+            class="edu.kit.ipd.sdq.metamodels.simulink.presentation.SimuLinkEditor"
+            contributorClass="edu.kit.ipd.sdq.metamodels.simulink.presentation.SimuLinkActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

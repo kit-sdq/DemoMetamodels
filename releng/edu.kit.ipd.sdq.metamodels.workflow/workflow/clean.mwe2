@@ -7,6 +7,8 @@ var familiesPluginName = "edu.kit.ipd.sdq.metamodels.families"
 var insurancePluginName = "edu.kit.ipd.sdq.metamodels.insurance"
 var personsPluginName = "edu.kit.ipd.sdq.metamodels.persons"
 var recipientsPluginName = "edu.kit.ipd.sdq.metamodels.recipients"
+var autosarPluginName = "edu.kit.ipd.sdq.metamodels.autosar"
+var simulinkPluginName = "edu.kit.ipd.sdq.metamodels.simulink"
 
 var workspaceRoot = "../../"
 
@@ -70,6 +72,30 @@ Workflow {
 	
 	component = DirectoryCleaner {
 		directory = "${workspaceRoot}/bundles/${recipientsPluginName}.editor/src-gen"
+	}
+
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${autosarPluginName}/src-gen"
+	}
+
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${autosarPluginName}.edit/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${autosarPluginName}.editor/src-gen"
+	}
+
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${simulinkPluginName}/src-gen"
+	}
+
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${simulinkPluginName}.edit/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${simulinkPluginName}.editor/src-gen"
 	}
 
 }
