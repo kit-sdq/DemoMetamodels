@@ -11,8 +11,7 @@
       <package
             uri="edu.kit.ipd.sdq.metamodels.autosar"
             class="edu.kit.ipd.sdq.metamodels.autosar.AutoSARPackage"
-
-            genModel="model/autoSAR.genmodel"/>
+            genModel="model/autosar.genmodel"/>
    </extension>
 
 </plugin>
