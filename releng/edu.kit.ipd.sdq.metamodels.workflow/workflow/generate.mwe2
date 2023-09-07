@@ -8,6 +8,8 @@ var familiesPluginName = "edu.kit.ipd.sdq.metamodels.families"
 var insurancePluginName = "edu.kit.ipd.sdq.metamodels.insurance"
 var personsPluginName = "edu.kit.ipd.sdq.metamodels.persons"
 var recipientsPluginName = "edu.kit.ipd.sdq.metamodels.recipients"
+var autosarPluginName = "edu.kit.ipd.sdq.metamodels.autosar"
+var simulinkPluginName = "edu.kit.ipd.sdq.metamodels.simulink"
 
 var workspaceRoot = "../../"
 
@@ -53,6 +55,22 @@ Workflow {
 	component = EcoreGenerator {
 		srcPath = "platform:/resource/${recipientsPluginName}/src-gen"
 		genModel = "platform:/resource/${recipientsPluginName}/model/recipients.genmodel"
+		generateCustomClasses = false
+		generateEdit = true
+		generateEditor = true
+	}
+
+	component = EcoreGenerator {
+		srcPath = "platform:/resource/${autosarPluginName}/src-gen"
+		genModel = "platform:/resource/${autosarPluginName}/model/autosar.genmodel"
+		generateCustomClasses = false
+		generateEdit = true
+		generateEditor = true
+	}
+
+	component = EcoreGenerator {
+		srcPath = "platform:/resource/${simulinkPluginName}/src-gen"
+		genModel = "platform:/resource/${simulinkPluginName}/model/simulink.genmodel"
 		generateCustomClasses = false
 		generateEdit = true
 		generateEditor = true

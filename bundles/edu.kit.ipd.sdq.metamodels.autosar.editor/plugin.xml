@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated autosar -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.kit.ipd.sdq.metamodels.autosar.presentation.AutoSARModelWizardID"
+            name="%_UI_AutoSARModelWizard_label"
+            class="edu.kit.ipd.sdq.metamodels.autosar.presentation.AutoSARModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/AutoSARModelFile.gif">
+         <description>%_UI_AutoSARModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated autosar -->
+      <editor
+            id="edu.kit.ipd.sdq.metamodels.autosar.presentation.AutoSAREditorID"
+            name="%_UI_AutoSAREditor_label"
+            icon="icons/full/obj16/AutoSARModelFile.gif"
+            extensions="autosar"
+            class="edu.kit.ipd.sdq.metamodels.autosar.presentation.AutoSAREditor"
+            contributorClass="edu.kit.ipd.sdq.metamodels.autosar.presentation.AutoSARActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
