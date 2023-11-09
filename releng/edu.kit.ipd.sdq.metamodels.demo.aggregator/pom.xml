@@ -33,6 +33,12 @@
 		<module>../../bundles/edu.kit.ipd.sdq.metamodels.simulink</module>
 		<module>../../bundles/edu.kit.ipd.sdq.metamodels.simulink.edit</module>
 		<module>../../bundles/edu.kit.ipd.sdq.metamodels.simulink.editor</module>
+		<module>../../bundles/edu.kit.ipd.sdq.metamodels.joana</module>
+		<module>../../bundles/edu.kit.ipd.sdq.metamodels.joana.edit</module>
+		<module>../../bundles/edu.kit.ipd.sdq.metamodels.joana.editor</module>
+		<module>../../bundles/edu.kit.ipd.sdq.metamodels.confidentiality4cbse</module>
+		<module>../../bundles/edu.kit.ipd.sdq.metamodels.confidentiality4cbse.edit</module>
+		<module>../../bundles/edu.kit.ipd.sdq.metamodels.confidentiality4cbse.editor</module>
 		<module>../../features/edu.kit.ipd.sdq.metamodels.addresses.feature</module>
 		<module>../../features/edu.kit.ipd.sdq.metamodels.insurance.feature</module>
 		<module>../../features/edu.kit.ipd.sdq.metamodels.recipients.feature</module>
@@ -40,5 +46,7 @@
 		<module>../../features/edu.kit.ipd.sdq.metamodels.persons.feature</module>
 		<module>../../features/edu.kit.ipd.sdq.metamodels.autosar.feature</module>
 		<module>../../features/edu.kit.ipd.sdq.metamodels.simulink.feature</module>
+		<module>../../features/edu.kit.ipd.sdq.metamodels.joana.feature</module>
+		<module>../../features/edu.kit.ipd.sdq.metamodels.confidentiality4cbse.feature</module>
 	</modules>
 </project>
