@@ -10,6 +10,8 @@ var personsPluginName = "edu.kit.ipd.sdq.metamodels.persons"
 var recipientsPluginName = "edu.kit.ipd.sdq.metamodels.recipients"
 var autosarPluginName = "edu.kit.ipd.sdq.metamodels.autosar"
 var simulinkPluginName = "edu.kit.ipd.sdq.metamodels.simulink"
+var joanaPluginName = "edu.kit.ipd.sdq.metamodels.joana"
+var confidentiality4cbsePluginName = "edu.kit.ipd.sdq.metamodels.confidentiality4cbse"
 
 var workspaceRoot = "../../"
 
@@ -71,6 +73,22 @@ Workflow {
 	component = EcoreGenerator {
 		srcPath = "platform:/resource/${simulinkPluginName}/src-gen"
 		genModel = "platform:/resource/${simulinkPluginName}/model/simulink.genmodel"
+		generateCustomClasses = false
+		generateEdit = true
+		generateEditor = true
+	}
+
+	component = EcoreGenerator {
+		srcPath = "platform:/resource/${joanaPluginName}/src-gen"
+		genModel = "platform:/resource/${joanaPluginName}/model/joana.genmodel"
+		generateCustomClasses = false
+		generateEdit = true
+		generateEditor = true
+	}
+
+	component = EcoreGenerator {
+		srcPath = "platform:/resource/${confidentiality4cbsePluginName}/src-gen"
+		genModel = "platform:/resource/${confidentiality4cbsePluginName}/model/confidentiality4cbse.genmodel"
 		generateCustomClasses = false
 		generateEdit = true
 		generateEditor = true

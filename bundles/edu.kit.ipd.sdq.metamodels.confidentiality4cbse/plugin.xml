@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated confidentiality -->
+      <package
+            uri="edu.kit.ipd.sdq.metamodels.confidentiality"
+            class="edu.kit.ipd.sdq.metamodels.confidentiality.ConfidentialityPackage"
+            genModel="model/confidentiality.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated confidentiality -->
+      <package
+            uri="edu.kit.ipd.sdq.metamodels.confidentiality/data"
+            class="edu.kit.ipd.sdq.metamodels.confidentiality.data.DataPackage"
+            genModel="model/confidentiality.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated confidentiality -->
+      <package
+            uri="edu.kit.ipd.sdq.metamodels.confidentiality/information"
+            class="edu.kit.ipd.sdq.metamodels.confidentiality.information.InformationPackage"
+            genModel="model/confidentiality.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated confidentiality -->
+      <package
+            uri="edu.kit.ipd.sdq.metamodels.confidentiality.repository"
+            class="edu.kit.ipd.sdq.metamodels.confidentiality.repository.RepositoryPackage"
+            genModel="model/confidentiality.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated confidentiality -->
+      <package
+            uri="edu.kit.ipd.sdq.metamodels.confidentiality/resources"
+            class="edu.kit.ipd.sdq.metamodels.confidentiality.resources.ResourcesPackage"
+            genModel="model/confidentiality.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated confidentiality -->
+      <package
+            uri="edu.kit.ipd.sdq.metamodels.confidentiality/adversary"
+            class="edu.kit.ipd.sdq.metamodels.confidentiality.adversary.AdversaryPackage"
+            genModel="model/confidentiality.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated confidentiality -->
+      <package
+            uri="edu.kit.ipd.sdq.metamodels.confidentiality/system"
+            class="edu.kit.ipd.sdq.metamodels.confidentiality.system.SystemPackage"
+            genModel="model/confidentiality.genmodel"/>
+   </extension>
+
+</plugin>

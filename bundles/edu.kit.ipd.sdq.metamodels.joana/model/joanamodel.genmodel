@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.ipd.sdq.metamodels.joana/src-gen"
+    modelPluginID="edu.kit.ipd.sdq.metamodels.joana" modelName="Joanamodel"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" usedGenPackages="../../org.emftext.language.java/metamodel/java.genmodel#//java ../../org.emftext.commons.layout/metamodel/layout.genmodel#//layout"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>joanamodel.ecore</foreignModel>
+  <genPackages prefix="Joana" basePackage="edu.kit.ipd.sdq.metamodels.joana" disposableProviderFactory="true"
+      ecorePackage="joanamodel.ecore#/">
+    <genClasses ecoreClass="joanamodel.ecore#//EntryPoint">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference joanamodel.ecore#//EntryPoint/securitylevels"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference joanamodel.ecore#//EntryPoint/lattice"/>
+    </genClasses>
+    <genClasses ecoreClass="joanamodel.ecore#//Annotation">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference joanamodel.ecore#//Annotation/securitylevel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference joanamodel.ecore#//Annotation/annotatedParameter"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="joanamodel.ecore#//FlowSpecificationElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute joanamodel.ecore#//FlowSpecificationElement/tag"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference joanamodel.ecore#//FlowSpecificationElement/annotatedClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference joanamodel.ecore#//FlowSpecificationElement/annotatedMethod"/>
+    </genClasses>
+    <genClasses ecoreClass="joanamodel.ecore#//Sink"/>
+    <genClasses ecoreClass="joanamodel.ecore#//Source"/>
+    <genClasses ecoreClass="joanamodel.ecore#//SecurityLevel"/>
+    <genClasses ecoreClass="joanamodel.ecore#//Lattice">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference joanamodel.ecore#//Lattice/flowrelation"/>
+    </genClasses>
+    <genClasses ecoreClass="joanamodel.ecore#//FlowRelation">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference joanamodel.ecore#//FlowRelation/from"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference joanamodel.ecore#//FlowRelation/to"/>
+    </genClasses>
+    <genClasses ecoreClass="joanamodel.ecore#//JOANARoot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference joanamodel.ecore#//JOANARoot/flowspecification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference joanamodel.ecore#//JOANARoot/lattice"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference joanamodel.ecore#//JOANARoot/securitylevel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference joanamodel.ecore#//JOANARoot/annotation"/>
+    </genClasses>
+    <genClasses ecoreClass="joanamodel.ecore#//FlowSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference joanamodel.ecore#//FlowSpecification/entrypoint"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference joanamodel.ecore#//FlowSpecification/annotation"/>
+    </genClasses>
+    <genClasses ecoreClass="joanamodel.ecore#//JoanaElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute joanamodel.ecore#//JoanaElement/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

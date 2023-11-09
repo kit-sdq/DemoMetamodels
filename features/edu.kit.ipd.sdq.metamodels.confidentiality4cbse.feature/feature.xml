@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.feature"
+      label="%featureName"
+      version="1.8.0.qualifier"
+      provider-name="%providerName" >
+
+   <description>
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import feature="org.eclipse.emf.ecore" version="2.12.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="edu.kit.ipd.sdq.metamodels.confidentiality4cbse"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+</feature>

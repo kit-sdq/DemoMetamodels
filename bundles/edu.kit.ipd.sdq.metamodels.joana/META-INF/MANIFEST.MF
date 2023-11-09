@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: edu.kit.ipd.sdq.metamodels.joana;singleton:=true
+Automatic-Module-Name: edu.kit.ipd.sdq.metamodels.joana
+Bundle-Version: 1.9.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package:
+edu.kit.ipd.sdq.metamodels.joana,
+edu.kit.ipd.sdq.metamodels.joana.impl,
+edu.kit.ipd.sdq.metamodels.joana.util
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+org.emftext.language.java;visibility:=reexport,
+org.emftext.commons.layout;visibility:=reexport,
+org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+

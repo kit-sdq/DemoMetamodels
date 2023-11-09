@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="confidentiality" nsURI="edu.kit.ipd.sdq.metamodels.confidentiality"
+    nsPrefix="confidentiality">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="operationReflection" value="false"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="ConfidentialitySpecification" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataIdentifier" upperBound="-1"
+        eType="#//data/DataIdentifying" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataSetMaps" upperBound="-1"
+        eType="#//data/DataSetMap" containment="true" eOpposite="#//data/DataSetMap/specificationContainer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="addedServiceParameters"
+        upperBound="-1" eType="#//repository/AddedServiceParameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="informationFlows" upperBound="-1"
+        eType="#//repository/AbstractInformationFlow" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="informationFlowParameters"
+        upperBound="-1" eType="#//repository/InformationFlowParameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specificationParameterAssignments"
+        upperBound="-1" eType="#//system/AbstractSpecificationParameterAssignement"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specificationParameterEquations"
+        upperBound="-1" eType="#//system/SpecificationParameterEquation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locations" lowerBound="1"
+        upperBound="-1" eType="#//resources/Location" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tamperProtections" upperBound="-1"
+        eType="#//resources/TamperProtection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceProtections" lowerBound="1"
+        upperBound="-1" eType="#//resources/AbstractResourceProtection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceConfidentialities"
+        upperBound="-1" eType="#//resources/ResourceContainerConfidentiality" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="encryptions" upperBound="-1"
+        eType="#//resources/Encryption" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="userIdentifiers" upperBound="-1"
+        eType="#//data/UserIdentifier" containment="true"/>
+  </eClassifiers>
+  <eSubpackages name="data" nsURI="http://edu.kit.kastel.scbs.confidentiality/data"
+      nsPrefix="edu.kit.kastel.scbs.confidentiality.data">
+    <eClassifiers xsi:type="ecore:EClass" name="DataIdentifying" abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="UnparameterizedDataIdentifying" abstract="true"
+        eSuperTypes="#//data/DataIdentifying"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DataSet" eSuperTypes="#//data/UnparameterizedDataIdentifying"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DataSetMap" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="specificationContainer"
+          lowerBound="1" eType="#//ConfidentialitySpecification" eOpposite="#//ConfidentialitySpecification/dataSetMaps"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AbstractDataSetMapEntry" abstract="true"
+        eSuperTypes="#//data/DataIdentifying">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="map" lowerBound="1" eType="#//data/DataSetMap"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DataSetMapEntry" eSuperTypes="#//data/AbstractDataSetMapEntry #//data/UnparameterizedDataIdentifying">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="userIdentifiers" lowerBound="1"
+          eType="#//data/UserIdentifier"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterizedDataSetMapEntry" eSuperTypes="#//data/AbstractDataSetMapEntry">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
+          eType="#//data/SpecificationParameter"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SpecificationParameter" eSuperTypes="#//data/DataIdentifying">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="definingServiceParameter"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="UserIdentifier" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+  </eSubpackages>
+  <eSubpackages name="information" nsURI="http://edu.kit.kastel.scbs.confidentiality/information"
+      nsPrefix="edu.kit.kastel.scbs.confidentiality.information">
+    <eClassifiers xsi:type="ecore:EClass" name="Information" abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dataTargets" upperBound="-1"
+          eType="#//data/DataIdentifying"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterInformation" eSuperTypes="#//information/Information">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="appliedTo" lowerBound="1"
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Parameter"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SizeOfInformation" eSuperTypes="#//information/Information">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="information" lowerBound="1"
+          eType="#//information/Information"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ReturnValueInformation" eSuperTypes="#//information/Information"/>
+    <eClassifiers xsi:type="ecore:EClass" name="CallInformation" eSuperTypes="#//information/Information"/>
+    <eClassifiers xsi:type="ecore:EClass" name="AllInformation" eSuperTypes="#//information/Information"/>
+  </eSubpackages>
+  <eSubpackages name="repository" nsURI="http://edu.kit.kastel.scbs.confidentiality.repository"
+      nsPrefix="edu.kit.kastel.scbs.confidentiality.repository">
+    <eClassifiers xsi:type="ecore:EClass" name="AddedServiceParameter" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="AbstractInformationFlow" abstract="true"
+        eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="information" upperBound="-1"
+          eType="#//information/Information" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InterfaceInformationFlow" eSuperTypes="#//repository/AbstractInformationFlow">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="appliedTo" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/OperationInterface"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SignatureInformationFlow" eSuperTypes="#//repository/AbstractInformationFlow">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="appliedTo" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/OperationSignature"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InformationFlowParameter" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="informationFlow" lowerBound="1"
+          eType="#//repository/AbstractInformationFlow"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="specificationParameters"
+          upperBound="-1" eType="#//data/SpecificationParameter"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="serviceParameters" eType="#//repository/AddedServiceParameter"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="resources" nsURI="http://edu.kit.kastel.scbs.confidentiality/resources"
+      nsPrefix="edu.kit.kastel.scbs.confidentiality.resources">
+    <eClassifiers xsi:type="ecore:EClass" name="Location" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TamperProtection" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="AbstractResourceProtection" abstract="true"
+        eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="locations" lowerBound="1"
+          upperBound="-1" eType="#//resources/Location"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="tamperProtections" upperBound="-1"
+          eType="#//resources/TamperProtection"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="LinkingResourceProtection" eSuperTypes="#//resources/AbstractResourceProtection">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="linkingResource" lowerBound="1"
+          upperBound="-1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/LinkingResource"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceContainerProtection" eSuperTypes="#//resources/AbstractResourceProtection">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceContainer" lowerBound="1"
+          upperBound="-1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/ResourceContainer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceContainerConfidentiality"
+        eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="appliedTo" lowerBound="1"
+          upperBound="-1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/ResourceContainer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="sharingType" eType="#//resources/SharingType"
+          defaultValueLiteral="shared"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="connectionType" eType="#//resources/ConnectionType"
+          defaultValueLiteral="existing"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="SharingType">
+      <eLiterals name="shared"/>
+      <eLiterals name="exclusive" value="1"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="ConnectionType">
+      <eLiterals name="existing"/>
+      <eLiterals name="possible" value="1"/>
+      <eLiterals name="complete" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Encryption" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="appliedTo" lowerBound="1"
+          upperBound="-1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/LinkingResource"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="unencryptedData" upperBound="-1"
+          eType="#//data/DataSet"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="adversary" nsURI="http://edu.kit.kastel.scbs.confidentiality/adversary"
+      nsPrefix="edu.kit.kastel.scbs.confidentiality.adversary">
+    <eClassifiers xsi:type="ecore:EClass" name="Adversaries" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="adversaries" ordered="false"
+          lowerBound="1" upperBound="-1" eType="#//adversary/Adversary" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Adversary" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="mayKnowData" upperBound="-1"
+          eType="#//data/UnparameterizedDataIdentifying"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="mayTamperWith" upperBound="-1"
+          eType="#//resources/AbstractResourceProtection"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="system" nsURI="http://edu.kit.kastel.scbs.confidentiality/system"
+      nsPrefix="edu.kit.kastel.scbs.confidentiality.sytem">
+    <eClassifiers xsi:type="ecore:EClass" name="AbstractSpecificationParameterAssignement"
+        abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="specificationParametersToReplace"
+          lowerBound="1" upperBound="-1" eType="#//data/SpecificationParameter"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assignedByConnector"
+          lowerBound="1" upperBound="-1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/Connector"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SpecificationParameter2DataSetAssignment"
+        eSuperTypes="#//system/AbstractSpecificationParameterAssignement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assignedDataSet" lowerBound="1"
+          eType="#//data/DataSet"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DataSetMapParameter2KeyAssignment"
+        eSuperTypes="#//system/AbstractSpecificationParameterAssignement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assignedKey" lowerBound="1"
+          eType="#//data/UserIdentifier"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SpecificationParameterEquation" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="leftSpecificationParameter"
+          lowerBound="1" eType="#//data/SpecificationParameter"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rightSpecificationParameter"
+          lowerBound="1" eType="#//data/SpecificationParameter"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="leftInterfaces" lowerBound="1"
+          upperBound="-1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Interface"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rightInterfaces" lowerBound="1"
+          upperBound="-1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Interface"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assignedByContext" lowerBound="1"
+          upperBound="-1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>
