@@ -7,14 +7,13 @@ Bundle-Version: 1.9.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package:
-edu.kit.ipd.sdq.metamodels.joana,
-edu.kit.ipd.sdq.metamodels.joana.impl,
-edu.kit.ipd.sdq.metamodels.joana.util
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: edu.kit.ipd.sdq.metamodels.joana,
+ edu.kit.ipd.sdq.metamodels.joana.impl,
+ edu.kit.ipd.sdq.metamodels.joana.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
-org.emftext.language.java;visibility:=reexport,
-org.emftext.commons.layout;visibility:=reexport,
-org.eclipse.core.runtime
+ org.emftext.language.java;visibility:=reexport,
+ org.emftext.commons.layout;visibility:=reexport,
+ org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy
 

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.ipd.sdq.metamodels.joana/src-gen"
-    modelPluginID="edu.kit.ipd.sdq.metamodels.joana" modelName="Joanamodel"
-    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="5.0" copyrightFields="false" usedGenPackages="../../org.emftext.language.java/metamodel/java.genmodel#//java ../../org.emftext.commons.layout/metamodel/layout.genmodel#//layout"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.ipd.sdq.metamodels.joana/src-gen" modelPluginID="edu.kit.ipd.sdq.metamodels.joana"
+    modelName="Joanamodel" editPluginClass="edu.kit.ipd.sdq.metamodels.joana.provider.JoanamodelEditPlugin"
+    editorPluginClass="edu.kit.ipd.sdq.metamodels.joana.presentation.JoanamodelEditorPlugin"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" testSuiteClass="edu.kit.ipd.sdq.metamodels.joana.tests.JoanamodelAllTests"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    usedGenPackages="../../org.emftext.language.java/metamodel/java.genmodel#//java"
     operationReflection="true" importOrganizing="true">
   <foreignModel>joanamodel.ecore</foreignModel>
-  <genPackages prefix="Joana" basePackage="edu.kit.ipd.sdq.metamodels.joana" disposableProviderFactory="true"
+  <genPackages prefix="Joana" basePackage="edu.kit.ipd.sdq.metamodels" disposableProviderFactory="true"
       ecorePackage="joanamodel.ecore#/">
     <genClasses ecoreClass="joanamodel.ecore#//EntryPoint">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference joanamodel.ecore#//EntryPoint/securitylevels"/>
