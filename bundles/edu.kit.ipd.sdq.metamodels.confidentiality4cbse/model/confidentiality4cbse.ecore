@@ -6,9 +6,9 @@
     <details key="operationReflection" value="false"/>
   </eAnnotations>
   <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
-    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
-    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/LPG"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/LPG"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/LPG"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="ConfidentialitySpecification" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataIdentifier" upperBound="-1"
@@ -39,8 +39,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="userIdentifiers" upperBound="-1"
         eType="#//data/UserIdentifier" containment="true"/>
   </eClassifiers>
-  <eSubpackages name="data" nsURI="http://edu.kit.kastel.scbs.confidentiality/data"
-      nsPrefix="edu.kit.kastel.scbs.confidentiality.data">
+  <eSubpackages name="data" nsURI="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.data"
+      nsPrefix="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.data">
     <eClassifiers xsi:type="ecore:EClass" name="DataIdentifying" abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
     <eClassifiers xsi:type="ecore:EClass" name="UnparameterizedDataIdentifying" abstract="true"
         eSuperTypes="#//data/DataIdentifying"/>
@@ -67,8 +67,8 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="UserIdentifier" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
   </eSubpackages>
-  <eSubpackages name="information" nsURI="http://edu.kit.kastel.scbs.confidentiality/information"
-      nsPrefix="edu.kit.kastel.scbs.confidentiality.information">
+  <eSubpackages name="information" nsURI="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.information"
+      nsPrefix="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.information">
     <eClassifiers xsi:type="ecore:EClass" name="Information" abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
       <eStructuralFeatures xsi:type="ecore:EReference" name="dataTargets" upperBound="-1"
           eType="#//data/DataIdentifying"/>
@@ -85,8 +85,8 @@
     <eClassifiers xsi:type="ecore:EClass" name="CallInformation" eSuperTypes="#//information/Information"/>
     <eClassifiers xsi:type="ecore:EClass" name="AllInformation" eSuperTypes="#//information/Information"/>
   </eSubpackages>
-  <eSubpackages name="repository" nsURI="http://edu.kit.kastel.scbs.confidentiality.repository"
-      nsPrefix="edu.kit.kastel.scbs.confidentiality.repository">
+  <eSubpackages name="repository" nsURI="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.repository"
+      nsPrefix="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.repository">
     <eClassifiers xsi:type="ecore:EClass" name="AddedServiceParameter" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
     <eClassifiers xsi:type="ecore:EClass" name="AbstractInformationFlow" abstract="true"
         eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
@@ -107,8 +107,8 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="serviceParameters" eType="#//repository/AddedServiceParameter"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="resources" nsURI="http://edu.kit.kastel.scbs.confidentiality/resources"
-      nsPrefix="edu.kit.kastel.scbs.confidentiality.resources">
+  <eSubpackages name="resources" nsURI="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.resources"
+      nsPrefix="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.resources">
     <eClassifiers xsi:type="ecore:EClass" name="Location" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
     <eClassifiers xsi:type="ecore:EClass" name="TamperProtection" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
     <eClassifiers xsi:type="ecore:EClass" name="AbstractResourceProtection" abstract="true"
@@ -151,8 +151,8 @@
           eType="#//data/DataSet"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="adversary" nsURI="http://edu.kit.kastel.scbs.confidentiality/adversary"
-      nsPrefix="edu.kit.kastel.scbs.confidentiality.adversary">
+  <eSubpackages name="adversary" nsURI="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.adversary"
+      nsPrefix="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.adversary">
     <eClassifiers xsi:type="ecore:EClass" name="Adversaries" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
       <eStructuralFeatures xsi:type="ecore:EReference" name="adversaries" ordered="false"
           lowerBound="1" upperBound="-1" eType="#//adversary/Adversary" containment="true"/>
@@ -164,8 +164,8 @@
           eType="#//resources/AbstractResourceProtection"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="system" nsURI="http://edu.kit.kastel.scbs.confidentiality/system"
-      nsPrefix="edu.kit.kastel.scbs.confidentiality.sytem">
+  <eSubpackages name="system" nsURI="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.system"
+      nsPrefix="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.sytem">
     <eClassifiers xsi:type="ecore:EClass" name="AbstractSpecificationParameterAssignement"
         abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
       <eStructuralFeatures xsi:type="ecore:EReference" name="specificationParametersToReplace"

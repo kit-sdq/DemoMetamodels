@@ -73,7 +73,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated confidentiality4cbse -->
       <package
-            uri="http://edu.kit.kastel.scbs.confidentiality/data"
+            uri="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.data"
             class="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.data.DataPackage"
             genModel="model/confidentiality4cbse.genmodel"/>
    </extension>
@@ -81,7 +81,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated confidentiality4cbse -->
       <package
-            uri="http://edu.kit.kastel.scbs.confidentiality/information"
+            uri="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.information"
             class="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.information.InformationPackage"
             genModel="model/confidentiality4cbse.genmodel"/>
    </extension>
@@ -89,7 +89,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated confidentiality4cbse -->
       <package
-            uri="http://edu.kit.kastel.scbs.confidentiality.repository"
+            uri="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.repository"
             class="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.repository.RepositoryPackage"
             genModel="model/confidentiality4cbse.genmodel"/>
    </extension>
@@ -97,7 +97,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated confidentiality4cbse -->
       <package
-            uri="http://edu.kit.kastel.scbs.confidentiality/resources"
+            uri="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.resources"
             class="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.resources.ResourcesPackage"
             genModel="model/confidentiality4cbse.genmodel"/>
    </extension>
@@ -105,7 +105,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated confidentiality4cbse -->
       <package
-            uri="http://edu.kit.kastel.scbs.confidentiality/adversary"
+            uri="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.adversary"
             class="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.adversary.AdversaryPackage"
             genModel="model/confidentiality4cbse.genmodel"/>
    </extension>
@@ -113,7 +113,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated confidentiality4cbse -->
       <package
-            uri="http://edu.kit.kastel.scbs.confidentiality/system"
+            uri="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.system"
             class="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.system.SystemPackage"
             genModel="model/confidentiality4cbse.genmodel"/>
    </extension>

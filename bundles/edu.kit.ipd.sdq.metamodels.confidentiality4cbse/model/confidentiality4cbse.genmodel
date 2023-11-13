@@ -10,7 +10,7 @@
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" suppressGenModelAnnotations="false"
     copyrightFields="false" usedGenPackages="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#//units platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction"
     importOrganizing="true">
-  <foreignModel>confidentiality.ecore</foreignModel>
+  <foreignModel>confidentiality4cbse.ecore</foreignModel>
   <genPackages prefix="Confidentiality" basePackage="edu.kit.ipd.sdq.metamodels" disposableProviderFactory="true"
       fileExtensions="confidentiality4cbse" ecorePackage="confidentiality4cbse.ecore#/">
     <genClasses ecoreClass="confidentiality4cbse.ecore#//ConfidentialitySpecification">
