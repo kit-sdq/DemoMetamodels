@@ -24,14 +24,16 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class JOANARootItemProvider extends JoanaElementItemProvider {
+public class JOANARootItemProvider extends JoanaElementItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public JOANARootItemProvider(AdapterFactory adapterFactory) {
+	public JOANARootItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -42,8 +44,10 @@ public class JOANARootItemProvider extends JoanaElementItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 		}
@@ -59,8 +63,10 @@ public class JOANARootItemProvider extends JoanaElementItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object)
+	{
+		if (childrenFeatures == null)
+		{
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(JoanaPackage.Literals.JOANA_ROOT__FLOWSPECIFICATION);
 			childrenFeatures.add(JoanaPackage.Literals.JOANA_ROOT__LATTICE);
@@ -76,7 +82,8 @@ public class JOANARootItemProvider extends JoanaElementItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
+	protected EStructuralFeature getChildFeature(Object object, Object child)
+	{
 		// Check the type of the specified child object and return the proper feature to use for
 		// adding (see {@link AddCommand}) it as a child.
 
@@ -90,7 +97,8 @@ public class JOANARootItemProvider extends JoanaElementItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/JOANARoot"));
 	}
 
@@ -101,7 +109,8 @@ public class JOANARootItemProvider extends JoanaElementItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((JOANARoot)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_JOANARoot_type") :
@@ -117,10 +126,12 @@ public class JOANARootItemProvider extends JoanaElementItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(JOANARoot.class)) {
+		switch (notification.getFeatureID(JOANARoot.class))
+		{
 			case JoanaPackage.JOANA_ROOT__FLOWSPECIFICATION:
 			case JoanaPackage.JOANA_ROOT__LATTICE:
 			case JoanaPackage.JOANA_ROOT__SECURITYLEVEL:
@@ -139,7 +150,8 @@ public class JOANARootItemProvider extends JoanaElementItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add

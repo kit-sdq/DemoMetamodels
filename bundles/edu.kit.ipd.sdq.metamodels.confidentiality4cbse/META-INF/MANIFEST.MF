@@ -7,7 +7,7 @@ Bundle-Version: 1.1.0.202304241414
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: edu.kit.ipd.sdq.metamodels.confidentiality,
  edu.kit.ipd.sdq.metamodels.confidentiality.adversary,
  edu.kit.ipd.sdq.metamodels.confidentiality.adversary.impl,
@@ -49,7 +49,28 @@ Export-Package: edu.kit.ipd.sdq.metamodels.confidentiality,
  edu.kit.ipd.sdq.metamodels.confidentiality4cbse.system,
  edu.kit.ipd.sdq.metamodels.confidentiality4cbse.system.impl,
  edu.kit.ipd.sdq.metamodels.confidentiality4cbse.system.util,
- edu.kit.ipd.sdq.metamodels.confidentiality4cbse.util
+ edu.kit.ipd.sdq.metamodels.confidentiality4cbse.util,
+ confidentiality4cbse,
+ confidentiality4cbse.adversary,
+ confidentiality4cbse.adversary.impl,
+ confidentiality4cbse.adversary.util,
+ confidentiality4cbse.data,
+ confidentiality4cbse.data.impl,
+ confidentiality4cbse.data.util,
+ confidentiality4cbse.impl,
+ confidentiality4cbse.information,
+ confidentiality4cbse.information.impl,
+ confidentiality4cbse.information.util,
+ confidentiality4cbse.repository,
+ confidentiality4cbse.repository.impl,
+ confidentiality4cbse.repository.util,
+ confidentiality4cbse.resources,
+ confidentiality4cbse.resources.impl,
+ confidentiality4cbse.resources.util,
+ confidentiality4cbse.system,
+ confidentiality4cbse.system.impl,
+ confidentiality4cbse.system.util,
+ confidentiality4cbse.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  de.uka.ipd.sdq.identifier;visibility:=reexport,

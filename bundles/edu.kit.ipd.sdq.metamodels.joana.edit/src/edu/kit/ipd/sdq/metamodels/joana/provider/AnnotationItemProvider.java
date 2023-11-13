@@ -21,14 +21,16 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AnnotationItemProvider extends FlowSpecificationElementItemProvider {
+public class AnnotationItemProvider extends FlowSpecificationElementItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AnnotationItemProvider(AdapterFactory adapterFactory) {
+	public AnnotationItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -39,8 +41,10 @@ public class AnnotationItemProvider extends FlowSpecificationElementItemProvider
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addAnnotatedParameterPropertyDescriptor(object);
@@ -54,7 +58,8 @@ public class AnnotationItemProvider extends FlowSpecificationElementItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAnnotatedParameterPropertyDescriptor(Object object) {
+	protected void addAnnotatedParameterPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
@@ -77,7 +82,8 @@ public class AnnotationItemProvider extends FlowSpecificationElementItemProvider
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/Annotation"));
 	}
 
@@ -88,7 +94,8 @@ public class AnnotationItemProvider extends FlowSpecificationElementItemProvider
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((Annotation)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Annotation_type") :
@@ -104,7 +111,8 @@ public class AnnotationItemProvider extends FlowSpecificationElementItemProvider
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 		super.notifyChanged(notification);
 	}
@@ -117,7 +125,8 @@ public class AnnotationItemProvider extends FlowSpecificationElementItemProvider
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

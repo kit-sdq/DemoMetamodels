@@ -47,7 +47,8 @@ import org.eclipse.ui.PartInitException;
  */
 public class JoanaActionBarContributor
 	extends EditingDomainActionBarContributor
-	implements ISelectionChangedListener {
+	implements ISelectionChangedListener
+{
 	/**
 	 * This keeps track of the active editor.
 	 * <!-- begin-user-doc -->
@@ -71,13 +72,17 @@ public class JoanaActionBarContributor
 	 * @generated
 	 */
 	protected IAction showPropertiesViewAction =
-		new Action(JoanamodelEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
+		new Action(JoanamodelEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item"))
+		{
 			@Override
-			public void run() {
-				try {
+			public void run()
+			{
+				try
+				{
 					getPage().showView("org.eclipse.ui.views.PropertySheet");
 				}
-				catch (PartInitException exception) {
+				catch (PartInitException exception)
+				{
 					JoanamodelEditorPlugin.INSTANCE.log(exception);
 				}
 			}
@@ -91,17 +96,22 @@ public class JoanaActionBarContributor
 	 * @generated
 	 */
 	protected IAction refreshViewerAction =
-		new Action(JoanamodelEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
+		new Action(JoanamodelEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item"))
+		{
 			@Override
-			public boolean isEnabled() {
+			public boolean isEnabled()
+			{
 				return activeEditorPart instanceof IViewerProvider;
 			}
 
 			@Override
-			public void run() {
-				if (activeEditorPart instanceof IViewerProvider) {
+			public void run()
+			{
+				if (activeEditorPart instanceof IViewerProvider)
+				{
 					Viewer viewer = ((IViewerProvider)activeEditorPart).getViewer();
-					if (viewer != null) {
+					if (viewer != null)
+					{
 						viewer.refresh();
 					}
 				}
@@ -148,7 +158,8 @@ public class JoanaActionBarContributor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public JoanaActionBarContributor() {
+	public JoanaActionBarContributor()
+	{
 		super(ADDITIONS_LAST_STYLE);
 		loadResourceAction = new LoadResourceAction();
 		validateAction = new ValidateAction();
@@ -162,7 +173,8 @@ public class JoanaActionBarContributor
 	 * @generated
 	 */
 	@Override
-	public void contributeToToolBar(IToolBarManager toolBarManager) {
+	public void contributeToToolBar(IToolBarManager toolBarManager)
+	{
 		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("joana-settings"));
 		toolBarManager.add(new Separator("joana-additions"));
@@ -176,7 +188,8 @@ public class JoanaActionBarContributor
 	 * @generated
 	 */
 	@Override
-	public void contributeToMenu(IMenuManager menuManager) {
+	public void contributeToMenu(IMenuManager menuManager)
+	{
 		super.contributeToMenu(menuManager);
 
 		IMenuManager submenuManager = new MenuManager(JoanamodelEditorPlugin.INSTANCE.getString("_UI_JoanaEditor_menu"), "edu.kit.ipd.sdq.metamodels.joanaMenuID");
@@ -199,8 +212,10 @@ public class JoanaActionBarContributor
 		// Force an update because Eclipse hides empty menus now.
 		//
 		submenuManager.addMenuListener
-			(new IMenuListener() {
-				 public void menuAboutToShow(IMenuManager menuManager) {
+			(new IMenuListener()
+			 {
+				 public void menuAboutToShow(IMenuManager menuManager)
+				 {
 					 menuManager.updateAll(true);
 				 }
 			 });
@@ -215,25 +230,30 @@ public class JoanaActionBarContributor
 	 * @generated
 	 */
 	@Override
-	public void setActiveEditor(IEditorPart part) {
+	public void setActiveEditor(IEditorPart part)
+	{
 		super.setActiveEditor(part);
 		activeEditorPart = part;
 
 		// Switch to the new selection provider.
 		//
-		if (selectionProvider != null) {
+		if (selectionProvider != null)
+		{
 			selectionProvider.removeSelectionChangedListener(this);
 		}
-		if (part == null) {
+		if (part == null)
+		{
 			selectionProvider = null;
 		}
-		else {
+		else
+		{
 			selectionProvider = part.getSite().getSelectionProvider();
 			selectionProvider.addSelectionChangedListener(this);
 
 			// Fake a selection changed event to update the menus.
 			//
-			if (selectionProvider.getSelection() != null) {
+			if (selectionProvider.getSelection() != null)
+			{
 				selectionChanged(new SelectionChangedEvent(selectionProvider, selectionProvider.getSelection()));
 			}
 		}
@@ -247,13 +267,16 @@ public class JoanaActionBarContributor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void selectionChanged(SelectionChangedEvent event) {
+	public void selectionChanged(SelectionChangedEvent event)
+	{
 		// Remove any menu items for old selection.
 		//
-		if (createChildMenuManager != null) {
+		if (createChildMenuManager != null)
+		{
 			depopulateManager(createChildMenuManager, createChildActions);
 		}
-		if (createSiblingMenuManager != null) {
+		if (createSiblingMenuManager != null)
+		{
 			depopulateManager(createSiblingMenuManager, createSiblingActions);
 		}
 
@@ -263,7 +286,8 @@ public class JoanaActionBarContributor
 		Collection<?> newSiblingDescriptors = null;
 
 		ISelection selection = event.getSelection();
-		if (selection instanceof IStructuredSelection && ((IStructuredSelection)selection).size() == 1) {
+		if (selection instanceof IStructuredSelection && ((IStructuredSelection)selection).size() == 1)
+		{
 			Object object = ((IStructuredSelection)selection).getFirstElement();
 
 			EditingDomain domain = ((IEditingDomainProvider)activeEditorPart).getEditingDomain();
@@ -277,11 +301,13 @@ public class JoanaActionBarContributor
 		createChildActions = generateCreateChildActions(newChildDescriptors, selection);
 		createSiblingActions = generateCreateSiblingActions(newSiblingDescriptors, selection);
 
-		if (createChildMenuManager != null) {
+		if (createChildMenuManager != null)
+		{
 			populateManager(createChildMenuManager, createChildActions, null);
 			createChildMenuManager.update(true);
 		}
-		if (createSiblingMenuManager != null) {
+		if (createSiblingMenuManager != null)
+		{
 			populateManager(createSiblingMenuManager, createSiblingActions, null);
 			createSiblingMenuManager.update(true);
 		}
@@ -294,10 +320,13 @@ public class JoanaActionBarContributor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Collection<IAction> generateCreateChildActions(Collection<?> descriptors, ISelection selection) {
+	protected Collection<IAction> generateCreateChildActions(Collection<?> descriptors, ISelection selection)
+	{
 		Collection<IAction> actions = new ArrayList<IAction>();
-		if (descriptors != null) {
-			for (Object descriptor : descriptors) {
+		if (descriptors != null)
+		{
+			for (Object descriptor : descriptors)
+			{
 				actions.add(new CreateChildAction(activeEditorPart, selection, descriptor));
 			}
 		}
@@ -311,10 +340,13 @@ public class JoanaActionBarContributor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Collection<IAction> generateCreateSiblingActions(Collection<?> descriptors, ISelection selection) {
+	protected Collection<IAction> generateCreateSiblingActions(Collection<?> descriptors, ISelection selection)
+	{
 		Collection<IAction> actions = new ArrayList<IAction>();
-		if (descriptors != null) {
-			for (Object descriptor : descriptors) {
+		if (descriptors != null)
+		{
+			for (Object descriptor : descriptors)
+			{
 				actions.add(new CreateSiblingAction(activeEditorPart, selection, descriptor));
 			}
 		}
@@ -330,13 +362,18 @@ public class JoanaActionBarContributor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void populateManager(IContributionManager manager, Collection<? extends IAction> actions, String contributionID) {
-		if (actions != null) {
-			for (IAction action : actions) {
-				if (contributionID != null) {
+	protected void populateManager(IContributionManager manager, Collection<? extends IAction> actions, String contributionID)
+	{
+		if (actions != null)
+		{
+			for (IAction action : actions)
+			{
+				if (contributionID != null)
+				{
 					manager.insertBefore(contributionID, action);
 				}
-				else {
+				else
+				{
 					manager.add(action);
 				}
 			}
@@ -350,22 +387,28 @@ public class JoanaActionBarContributor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void depopulateManager(IContributionManager manager, Collection<? extends IAction> actions) {
-		if (actions != null) {
+	protected void depopulateManager(IContributionManager manager, Collection<? extends IAction> actions)
+	{
+		if (actions != null)
+		{
 			IContributionItem[] items = manager.getItems();
-			for (int i = 0; i < items.length; i++) {
+			for (int i = 0; i < items.length; i++)
+			{
 				// Look into SubContributionItems
 				//
 				IContributionItem contributionItem = items[i];
-				while (contributionItem instanceof SubContributionItem) {
+				while (contributionItem instanceof SubContributionItem)
+				{
 					contributionItem = ((SubContributionItem)contributionItem).getInnerItem();
 				}
 
 				// Delete the ActionContributionItems with matching action.
 				//
-				if (contributionItem instanceof ActionContributionItem) {
+				if (contributionItem instanceof ActionContributionItem)
+				{
 					IAction action = ((ActionContributionItem)contributionItem).getAction();
-					if (actions.contains(action)) {
+					if (actions.contains(action))
+					{
 						manager.remove(contributionItem);
 					}
 				}
@@ -380,7 +423,8 @@ public class JoanaActionBarContributor
 	 * @generated
 	 */
 	@Override
-	public void menuAboutToShow(IMenuManager menuManager) {
+	public void menuAboutToShow(IMenuManager menuManager)
+	{
 		super.menuAboutToShow(menuManager);
 		MenuManager submenuManager = null;
 
@@ -400,7 +444,8 @@ public class JoanaActionBarContributor
 	 * @generated
 	 */
 	@Override
-	protected void addGlobalActions(IMenuManager menuManager) {
+	protected void addGlobalActions(IMenuManager menuManager)
+	{
 		menuManager.insertAfter("additions-end", new Separator("ui-actions"));
 		menuManager.insertAfter("ui-actions", showPropertiesViewAction);
 
@@ -417,7 +462,8 @@ public class JoanaActionBarContributor
 	 * @generated
 	 */
 	@Override
-	protected boolean removeAllReferencesOnDelete() {
+	protected boolean removeAllReferencesOnDelete()
+	{
 		return true;
 	}
 

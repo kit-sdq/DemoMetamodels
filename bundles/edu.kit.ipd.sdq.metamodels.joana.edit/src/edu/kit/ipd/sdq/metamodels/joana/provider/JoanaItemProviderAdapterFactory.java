@@ -32,7 +32,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable
+{
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -63,7 +64,8 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public JoanaItemProviderAdapterFactory() {
+	public JoanaItemProviderAdapterFactory()
+	{
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -86,8 +88,10 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * @generated
 	 */
 	@Override
-	public Adapter createEntryPointAdapter() {
-		if (entryPointItemProvider == null) {
+	public Adapter createEntryPointAdapter()
+	{
+		if (entryPointItemProvider == null)
+		{
 			entryPointItemProvider = new EntryPointItemProvider(this);
 		}
 
@@ -109,8 +113,10 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * @generated
 	 */
 	@Override
-	public Adapter createAnnotationAdapter() {
-		if (annotationItemProvider == null) {
+	public Adapter createAnnotationAdapter()
+	{
+		if (annotationItemProvider == null)
+		{
 			annotationItemProvider = new AnnotationItemProvider(this);
 		}
 
@@ -132,8 +138,10 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * @generated
 	 */
 	@Override
-	public Adapter createSinkAdapter() {
-		if (sinkItemProvider == null) {
+	public Adapter createSinkAdapter()
+	{
+		if (sinkItemProvider == null)
+		{
 			sinkItemProvider = new SinkItemProvider(this);
 		}
 
@@ -155,8 +163,10 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * @generated
 	 */
 	@Override
-	public Adapter createSourceAdapter() {
-		if (sourceItemProvider == null) {
+	public Adapter createSourceAdapter()
+	{
+		if (sourceItemProvider == null)
+		{
 			sourceItemProvider = new SourceItemProvider(this);
 		}
 
@@ -178,8 +188,10 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * @generated
 	 */
 	@Override
-	public Adapter createSecurityLevelAdapter() {
-		if (securityLevelItemProvider == null) {
+	public Adapter createSecurityLevelAdapter()
+	{
+		if (securityLevelItemProvider == null)
+		{
 			securityLevelItemProvider = new SecurityLevelItemProvider(this);
 		}
 
@@ -201,8 +213,10 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * @generated
 	 */
 	@Override
-	public Adapter createLatticeAdapter() {
-		if (latticeItemProvider == null) {
+	public Adapter createLatticeAdapter()
+	{
+		if (latticeItemProvider == null)
+		{
 			latticeItemProvider = new LatticeItemProvider(this);
 		}
 
@@ -224,8 +238,10 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * @generated
 	 */
 	@Override
-	public Adapter createFlowRelationAdapter() {
-		if (flowRelationItemProvider == null) {
+	public Adapter createFlowRelationAdapter()
+	{
+		if (flowRelationItemProvider == null)
+		{
 			flowRelationItemProvider = new FlowRelationItemProvider(this);
 		}
 
@@ -247,8 +263,10 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * @generated
 	 */
 	@Override
-	public Adapter createJOANARootAdapter() {
-		if (joanaRootItemProvider == null) {
+	public Adapter createJOANARootAdapter()
+	{
+		if (joanaRootItemProvider == null)
+		{
 			joanaRootItemProvider = new JOANARootItemProvider(this);
 		}
 
@@ -270,8 +288,10 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * @generated
 	 */
 	@Override
-	public Adapter createFlowSpecificationAdapter() {
-		if (flowSpecificationItemProvider == null) {
+	public Adapter createFlowSpecificationAdapter()
+	{
+		if (flowSpecificationItemProvider == null)
+		{
 			flowSpecificationItemProvider = new FlowSpecificationItemProvider(this);
 		}
 
@@ -293,8 +313,10 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * @generated
 	 */
 	@Override
-	public Adapter createJoanaElementAdapter() {
-		if (joanaElementItemProvider == null) {
+	public Adapter createJoanaElementAdapter()
+	{
+		if (joanaElementItemProvider == null)
+		{
 			joanaElementItemProvider = new JoanaElementItemProvider(this);
 		}
 
@@ -307,7 +329,8 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ComposeableAdapterFactory getRootAdapterFactory() {
+	public ComposeableAdapterFactory getRootAdapterFactory()
+	{
 		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
 	}
 
@@ -317,7 +340,8 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
+	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory)
+	{
 		this.parentAdapterFactory = parentAdapterFactory;
 	}
 
@@ -327,7 +351,8 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * @generated
 	 */
 	@Override
-	public boolean isFactoryForType(Object type) {
+	public boolean isFactoryForType(Object type)
+	{
 		return supportedTypes.contains(type) || super.isFactoryForType(type);
 	}
 
@@ -338,7 +363,8 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * @generated
 	 */
 	@Override
-	public Adapter adapt(Notifier notifier, Object type) {
+	public Adapter adapt(Notifier notifier, Object type)
+	{
 		return super.adapt(notifier, this);
 	}
 
@@ -348,10 +374,13 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * @generated
 	 */
 	@Override
-	public Object adapt(Object object, Object type) {
-		if (isFactoryForType(type)) {
+	public Object adapt(Object object, Object type)
+	{
+		if (isFactoryForType(type))
+		{
 			Object adapter = super.adapt(object, type);
-			if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
+			if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter)))
+			{
 				return adapter;
 			}
 		}
@@ -365,7 +394,8 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addListener(INotifyChangedListener notifyChangedListener) {
+	public void addListener(INotifyChangedListener notifyChangedListener)
+	{
 		changeNotifier.addListener(notifyChangedListener);
 	}
 
@@ -375,7 +405,8 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeListener(INotifyChangedListener notifyChangedListener) {
+	public void removeListener(INotifyChangedListener notifyChangedListener)
+	{
 		changeNotifier.removeListener(notifyChangedListener);
 	}
 
@@ -385,10 +416,12 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void fireNotifyChanged(Notification notification) {
+	public void fireNotifyChanged(Notification notification)
+	{
 		changeNotifier.fireNotifyChanged(notification);
 
-		if (parentAdapterFactory != null) {
+		if (parentAdapterFactory != null)
+		{
 			parentAdapterFactory.fireNotifyChanged(notification);
 		}
 	}
@@ -399,7 +432,8 @@ public class JoanaItemProviderAdapterFactory extends JoanaAdapterFactory impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void dispose() {
+	public void dispose()
+	{
 		if (entryPointItemProvider != null) entryPointItemProvider.dispose();
 		if (annotationItemProvider != null) annotationItemProvider.dispose();
 		if (sinkItemProvider != null) sinkItemProvider.dispose();

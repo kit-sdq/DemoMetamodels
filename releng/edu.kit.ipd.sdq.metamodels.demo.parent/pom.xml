@@ -31,6 +31,16 @@
 			<layout>p2</layout>
 			<url>https://kit-sdq.github.io/updatesite/release/xannotations/${sdq.xannotations.version}</url>
 		</repository>
+		<repository>
+			<id>Jamopp</id>
+			<layout>p2</layout>
+			<url>https://updatesite.palladio-simulator.com/palladio-supporting-eclipsejavadevelopmenttools/nightly</url>
+		</repository>
+		<repository>
+			<id>PCM</id>
+			<layout>p2</layout>
+			<url>https://updatesite.palladio-simulator.com/palladio-build-updatesite/releases/5.1.0/</url>
+		</repository>
 	</repositories>
 
 	<build>

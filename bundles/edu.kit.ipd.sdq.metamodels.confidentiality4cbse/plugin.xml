@@ -66,7 +66,7 @@
       <!-- @generated confidentiality4cbse -->
       <package
             uri="edu.kit.ipd.sdq.metamodels.confidentiality4cbse"
-            class="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.ConfidentialityPackage"
+            class="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.Confidentiality4cbsePackage"
             genModel="model/confidentiality4cbse.genmodel"/>
    </extension>
 

@@ -80,7 +80,7 @@ Workflow {
 
 	component = EcoreGenerator {
 		srcPath = "platform:/resource/${joanaPluginName}/src-gen"
-		genModel = "platform:/resource/${joanaPluginName}/model/joana.genmodel"
+		genModel = "platform:/resource/${joanaPluginName}/model/joanamodel.genmodel"
 		generateCustomClasses = false
 		generateEdit = true
 		generateEditor = true

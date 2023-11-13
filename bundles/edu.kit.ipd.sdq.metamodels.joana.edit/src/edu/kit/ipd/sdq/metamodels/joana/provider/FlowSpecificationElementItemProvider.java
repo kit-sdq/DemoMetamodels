@@ -23,14 +23,16 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FlowSpecificationElementItemProvider extends JoanaElementItemProvider {
+public class FlowSpecificationElementItemProvider extends JoanaElementItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FlowSpecificationElementItemProvider(AdapterFactory adapterFactory) {
+	public FlowSpecificationElementItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -41,8 +43,10 @@ public class FlowSpecificationElementItemProvider extends JoanaElementItemProvid
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addTagPropertyDescriptor(object);
@@ -58,7 +62,8 @@ public class FlowSpecificationElementItemProvider extends JoanaElementItemProvid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTagPropertyDescriptor(Object object) {
+	protected void addTagPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
@@ -80,7 +85,8 @@ public class FlowSpecificationElementItemProvider extends JoanaElementItemProvid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAnnotatedClassPropertyDescriptor(Object object) {
+	protected void addAnnotatedClassPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
@@ -102,7 +108,8 @@ public class FlowSpecificationElementItemProvider extends JoanaElementItemProvid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAnnotatedMethodPropertyDescriptor(Object object) {
+	protected void addAnnotatedMethodPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
@@ -125,7 +132,8 @@ public class FlowSpecificationElementItemProvider extends JoanaElementItemProvid
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((FlowSpecificationElement)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_FlowSpecificationElement_type") :
@@ -141,10 +149,12 @@ public class FlowSpecificationElementItemProvider extends JoanaElementItemProvid
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(FlowSpecificationElement.class)) {
+		switch (notification.getFeatureID(FlowSpecificationElement.class))
+		{
 			case JoanaPackage.FLOW_SPECIFICATION_ELEMENT__TAG:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
@@ -160,7 +170,8 @@ public class FlowSpecificationElementItemProvider extends JoanaElementItemProvid
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

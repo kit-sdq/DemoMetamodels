@@ -6,15 +6,14 @@ import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.emftext.language.java.annotations.provider.JavaEditPlugin;
-
 /**
  * This is the central singleton for the Joanamodel edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class JoanamodelEditPlugin extends EMFPlugin {
+public final class JoanamodelEditPlugin extends EMFPlugin
+{
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
@@ -37,10 +36,11 @@ public final class JoanamodelEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public JoanamodelEditPlugin() {
+	public JoanamodelEditPlugin()
+	{
 		super
-		  (new ResourceLocator [] {
-		     JavaEditPlugin.INSTANCE,
+		  (new ResourceLocator [] 
+		   {
 		   });
 	}
 
@@ -52,7 +52,8 @@ public final class JoanamodelEditPlugin extends EMFPlugin {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getPluginResourceLocator() {
+	public ResourceLocator getPluginResourceLocator()
+	{
 		return plugin;
 	}
 
@@ -63,7 +64,8 @@ public final class JoanamodelEditPlugin extends EMFPlugin {
 	 * @return the singleton instance.
 	 * @generated
 	 */
-	public static Implementation getPlugin() {
+	public static Implementation getPlugin()
+	{
 		return plugin;
 	}
 
@@ -73,14 +75,16 @@ public final class JoanamodelEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Implementation extends EclipsePlugin {
+	public static class Implementation extends EclipsePlugin
+	{
 		/**
 		 * Creates an instance.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		public Implementation() {
+		public Implementation()
+		{
 			super();
 
 			// Remember the static instance.
