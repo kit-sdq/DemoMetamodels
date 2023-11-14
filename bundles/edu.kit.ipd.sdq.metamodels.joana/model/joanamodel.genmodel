@@ -5,8 +5,8 @@
     editorPluginClass="edu.kit.ipd.sdq.metamodels.joana.presentation.JoanamodelEditorPlugin"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" testSuiteClass="edu.kit.ipd.sdq.metamodels.joana.tests.JoanamodelAllTests"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
-    usedGenPackages="../../org.emftext.language.java/metamodel/java.genmodel#//java"
-    operationReflection="true" importOrganizing="true">
+    usedGenPackages="../../tools.mdsd.jamopp.model/metamodel/java.genmodel#//java"
+    importOrganizing="true">
   <foreignModel>joanamodel.ecore</foreignModel>
   <genPackages prefix="Joana" basePackage="edu.kit.ipd.sdq.metamodels" disposableProviderFactory="true"
       ecorePackage="joanamodel.ecore#/">

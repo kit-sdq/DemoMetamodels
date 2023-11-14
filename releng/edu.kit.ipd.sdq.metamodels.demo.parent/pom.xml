@@ -34,7 +34,7 @@
 		<repository>
 			<id>Jamopp</id>
 			<layout>p2</layout>
-			<url>https://updatesite.palladio-simulator.com/palladio-supporting-eclipsejavadevelopmenttools/nightly</url>
+			<url>https://updatesite.mdsd.tools/extended-java-model-parser-and-printer/nightly/</url>
 		</repository>
 		<repository>
 			<id>PCM</id>

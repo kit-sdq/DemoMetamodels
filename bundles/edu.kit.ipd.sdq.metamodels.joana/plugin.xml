@@ -11,7 +11,7 @@
       <package
             uri="edu.kit.ipd.sdq.metamodels.joana"
             class="edu.kit.ipd.sdq.metamodels.joana.JoanaPackage"
-            genModel="model/joana.genmodel"/>
+            genModel="model/joanamodel.genmodel"/>
    </extension>
 
 </plugin>
