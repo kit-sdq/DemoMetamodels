@@ -159,6 +159,46 @@ import edu.kit.ipd.sdq.metamodels.joana.provider.JoanaItemProviderAdapterFactory
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
+import tools.mdsd.jamopp.model.commons.layout.provider.LayoutItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.annotations.provider.AnnotationsItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.arrays.provider.ArraysItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.classifiers.provider.ClassifiersItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.commons.provider.CommonsItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.containers.provider.ContainersItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.expressions.provider.ExpressionsItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.generics.provider.GenericsItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.imports.provider.ImportsItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.instantiations.provider.InstantiationsItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.literals.provider.LiteralsItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.members.provider.MembersItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.modifiers.provider.ModifiersItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.modules.provider.ModulesItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.operators.provider.OperatorsItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.parameters.provider.ParametersItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.references.provider.ReferencesItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.statements.provider.StatementsItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.types.provider.TypesItemProviderAdapterFactory;
+
+import tools.mdsd.jamopp.model.java.variables.provider.VariablesItemProviderAdapterFactory;
+
 
 /**
  * This is an example of a Joana model editor.
@@ -778,6 +818,26 @@ public class JoanaEditor
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new JoanaItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new AnnotationsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ArraysItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ClassifiersItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new CommonsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ContainersItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ExpressionsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new GenericsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ImportsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new InstantiationsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new LiteralsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new MembersItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ModifiersItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new OperatorsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ParametersItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ReferencesItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new StatementsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new TypesItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new VariablesItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ModulesItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new LayoutItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

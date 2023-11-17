@@ -8,6 +8,8 @@ import org.eclipse.emf.common.ui.EclipseUIPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import tools.mdsd.jamopp.model.java.annotations.provider.JavaEditPlugin;
+
 /**
  * This is the central singleton for the Joanamodel editor plugin.
  * <!-- begin-user-doc -->
@@ -43,6 +45,7 @@ public final class JoanamodelEditorPlugin extends EMFPlugin
 		super
 			(new ResourceLocator [] 
 			{
+				JavaEditPlugin.INSTANCE,
 			});
 	}
 
