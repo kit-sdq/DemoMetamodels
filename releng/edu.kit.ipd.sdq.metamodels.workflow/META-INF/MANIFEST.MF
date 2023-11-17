@@ -12,4 +12,6 @@ Require-Bundle: tools.mdsd.jamopp.model,
  org.palladiosimulator.pcm,
  de.uka.ipd.sdq.probfunction,
  de.uka.ipd.sdq.stoex,
- de.uka.ipd.sdq.units
+ de.uka.ipd.sdq.units,
+ org.eclipse.uml2.uml,
+ org.eclipse.uml2.codegen.ecore

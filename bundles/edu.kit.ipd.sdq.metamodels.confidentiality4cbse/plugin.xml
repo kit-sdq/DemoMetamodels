@@ -117,4 +117,5 @@
             class="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.system.SystemPackage"
             genModel="model/confidentiality4cbse.genmodel"/>
    </extension>
+
 </plugin>
