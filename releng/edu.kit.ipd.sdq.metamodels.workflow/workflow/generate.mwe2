@@ -2,6 +2,8 @@ module generate
 
 import org.eclipse.emf.mwe2.ecore.EcoreGenerator
 import org.eclipse.emf.mwe.utils.StandaloneSetup
+import tools.mdsd.ecoreworkflow.mwe2lib.bean.EclipseRCPSupportingStandaloneSetup
+import tools.mdsd.ecoreworkflow.mwe2lib.component.*
 
 var addressesPluginName = "edu.kit.ipd.sdq.metamodels.addresses"
 var familiesPluginName = "edu.kit.ipd.sdq.metamodels.families"
@@ -10,6 +12,8 @@ var personsPluginName = "edu.kit.ipd.sdq.metamodels.persons"
 var recipientsPluginName = "edu.kit.ipd.sdq.metamodels.recipients"
 var autosarPluginName = "edu.kit.ipd.sdq.metamodels.autosar"
 var simulinkPluginName = "edu.kit.ipd.sdq.metamodels.simulink"
+var joanaPluginName = "edu.kit.ipd.sdq.metamodels.joana"
+var confidentiality4cbsePluginName = "edu.kit.ipd.sdq.metamodels.confidentiality4cbse"
 
 var workspaceRoot = "../../"
 
@@ -18,6 +22,75 @@ Workflow {
 	bean = StandaloneSetup {
 		scanClassPath = true
 		platformUri = workspaceRoot
+		
+		uriMap = {
+			from = "platform:/plugin/tools.mdsd.jamopp.model/metamodel/java.genmodel"
+			to = "platform:/resource/tools.mdsd.jamopp.model/metamodel/java.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/tools.mdsd.jamopp.model/metamodel/java.ecore"
+			to = "platform:/resource/tools.mdsd.jamopp.model/metamodel/java.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
+			to = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.uml2.codegen.ecore/model/GenModel.ecore"
+			to = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel"
+			to = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore"
+			to = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
+			to = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore"
+			to = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.palladiosimulator.pcm/model/pcm.genmodel"
+			to = "platform:/resource/org.palladiosimulator.pcm/model/pcm.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore"
+			to = "platform:/resource/org.palladiosimulator.pcm/model/pcm.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel"
+			to = "platform:/resource/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.ecore"
+			to = "platform:/resource/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel"
+			to = "platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore"
+			to = "platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel"
+			to = "platform:/resource/de.uka.ipd.sdq.units/model/Units.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore"
+			to = "platform:/resource/de.uka.ipd.sdq.units/model/Units.ecore"
+		}   
+		registerGeneratedEPackage = "org.eclipse.uml2.codegen.ecore.genmodel.GenModelPackage"
+		
+		registerGenModelFile = "platform:/resource/tools.mdsd.jamopp.model/metamodel/java.genmodel"
+		registerGenModelFile = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
 	}
 	
 	component = EcoreGenerator {
@@ -71,6 +144,22 @@ Workflow {
 	component = EcoreGenerator {
 		srcPath = "platform:/resource/${simulinkPluginName}/src-gen"
 		genModel = "platform:/resource/${simulinkPluginName}/model/simulink.genmodel"
+		generateCustomClasses = false
+		generateEdit = true
+		generateEditor = true
+	}
+
+	component = EcoreGenerator {
+		srcPath = "platform:/resource/${joanaPluginName}/src-gen"
+		genModel = "platform:/resource/${joanaPluginName}/model/joanamodel.genmodel"
+		generateCustomClasses = false
+		generateEdit = true
+		generateEditor = true
+	}
+
+	component = EcoreGenerator {
+		srcPath = "platform:/resource/${confidentiality4cbsePluginName}/src-gen"
+		genModel = "platform:/resource/${confidentiality4cbsePluginName}/model/confidentiality4cbse.genmodel"
 		generateCustomClasses = false
 		generateEdit = true
 		generateEditor = true

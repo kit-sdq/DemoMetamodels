@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="joana" nsURI="edu.kit.ipd.sdq.metamodels.joana" nsPrefix="joana">
+  <eClassifiers xsi:type="ecore:EClass" name="EntryPoint" eSuperTypes="#//FlowSpecificationElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="securitylevels" upperBound="-1"
+        eType="#//SecurityLevel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lattice" lowerBound="1"
+        eType="#//Lattice"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Annotation" eSuperTypes="#//FlowSpecificationElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="securitylevel" lowerBound="1"
+        upperBound="-1" eType="#//SecurityLevel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="annotatedParameter" eType="ecore:EClass platform:/plugin/tools.mdsd.jamopp.model/metamodel/java.ecore#//parameters/Parameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FlowSpecificationElement" abstract="true"
+      eSuperTypes="#//JoanaElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tag" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="annotatedClass" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/tools.mdsd.jamopp.model/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="annotatedMethod" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/tools.mdsd.jamopp.model/metamodel/java.ecore#//members/Method"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sink" eSuperTypes="#//Annotation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Source" eSuperTypes="#//Annotation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityLevel" eSuperTypes="#//JoanaElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Lattice" eSuperTypes="#//JoanaElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowrelation" upperBound="-1"
+        eType="#//FlowRelation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FlowRelation" eSuperTypes="#//JoanaElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" lowerBound="1" upperBound="-1"
+        eType="#//SecurityLevel" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" lowerBound="1" upperBound="-1"
+        eType="#//SecurityLevel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JOANARoot" eSuperTypes="#//JoanaElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowspecification" upperBound="-1"
+        eType="#//FlowSpecification" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lattice" lowerBound="1"
+        eType="#//Lattice" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="securitylevel" upperBound="-1"
+        eType="#//SecurityLevel" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="annotation" upperBound="-1"
+        eType="#//Annotation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FlowSpecification" eSuperTypes="#//JoanaElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entrypoint" lowerBound="1"
+        eType="#//EntryPoint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="annotation" lowerBound="1"
+        upperBound="-1" eType="#//Annotation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JoanaElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

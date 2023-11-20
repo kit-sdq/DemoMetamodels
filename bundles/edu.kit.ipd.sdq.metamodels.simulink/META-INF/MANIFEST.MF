@@ -3,11 +3,11 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: edu.kit.ipd.sdq.metamodels.simulink;singleton:=true
 Automatic-Module-Name: edu.kit.ipd.sdq.metamodels.simulink
-Bundle-Version: 1.8.0.qualifier
+Bundle-Version: 1.9.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: edu.kit.ipd.sdq.metamodels.simulink,
  edu.kit.ipd.sdq.metamodels.simulink.impl,
  edu.kit.ipd.sdq.metamodels.simulink.util
