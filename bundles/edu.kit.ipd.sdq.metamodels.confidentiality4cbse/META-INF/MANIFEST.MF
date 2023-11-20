@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: edu.kit.ipd.sdq.metamodels.confidentiality4cbse;singleton:=true
 Automatic-Module-Name: edu.kit.ipd.sdq.metamodels.confidentiality4cbse
-Bundle-Version: 1.1.0.202304241414
+Bundle-Version: 1.9.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
