@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" 
+    modelDirectory="/edu.kit.ipd.sdq.metamodels.confidentiality4cbse/src-gen"
+    modelPluginID="edu.kit.ipd.sdq.metamodels.confidentiality4cbse" 
+    modelName="Confidentiality4cbse"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" 
+    importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="17.0" 
+    copyrightFields="false" 
+    usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier platform:/plugin/org.palladiosimulator.pcm/model/pcm.genmodel#//pcm platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#//units"
+    importOrganizing="true">
+  <foreignModel>confidentiality4cbse.ecore</foreignModel>
+  <genPackages prefix="Confidentiality4cbse" basePackage="edu.kit.ipd.sdq.metamodels" disposableProviderFactory="true" ecorePackage="confidentiality4cbse.ecore#/">
+    <genClasses ecoreClass="confidentiality4cbse.ecore#//ConfidentialitySpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//ConfidentialitySpecification/dataIdentifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//ConfidentialitySpecification/dataSetMaps"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//ConfidentialitySpecification/addedServiceParameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//ConfidentialitySpecification/informationFlows"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//ConfidentialitySpecification/informationFlowParameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//ConfidentialitySpecification/specificationParameterAssignments"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//ConfidentialitySpecification/specificationParameterEquations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//ConfidentialitySpecification/locations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//ConfidentialitySpecification/tamperProtections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//ConfidentialitySpecification/resourceProtections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//ConfidentialitySpecification/resourceConfidentialities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//ConfidentialitySpecification/encryptions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//ConfidentialitySpecification/userIdentifiers"/>
+    </genClasses>
+    <nestedGenPackages prefix="Data" disposableProviderFactory="true" ecorePackage="confidentiality4cbse.ecore#//data">
+      <genClasses image="false" ecoreClass="confidentiality4cbse.ecore#//data/DataIdentifying"/>
+      <genClasses image="false" ecoreClass="confidentiality4cbse.ecore#//data/UnparameterizedDataIdentifying"/>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//data/DataSet"/>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//data/DataSetMap">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//data/DataSetMap/specificationContainer"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="confidentiality4cbse.ecore#//data/AbstractDataSetMapEntry">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//data/AbstractDataSetMapEntry/map"/>
+      </genClasses>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//data/DataSetMapEntry">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//data/DataSetMapEntry/userIdentifiers"/>
+      </genClasses>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//data/ParameterizedDataSetMapEntry">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//data/ParameterizedDataSetMapEntry/parameter"/>
+      </genClasses>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//data/SpecificationParameter">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confidentiality4cbse.ecore#//data/SpecificationParameter/definingServiceParameter"/>
+      </genClasses>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//data/UserIdentifier"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Information" disposableProviderFactory="true" ecorePackage="confidentiality4cbse.ecore#//information">
+      <genClasses image="false" ecoreClass="confidentiality4cbse.ecore#//information/Information">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//information/Information/dataTargets"/>
+      </genClasses>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//information/ParameterInformation">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//information/ParameterInformation/appliedTo"/>
+      </genClasses>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//information/SizeOfInformation">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//information/SizeOfInformation/information"/>
+      </genClasses>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//information/ReturnValueInformation"/>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//information/CallInformation"/>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//information/AllInformation"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Repository" disposableProviderFactory="true" ecorePackage="confidentiality4cbse.ecore#//repository">
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//repository/AddedServiceParameter"/>
+      <genClasses image="false" ecoreClass="confidentiality4cbse.ecore#//repository/AbstractInformationFlow">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//repository/AbstractInformationFlow/information"/>
+      </genClasses>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//repository/InterfaceInformationFlow">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//repository/InterfaceInformationFlow/appliedTo"/>
+      </genClasses>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//repository/SignatureInformationFlow">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//repository/SignatureInformationFlow/appliedTo"/>
+      </genClasses>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//repository/InformationFlowParameter">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//repository/InformationFlowParameter/informationFlow"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//repository/InformationFlowParameter/specificationParameters"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//repository/InformationFlowParameter/serviceParameters"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Resources" disposableProviderFactory="true" ecorePackage="confidentiality4cbse.ecore#//resources">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="confidentiality4cbse.ecore#//resources/SharingType">
+        <genEnumLiterals ecoreEnumLiteral="confidentiality4cbse.ecore#//resources/SharingType/shared"/>
+        <genEnumLiterals ecoreEnumLiteral="confidentiality4cbse.ecore#//resources/SharingType/exclusive"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="confidentiality4cbse.ecore#//resources/ConnectionType">
+        <genEnumLiterals ecoreEnumLiteral="confidentiality4cbse.ecore#//resources/ConnectionType/existing"/>
+        <genEnumLiterals ecoreEnumLiteral="confidentiality4cbse.ecore#//resources/ConnectionType/possible"/>
+        <genEnumLiterals ecoreEnumLiteral="confidentiality4cbse.ecore#//resources/ConnectionType/complete"/>
+      </genEnums>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//resources/Location"/>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//resources/TamperProtection"/>
+      <genClasses image="false" ecoreClass="confidentiality4cbse.ecore#//resources/AbstractResourceProtection">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//resources/AbstractResourceProtection/locations"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//resources/AbstractResourceProtection/tamperProtections"/>
+      </genClasses>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//resources/LinkingResourceProtection">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//resources/LinkingResourceProtection/linkingResource"/>
+      </genClasses>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//resources/ResourceContainerProtection">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//resources/ResourceContainerProtection/resourceContainer"/>
+      </genClasses>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//resources/ResourceContainerConfidentiality">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//resources/ResourceContainerConfidentiality/appliedTo"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confidentiality4cbse.ecore#//resources/ResourceContainerConfidentiality/sharingType"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confidentiality4cbse.ecore#//resources/ResourceContainerConfidentiality/connectionType"/>
+      </genClasses>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//resources/Encryption">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//resources/Encryption/appliedTo"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//resources/Encryption/unencryptedData"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Adversary" disposableProviderFactory="true" ecorePackage="confidentiality4cbse.ecore#//adversary">
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//adversary/Adversaries">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//adversary/Adversaries/adversaries"/>
+      </genClasses>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//adversary/Adversary">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//adversary/Adversary/mayKnowData"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//adversary/Adversary/mayTamperWith"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="System" disposableProviderFactory="true" ecorePackage="confidentiality4cbse.ecore#//system">
+      <genClasses image="false" ecoreClass="confidentiality4cbse.ecore#//system/AbstractSpecificationParameterAssignement">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//system/AbstractSpecificationParameterAssignement/specificationParametersToReplace"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//system/AbstractSpecificationParameterAssignement/assignedByConnector"/>
+      </genClasses>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//system/SpecificationParameter2DataSetAssignment">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//system/SpecificationParameter2DataSetAssignment/assignedDataSet"/>
+      </genClasses>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//system/DataSetMapParameter2KeyAssignment">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//system/DataSetMapParameter2KeyAssignment/assignedKey"/>
+      </genClasses>
+      <genClasses ecoreClass="confidentiality4cbse.ecore#//system/SpecificationParameterEquation">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//system/SpecificationParameterEquation/leftSpecificationParameter"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//system/SpecificationParameterEquation/rightSpecificationParameter"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//system/SpecificationParameterEquation/leftInterfaces"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//system/SpecificationParameterEquation/rightInterfaces"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality4cbse.ecore#//system/SpecificationParameterEquation/assignedByContext"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

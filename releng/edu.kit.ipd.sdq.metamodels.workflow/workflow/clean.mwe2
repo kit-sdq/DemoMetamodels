@@ -9,6 +9,8 @@ var personsPluginName = "edu.kit.ipd.sdq.metamodels.persons"
 var recipientsPluginName = "edu.kit.ipd.sdq.metamodels.recipients"
 var autosarPluginName = "edu.kit.ipd.sdq.metamodels.autosar"
 var simulinkPluginName = "edu.kit.ipd.sdq.metamodels.simulink"
+var joanaPluginName = "edu.kit.ipd.sdq.metamodels.joana"
+var confidentiality4cbsePluginName = "edu.kit.ipd.sdq.metamodels.confidentiality4cbse"
 
 var workspaceRoot = "../../"
 
@@ -96,6 +98,30 @@ Workflow {
 	
 	component = DirectoryCleaner {
 		directory = "${workspaceRoot}/bundles/${simulinkPluginName}.editor/src-gen"
+	}
+
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${joanaPluginName}/src-gen"
+	}
+
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${joanaPluginName}.edit/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${joanaPluginName}.editor/src-gen"
+	}
+
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${confidentiality4cbsePluginName}/src-gen"
+	}
+
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${confidentiality4cbsePluginName}.edit/src-gen"
+	}
+	
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${confidentiality4cbsePluginName}.editor/src-gen"
 	}
 
 }
