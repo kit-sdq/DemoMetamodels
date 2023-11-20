@@ -7,7 +7,7 @@ Bundle-Version: 1.8.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: edu.kit.ipd.sdq.metamodels.simulink,
  edu.kit.ipd.sdq.metamodels.simulink.impl,
  edu.kit.ipd.sdq.metamodels.simulink.util

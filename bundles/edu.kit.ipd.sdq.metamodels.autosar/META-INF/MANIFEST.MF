@@ -7,7 +7,7 @@ Bundle-Version: 1.8.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: edu.kit.ipd.sdq.metamodels.autosar,
  edu.kit.ipd.sdq.metamodels.autosar.impl,
  edu.kit.ipd.sdq.metamodels.autosar.util
