@@ -98,7 +98,7 @@ public class SpecificationParameterItemProvider extends DataIdentifyingItemProvi
 	@Override
 	public String getText(Object object)
 	{
-		String label = ((SpecificationParameter)object).getDefiningServiceParameter();
+		String label = ((SpecificationParameter)object).getId();
 		return label == null || label.length() == 0 ?
 			getString("_UI_SpecificationParameter_type") :
 			getString("_UI_SpecificationParameter_type") + " " + label;

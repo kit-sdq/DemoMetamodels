@@ -3,6 +3,7 @@
 package edu.kit.ipd.sdq.metamodels.confidentiality4cbse.resources.provider;
 
 
+import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.resources.ResourceContainerProtection;
 import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.resources.ResourcesPackage;
 
 import java.util.Collection;
@@ -95,7 +96,10 @@ public class ResourceContainerProtectionItemProvider extends AbstractResourcePro
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_ResourceContainerProtection_type");
+		String label = ((ResourceContainerProtection)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ResourceContainerProtection_type") :
+			getString("_UI_ResourceContainerProtection_type") + " " + label;
 	}
 
 

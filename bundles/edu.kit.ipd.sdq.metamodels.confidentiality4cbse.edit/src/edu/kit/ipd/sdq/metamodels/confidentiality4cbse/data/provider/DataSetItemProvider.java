@@ -3,6 +3,8 @@
 package edu.kit.ipd.sdq.metamodels.confidentiality4cbse.data.provider;
 
 
+import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.data.DataSet;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -68,7 +70,10 @@ public class DataSetItemProvider extends UnparameterizedDataIdentifyingItemProvi
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_DataSet_type");
+		String label = ((DataSet)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_DataSet_type") :
+			getString("_UI_DataSet_type") + " " + label;
 	}
 
 

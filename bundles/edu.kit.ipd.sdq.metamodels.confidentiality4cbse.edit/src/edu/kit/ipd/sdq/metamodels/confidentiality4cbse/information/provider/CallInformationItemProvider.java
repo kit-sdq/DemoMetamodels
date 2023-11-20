@@ -3,6 +3,8 @@
 package edu.kit.ipd.sdq.metamodels.confidentiality4cbse.information.provider;
 
 
+import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.information.CallInformation;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -68,7 +70,10 @@ public class CallInformationItemProvider extends InformationItemProvider
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_CallInformation_type");
+		String label = ((CallInformation)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_CallInformation_type") :
+			getString("_UI_CallInformation_type") + " " + label;
 	}
 
 

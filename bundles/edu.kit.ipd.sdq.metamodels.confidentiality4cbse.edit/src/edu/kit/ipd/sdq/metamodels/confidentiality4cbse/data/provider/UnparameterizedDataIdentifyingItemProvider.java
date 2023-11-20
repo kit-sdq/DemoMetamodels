@@ -3,6 +3,8 @@
 package edu.kit.ipd.sdq.metamodels.confidentiality4cbse.data.provider;
 
 
+import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.data.UnparameterizedDataIdentifying;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -56,7 +58,10 @@ public class UnparameterizedDataIdentifyingItemProvider extends DataIdentifyingI
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_UnparameterizedDataIdentifying_type");
+		String label = ((UnparameterizedDataIdentifying)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_UnparameterizedDataIdentifying_type") :
+			getString("_UI_UnparameterizedDataIdentifying_type") + " " + label;
 	}
 
 

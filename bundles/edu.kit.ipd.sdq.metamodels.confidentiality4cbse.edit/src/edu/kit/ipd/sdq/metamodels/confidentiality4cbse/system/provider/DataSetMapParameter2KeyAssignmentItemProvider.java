@@ -3,6 +3,7 @@
 package edu.kit.ipd.sdq.metamodels.confidentiality4cbse.system.provider;
 
 
+import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.system.DataSetMapParameter2KeyAssignment;
 import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.system.SystemPackage;
 
 import java.util.Collection;
@@ -95,7 +96,10 @@ public class DataSetMapParameter2KeyAssignmentItemProvider extends AbstractSpeci
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_DataSetMapParameter2KeyAssignment_type");
+		String label = ((DataSetMapParameter2KeyAssignment)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_DataSetMapParameter2KeyAssignment_type") :
+			getString("_UI_DataSetMapParameter2KeyAssignment_type") + " " + label;
 	}
 
 

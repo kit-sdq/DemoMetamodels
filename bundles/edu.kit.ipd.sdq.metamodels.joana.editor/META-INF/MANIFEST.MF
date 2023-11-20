@@ -8,7 +8,7 @@ Bundle-ClassPath: .
 Bundle-Activator: edu.kit.ipd.sdq.metamodels.joana.presentation.JoanamodelEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: edu.kit.ipd.sdq.metamodels.joana.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,

@@ -3,6 +3,7 @@
 package edu.kit.ipd.sdq.metamodels.confidentiality4cbse.adversary.provider;
 
 
+import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.adversary.Adversary;
 import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.adversary.AdversaryPackage;
 
 import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.provider.Confidentiality4cbseEditPlugin;
@@ -16,13 +17,9 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+
+import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
 
 /**
  * This is the item provider adapter for a {@link edu.kit.ipd.sdq.metamodels.confidentiality4cbse.adversary.Adversary} object.
@@ -30,14 +27,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AdversaryItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource
+public class AdversaryItemProvider extends EntityItemProvider
 {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -136,7 +126,10 @@ public class AdversaryItemProvider
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_Adversary_type");
+		String label = ((Adversary)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Adversary_type") :
+			getString("_UI_Adversary_type") + " " + label;
 	}
 
 

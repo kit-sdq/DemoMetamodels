@@ -22,16 +22,10 @@ Workflow {
 	bean = StandaloneSetup {
 		scanClassPath = true
 		platformUri = workspaceRoot
-		registerGenModelFile = "platform:/resource/tools.mdsd.jamopp.model/metamodel/java.genmodel"
-		registerGenModelFile = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
-		registerGenModelFile = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
 		
-		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
-		registerGenModelFile = "platform:/resource/org.palladiosimulator.pcm/model/pcm.genmodel"
-		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel"
-		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.genmodel"
-		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.units/model/Units.genmodel"
 
+
+		
 		uriMap = {
 			from = "platform:/plugin/tools.mdsd.jamopp.model/metamodel/java.genmodel"
 			to = "platform:/resource/tools.mdsd.jamopp.model/metamodel/java.genmodel"
@@ -47,6 +41,10 @@ Workflow {
 		uriMap = {
 			from = "platform:/plugin/org.eclipse.uml2.codegen.ecore/model/GenModel.ecore"
 			to = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.ecore"
+		}
+		uriMap = {
+			from = "http://www.eclipse.org/uml2/2.2.0/GenModel"
+			to = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
 		}
 		uriMap = {
 			from = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel"
@@ -96,7 +94,25 @@ Workflow {
 			from = "platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore"
 			to = "platform:/resource/de.uka.ipd.sdq.units/model/Units.ecore"
 		}
-    
+		
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
+			to = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore"
+			to = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.ecore"
+		}    
+		registerGeneratedEPackage = "org.eclipse.uml2.codegen.ecore.genmodel.GenModelPackage"
+		
+		registerGenModelFile = "platform:/resource/tools.mdsd.jamopp.model/metamodel/java.genmodel"
+		registerGenModelFile = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
+		registerGenModelFile = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
+		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
+		registerGenModelFile = "platform:/resource/org.palladiosimulator.pcm/model/pcm.genmodel"
+		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel"
+		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.genmodel"
+		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.units/model/Units.genmodel"
 	}
 	
 	component = EcoreGenerator {

@@ -4,6 +4,7 @@ package edu.kit.ipd.sdq.metamodels.confidentiality4cbse.data.provider;
 
 
 import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.data.DataPackage;
+import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.data.DataSetMapEntry;
 
 import java.util.Collection;
 import java.util.List;
@@ -95,7 +96,10 @@ public class DataSetMapEntryItemProvider extends AbstractDataSetMapEntryItemProv
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_DataSetMapEntry_type");
+		String label = ((DataSetMapEntry)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_DataSetMapEntry_type") :
+			getString("_UI_DataSetMapEntry_type") + " " + label;
 	}
 
 

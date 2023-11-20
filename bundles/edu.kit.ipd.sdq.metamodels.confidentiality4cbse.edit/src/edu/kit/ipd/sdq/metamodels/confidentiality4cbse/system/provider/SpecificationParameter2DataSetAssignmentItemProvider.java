@@ -3,6 +3,7 @@
 package edu.kit.ipd.sdq.metamodels.confidentiality4cbse.system.provider;
 
 
+import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.system.SpecificationParameter2DataSetAssignment;
 import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.system.SystemPackage;
 
 import java.util.Collection;
@@ -95,7 +96,10 @@ public class SpecificationParameter2DataSetAssignmentItemProvider extends Abstra
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_SpecificationParameter2DataSetAssignment_type");
+		String label = ((SpecificationParameter2DataSetAssignment)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_SpecificationParameter2DataSetAssignment_type") :
+			getString("_UI_SpecificationParameter2DataSetAssignment_type") + " " + label;
 	}
 
 

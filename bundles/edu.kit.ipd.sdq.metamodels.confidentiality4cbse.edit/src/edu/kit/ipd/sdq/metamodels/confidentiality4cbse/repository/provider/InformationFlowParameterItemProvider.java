@@ -5,6 +5,7 @@ package edu.kit.ipd.sdq.metamodels.confidentiality4cbse.repository.provider;
 
 import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.provider.Confidentiality4cbseEditPlugin;
 
+import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.repository.InformationFlowParameter;
 import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.repository.RepositoryPackage;
 
 import java.util.Collection;
@@ -16,13 +17,9 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+
+import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
 
 /**
  * This is the item provider adapter for a {@link edu.kit.ipd.sdq.metamodels.confidentiality4cbse.repository.InformationFlowParameter} object.
@@ -30,14 +27,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
  * <!-- end-user-doc -->
  * @generated
  */
-public class InformationFlowParameterItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource
+public class InformationFlowParameterItemProvider extends EntityItemProvider
 {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -160,7 +150,10 @@ public class InformationFlowParameterItemProvider
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_InformationFlowParameter_type");
+		String label = ((InformationFlowParameter)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_InformationFlowParameter_type") :
+			getString("_UI_InformationFlowParameter_type") + " " + label;
 	}
 
 

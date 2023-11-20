@@ -3,6 +3,8 @@
 package edu.kit.ipd.sdq.metamodels.confidentiality4cbse.information.provider;
 
 
+import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.information.ReturnValueInformation;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -68,7 +70,10 @@ public class ReturnValueInformationItemProvider extends InformationItemProvider
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_ReturnValueInformation_type");
+		String label = ((ReturnValueInformation)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ReturnValueInformation_type") :
+			getString("_UI_ReturnValueInformation_type") + " " + label;
 	}
 
 

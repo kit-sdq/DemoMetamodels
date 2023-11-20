@@ -4,6 +4,7 @@ package edu.kit.ipd.sdq.metamodels.confidentiality4cbse.information.provider;
 
 
 import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.information.InformationPackage;
+import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.information.SizeOfInformation;
 
 import java.util.Collection;
 import java.util.List;
@@ -95,7 +96,10 @@ public class SizeOfInformationItemProvider extends InformationItemProvider
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_SizeOfInformation_type");
+		String label = ((SizeOfInformation)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_SizeOfInformation_type") :
+			getString("_UI_SizeOfInformation_type") + " " + label;
 	}
 
 

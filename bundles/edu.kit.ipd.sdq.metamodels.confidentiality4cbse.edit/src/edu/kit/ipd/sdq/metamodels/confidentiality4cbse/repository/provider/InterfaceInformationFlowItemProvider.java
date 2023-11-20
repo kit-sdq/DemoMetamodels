@@ -3,6 +3,7 @@
 package edu.kit.ipd.sdq.metamodels.confidentiality4cbse.repository.provider;
 
 
+import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.repository.InterfaceInformationFlow;
 import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.repository.RepositoryPackage;
 
 import java.util.Collection;
@@ -95,7 +96,10 @@ public class InterfaceInformationFlowItemProvider extends AbstractInformationFlo
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_InterfaceInformationFlow_type");
+		String label = ((InterfaceInformationFlow)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_InterfaceInformationFlow_type") :
+			getString("_UI_InterfaceInformationFlow_type") + " " + label;
 	}
 
 

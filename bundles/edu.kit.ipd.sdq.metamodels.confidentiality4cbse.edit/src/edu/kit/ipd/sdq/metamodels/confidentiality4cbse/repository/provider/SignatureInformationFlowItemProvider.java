@@ -4,6 +4,7 @@ package edu.kit.ipd.sdq.metamodels.confidentiality4cbse.repository.provider;
 
 
 import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.repository.RepositoryPackage;
+import edu.kit.ipd.sdq.metamodels.confidentiality4cbse.repository.SignatureInformationFlow;
 
 import java.util.Collection;
 import java.util.List;
@@ -95,7 +96,10 @@ public class SignatureInformationFlowItemProvider extends AbstractInformationFlo
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_SignatureInformationFlow_type");
+		String label = ((SignatureInformationFlow)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_SignatureInformationFlow_type") :
+			getString("_UI_SignatureInformationFlow_type") + " " + label;
 	}
 
 
