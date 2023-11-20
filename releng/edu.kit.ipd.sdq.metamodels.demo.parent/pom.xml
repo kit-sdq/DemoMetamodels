@@ -41,12 +41,6 @@
 			<layout>p2</layout>
 			<url>https://updatesite.palladio-simulator.com/palladio-build-updatesite/releases/5.1.0/</url>
 		</repository>
-		<repository>
-			<id>EcoreWorkflow</id>
-			<layout>p2</layout>
-			<url>https://updatesite.mdsd.tools/ecore-workflow/nightly/</url>
-		</repository>
-
 	</repositories>
 
 	<build>
