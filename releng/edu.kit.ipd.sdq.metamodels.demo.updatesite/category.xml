@@ -42,13 +42,13 @@
    <feature id="edu.kit.ipd.sdq.metamodels.simulink.feature.source" version="1.9.0.qualifier">
       <category name="demometamodels"/>
    </feature>
-      <feature url="features/edu.kit.ipd.sdq.metamodels.joana.feature_1.9.0.qualifier.jar" id="edu.kit.ipd.sdq.metamodels.simulink.feature" version="1.9.0.qualifier">
+      <feature url="features/edu.kit.ipd.sdq.metamodels.joana.feature_1.9.0.qualifier.jar" id="edu.kit.ipd.sdq.metamodels.joana.feature" version="1.9.0.qualifier">
       <category name="demometamodels"/>
    </feature>
    <feature id="edu.kit.ipd.sdq.metamodels.joana.feature.source" version="1.9.0.qualifier">
       <category name="demometamodels"/>
    </feature>
-      <feature url="features/edu.kit.ipd.sdq.metamodels.confidentiality4cbse.feature_1.9.0.qualifier.jar" id="edu.kit.ipd.sdq.metamodels.simulink.feature" version="1.9.0.qualifier">
+      <feature url="features/edu.kit.ipd.sdq.metamodels.confidentiality4cbse.feature_1.9.0.qualifier.jar" id="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.feature" version="1.9.0.qualifier">
       <category name="demometamodels"/>
    </feature>
    <feature id="edu.kit.ipd.sdq.metamodels.confidentiality4cbse.feature.source" version="1.9.0.qualifier">
