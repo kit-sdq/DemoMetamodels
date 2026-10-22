@@ -34,7 +34,7 @@
 		<repository>
 			<id>Jamopp</id>
 			<layout>p2</layout>
-			<url>https://updatesite.mdsd.tools/extended-java-model-parser-and-printer/nightly/</url>
+			<url>https://kit-sdq.github.io/updatesite/release/p2-wrapper/latest/</url>
 		</repository>
 		<repository>
 			<id>PCM</id>

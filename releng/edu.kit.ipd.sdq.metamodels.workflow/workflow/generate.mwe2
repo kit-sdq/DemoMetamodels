@@ -24,12 +24,20 @@ Workflow {
 		platformUri = workspaceRoot
 		
 		uriMap = {
-			from = "platform:/plugin/tools.mdsd.jamopp.model/metamodel/java.genmodel"
-			to = "platform:/resource/tools.mdsd.jamopp.model/metamodel/java.genmodel"
+			from = "platform:/plugin/org.emftext.language.java/metamodel/java.genmodel"
+			to = "platform:/resource/org.emftext.language.java/metamodel/java.genmodel"
 		}
 		uriMap = {
-			from = "platform:/plugin/tools.mdsd.jamopp.model/metamodel/java.ecore"
-			to = "platform:/resource/tools.mdsd.jamopp.model/metamodel/java.ecore"
+			from = "platform:/plugin/org.emftext.language.java/metamodel/java.ecore"
+			to = "platform:/resource/org.emftext.language.java/metamodel/java.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.emftext.commons.layout/metamodel/layout.genmodel"
+			to = "platform:/resource/org.emftext.commons.layout/metamodel/layout.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.emftext.commons.layout/metamodel/layout.ecore"
+			to = "platform:/resource/org.emftext.commons.layout/metamodel/layout.ecore"
 		}
 		uriMap = {
 			from = "platform:/plugin/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
@@ -89,7 +97,8 @@ Workflow {
 		}   
 		registerGeneratedEPackage = "org.eclipse.uml2.codegen.ecore.genmodel.GenModelPackage"
 		
-		registerGenModelFile = "platform:/resource/tools.mdsd.jamopp.model/metamodel/java.genmodel"
+		registerGenModelFile = "platform:/resource/org.emftext.commons.layout/metamodel/layout.genmodel"
+		registerGenModelFile = "platform:/resource/org.emftext.language.java/metamodel/java.genmodel"
 		registerGenModelFile = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
 	}
 	
