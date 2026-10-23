@@ -11,6 +11,7 @@ var autosarPluginName = "edu.kit.ipd.sdq.metamodels.autosar"
 var simulinkPluginName = "edu.kit.ipd.sdq.metamodels.simulink"
 var joanaPluginName = "edu.kit.ipd.sdq.metamodels.joana"
 var confidentiality4cbsePluginName = "edu.kit.ipd.sdq.metamodels.confidentiality4cbse"
+var smarthomePluginName = "edu.kit.ipd.sdq.metamodels.smarthome"
 
 var workspaceRoot = "../../"
 
@@ -122,6 +123,10 @@ Workflow {
 	
 	component = DirectoryCleaner {
 		directory = "${workspaceRoot}/bundles/${confidentiality4cbsePluginName}.editor/src-gen"
+	}
+
+	component = DirectoryCleaner {
+		directory = "${workspaceRoot}/bundles/${smarthomePluginName}/src-gen"
 	}
 
 }

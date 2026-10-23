@@ -2,7 +2,7 @@
 <feature
       id="edu.kit.ipd.sdq.metamodels.smarthome.feature"
       label="%featureName"
-      version="0.1.0.qualifier"
+      version="1.10.0.qualifier"
       provider-name="%providerName" >
 
    <description>
