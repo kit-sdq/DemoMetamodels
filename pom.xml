@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>edu.kit.ipd.sdq</groupId>
+	<groupId>tools.vitruv</groupId>
 	<artifactId>edu.kit.ipd.sdq.metamodels.demo</artifactId>
 	<version>${revision}</version>
 	<packaging>pom</packaging>
