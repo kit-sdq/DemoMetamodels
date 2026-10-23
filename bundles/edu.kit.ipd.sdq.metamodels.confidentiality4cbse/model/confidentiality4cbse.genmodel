@@ -4,7 +4,7 @@
     modelDirectory="/edu.kit.ipd.sdq.metamodels.confidentiality4cbse/src-gen"
     modelPluginID="edu.kit.ipd.sdq.metamodels.confidentiality4cbse" 
     modelName="Confidentiality4cbse"
-    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" 
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" featureDelegation="Dynamic" 
     importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="17.0" 
     copyrightFields="false" 
