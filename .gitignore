@@ -1,9 +1,9 @@
 # Maven
 target/
-.flattened-pom.xml
 
 # Eclipse
 .metadata
+.project
 .classpath
 .settings/
 bin/
@@ -18,9 +18,3 @@ bin/
 *.tmp
 *.bak
 *.swp
-
-# Eclipse plug-in files written by the EMF code generator, not used by the Maven build
-metamodels/*/META-INF/
-metamodels/*/plugin.xml
-metamodels/*/plugin.properties
-metamodels/*/build.properties

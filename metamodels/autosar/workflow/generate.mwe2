@@ -4,12 +4,15 @@ import org.eclipse.emf.mwe2.ecore.EcoreGenerator
 import org.eclipse.emf.mwe.utils.StandaloneSetup
 
 var projectName = "edu.kit.ipd.sdq.metamodels.autosar"
-var workspaceRoot = ".."
+var workspaceRoot = "."
 
 Workflow {
 	bean = StandaloneSetup {
 		scanClassPath = true
-		platformUri = workspaceRoot
+		projectMapping = {
+			projectName = projectName
+			path = workspaceRoot
+		}
 	}
 
 	component = EcoreGenerator {

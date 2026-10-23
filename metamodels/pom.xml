@@ -132,6 +132,33 @@
 							</dependency>
 						</dependencies>
 					</plugin>
+					<!-- The EMF generator also writes Eclipse plug-in files into the module, which this build does not use -->
+					<plugin>
+						<artifactId>maven-clean-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>remove-plugin-files</id>
+								<phase>generate-sources</phase>
+								<goals>
+									<goal>clean</goal>
+								</goals>
+								<configuration>
+									<excludeDefaultDirectories>true</excludeDefaultDirectories>
+									<filesets>
+										<fileset>
+											<directory>${project.basedir}</directory>
+											<includes>
+												<include>META-INF/**</include>
+												<include>plugin.xml</include>
+												<include>plugin.properties</include>
+												<include>build.properties</include>
+											</includes>
+										</fileset>
+									</filesets>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
 					<plugin>
 						<groupId>org.codehaus.mojo</groupId>
 						<artifactId>build-helper-maven-plugin</artifactId>
