@@ -6,7 +6,8 @@ Bundle-Version: 1.10.0.qualifier
 Bundle-Vendor: KIT SDQ
 Automatic-Module-Name: edu.kit.ipd.sdq.metamodels.workflow
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Require-Bundle: tools.mdsd.jamopp.model,
+Require-Bundle: org.emftext.language.java,
+ org.emftext.commons.layout,
  org.eclipse.emf.ecore,
  de.uka.ipd.sdq.identifier,
  org.palladiosimulator.pcm,
