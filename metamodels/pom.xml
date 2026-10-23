@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>edu.kit.ipd.sdq</groupId>
+		<artifactId>edu.kit.ipd.sdq.metamodels.demo</artifactId>
+		<version>${revision}</version>
+	</parent>
+
+	<artifactId>edu.kit.ipd.sdq.metamodels</artifactId>
+	<packaging>pom</packaging>
+
+	<name>Demo Metamodels Parent</name>
+	<description>Common build of the demo metamodels: generates EMF code from each module's genmodel via workflow/generate.mwe2</description>
+
+	<modules>
+		<module>addresses</module>
+		<module>autosar</module>
+		<module>confidentiality4cbse</module>
+		<module>families</module>
+		<module>insurance</module>
+		<module>joana</module>
+		<module>persons</module>
+		<module>recipients</module>
+		<module>simulink</module>
+		<module>smarthome</module>
+	</modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.ecore</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<resources>
+			<!-- Ship the metamodels next to the generated code, at the same location as in the former Eclipse bundles -->
+			<resource>
+				<directory>src/main/ecore</directory>
+				<targetPath>model</targetPath>
+				<includes>
+					<include>*.ecore</include>
+					<include>*.genmodel</include>
+					<include>*.ocl</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifestEntries>
+							<Automatic-Module-Name>${project.artifactId}</Automatic-Module-Name>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<!-- Generates the model code with workflow/generate.mwe2 in every module that has one -->
+		<profile>
+			<id>generate-ecore</id>
+			<activation>
+				<file>
+					<exists>${project.basedir}/workflow/generate.mwe2</exists>
+				</file>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>generate-ecore</id>
+								<phase>generate-sources</phase>
+								<goals>
+									<goal>java</goal>
+								</goals>
+								<configuration>
+									<mainClass>org.eclipse.emf.mwe2.launch.runtime.Mwe2Launcher</mainClass>
+									<arguments>
+										<argument>/${project.basedir}/workflow/generate.mwe2</argument>
+										<argument>-p</argument>
+										<argument>workspaceRoot=${project.basedir}</argument>
+									</arguments>
+									<classpathScope>compile</classpathScope>
+									<includePluginDependencies>true</includePluginDependencies>
+									<!-- see https://bugs.eclipse.org/bugs/show_bug.cgi?id=475098#c3 -->
+									<cleanupDaemonThreads>false</cleanupDaemonThreads>
+								</configuration>
+							</execution>
+						</executions>
+						<dependencies>
+							<dependency>
+								<groupId>org.eclipse.emf</groupId>
+								<artifactId>org.eclipse.emf.mwe2.launch</artifactId>
+								<version>${mwe2.version}</version>
+							</dependency>
+							<dependency>
+								<groupId>org.eclipse.emf</groupId>
+								<artifactId>org.eclipse.emf.mwe2.lib</artifactId>
+								<version>${mwe2.version}</version>
+							</dependency>
+							<dependency>
+								<groupId>org.eclipse.emf</groupId>
+								<artifactId>org.eclipse.emf.mwe.utils</artifactId>
+								<version>${mwe.version}</version>
+							</dependency>
+							<dependency>
+								<groupId>org.eclipse.emf</groupId>
+								<artifactId>org.eclipse.emf.codegen.ecore</artifactId>
+								<version>${emf.codegen.ecore.version}</version>
+							</dependency>
+							<dependency>
+								<groupId>org.eclipse.xtext</groupId>
+								<artifactId>org.eclipse.xtext.common.types</artifactId>
+								<version>${xtext.version}</version>
+							</dependency>
+						</dependencies>
+					</plugin>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>build-helper-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>add-ecore-sources</id>
+								<phase>generate-sources</phase>
+								<goals>
+									<goal>add-source</goal>
+								</goals>
+								<configuration>
+									<sources>
+										<source>${project.build.directory}/generated-sources/ecore</source>
+									</sources>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>
