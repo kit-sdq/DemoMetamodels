@@ -9,8 +9,7 @@ on:
     - cron: '35 2 * * *' # run nightly at 2:35 am
 
 jobs:
-  verify:
-    name: Verify
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
