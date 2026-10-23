@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/edu.kit.ipd.sdq.metamodels.smarthome/src-gen" creationIcons="false"
+    editDirectory="/edu.kit.ipd.sdq.metamodels.smarthome.edit/src-gen" editorDirectory="/edu.kit.ipd.sdq.metamodels.smarthome.editor/src-gen"
+    modelPluginID="edu.kit.ipd.sdq.metamodels.smarthome" modelName="Smarthome" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>smarthome.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Smarthome" basePackage="edu.kit.ipd.sdq.metamodels" disposableProviderFactory="true"
+      ecorePackage="smarthome.ecore#/">
+    <genClasses ecoreClass="smarthome.ecore#//Protocol">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smarthome.ecore#//Protocol/name"/>
+    </genClasses>
+    <genClasses ecoreClass="smarthome.ecore#//Link">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smarthome.ecore#//Link/protocol"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smarthome.ecore#//Link/components"/>
+    </genClasses>
+    <genClasses ecoreClass="smarthome.ecore#//Component">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smarthome.ecore#//Component/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smarthome.ecore#//Component/supportedProtocols"/>
+    </genClasses>
+    <genClasses ecoreClass="smarthome.ecore#//Device"/>
+    <genClasses ecoreClass="smarthome.ecore#//Server"/>
+    <genClasses ecoreClass="smarthome.ecore#//SmartHomeSystem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smarthome.ecore#//SmartHomeSystem/address"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smarthome.ecore#//SmartHomeSystem/links"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smarthome.ecore#//SmartHomeSystem/protocols"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smarthome.ecore#//SmartHomeSystem/components"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
