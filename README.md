@@ -14,7 +14,7 @@ Ecore metamodels based on EMF for demonstrating MDSD techniques
 | Simulink | `tools.vitruv:edu.kit.ipd.sdq.metamodels.simulink` |
 | Smart Home | `tools.vitruv:edu.kit.ipd.sdq.metamodels.smarthome` |
 
-The metamodels are published to Maven Central as plain jars containing the generated model code and the metamodels (`model/*.ecore`, `model/*.genmodel`).
+The metamodels are published to Maven Central as plain jars containing the generated model code and the metamodels (`src/main/ecore/*.ecore`, `src/main/ecore/*.genmodel`).
 They only depend on EMF and run on Java 8 or later.
 Since EMF packages are not registered by OSGi outside of Eclipse, access a metamodel's package (e.g., `FamiliesPackage.eINSTANCE`) before loading models of it.
 
@@ -27,7 +27,7 @@ Up to version 1.10.0, the metamodels were published as Eclipse plug-ins, includi
 
 ## Building
 
-Build with JDK 25 or later:
+The build inherits from the [Vitruvius Maven build parent](https://github.com/vitruv-tools/Maven-Build-Parent). Build with JDK 25:
 
 ```
 ./mvnw clean verify

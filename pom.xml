@@ -1,33 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project child.project.url.inherit.append.path="false" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>tools.vitruv</groupId>
+	<parent>
+		<groupId>tools.vitruv</groupId>
+		<artifactId>parent</artifactId>
+		<version>4.0.0</version>
+	</parent>
+
 	<artifactId>edu.kit.ipd.sdq.metamodels.demo</artifactId>
 	<version>${revision}</version>
 	<packaging>pom</packaging>
 
 	<name>Demo Metamodels</name>
 	<description>Ecore metamodels based on EMF for demonstrating MDSD techniques</description>
-	<url child.project.url.inherit.append.path="false">https://github.com/kit-sdq/DemoMetamodels</url>
-	<organization>
-		<name>Software Design and Quality (SDQ), Karlsruhe Institute of Technology (KIT)</name>
-		<url>https://sdq.kastel.kit.edu/</url>
-	</organization>
-	<licenses>
-		<license>
-			<name>Eclipse Public License - v 2.0</name>
-			<url>https://www.eclipse.org/legal/epl-2.0/</url>
-		</license>
-	</licenses>
-	<developers>
-		<developer>
-			<name>KIT SDQ Demo Metamodels Developers</name>
-			<organization>Karlsruhe Institute of Technology (KIT), Germany</organization>
-			<organizationUrl>https://kit.edu</organizationUrl>
-		</developer>
-	</developers>
+	<url>https://github.com/kit-sdq/DemoMetamodels</url>
 	<scm child.scm.connection.inherit.append.path="false" child.scm.developerConnection.inherit.append.path="false" child.scm.url.inherit.append.path="false">
 		<connection>scm:git:git://github.com/kit-sdq/DemoMetamodels.git</connection>
 		<developerConnection>scm:git:https://github.com/kit-sdq/DemoMetamodels.git</developerConnection>
@@ -41,17 +29,8 @@
 	<properties>
 		<!-- the release workflow sets the version from the release tag via -Drevision=... -->
 		<revision>2.0.0-SNAPSHOT</revision>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<!-- Built with the current LTS JDK, but emitting Java 8 bytecode, which is the minimum EMF still supports -->
 		<maven.compiler.release>8</maven.compiler.release>
-		<emf.common.version>2.46.0</emf.common.version>
-		<emf.ecore.version>2.43.0</emf.ecore.version>
-		<emf.ecore.xmi.version>2.41.0</emf.ecore.xmi.version>
-		<emf.codegen.ecore.version>2.47.0</emf.codegen.ecore.version>
-		<mwe.version>1.21.0</mwe.version>
-		<mwe2.version>2.27.0</mwe2.version>
-		<xtext.version>2.44.0</xtext.version>
 	</properties>
 
 	<dependencyManagement>
@@ -59,17 +38,17 @@
 			<dependency>
 				<groupId>org.eclipse.emf</groupId>
 				<artifactId>org.eclipse.emf.common</artifactId>
-				<version>${emf.common.version}</version>
+				<version>2.46.0</version>
 			</dependency>
 			<dependency>
 				<groupId>org.eclipse.emf</groupId>
 				<artifactId>org.eclipse.emf.ecore</artifactId>
-				<version>${emf.ecore.version}</version>
+				<version>2.43.0</version>
 			</dependency>
 			<dependency>
 				<groupId>org.eclipse.emf</groupId>
 				<artifactId>org.eclipse.emf.ecore.xmi</artifactId>
-				<version>${emf.ecore.xmi.version}</version>
+				<version>2.41.0</version>
 			</dependency>
 			<!-- JUnit 5, as JUnit 6 requires Java 17 -->
 			<dependency>
@@ -86,26 +65,13 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
-					<artifactId>maven-clean-plugin</artifactId>
-					<version>3.5.0</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-resources-plugin</artifactId>
-					<version>3.5.0</version>
-				</plugin>
-				<plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.15.0</version>
 					<configuration>
 						<compilerArgs>
 							<!-- javac warns that release 8 is obsolete -->
 							<arg>-Xlint:-options</arg>
 						</compilerArgs>
 					</configuration>
-				</plugin>
-				<plugin>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.6.0</version>
 				</plugin>
 				<!-- Runs the *IT tests against the packaged jar instead of target/classes. As bundled p2 artifacts are not
 					project dependencies, these tests prove that the jar is self-contained. -->
@@ -147,54 +113,6 @@
 					</executions>
 				</plugin>
 				<plugin>
-					<artifactId>maven-jar-plugin</artifactId>
-					<version>3.5.0</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-install-plugin</artifactId>
-					<version>3.1.4</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-deploy-plugin</artifactId>
-					<version>3.1.4</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-enforcer-plugin</artifactId>
-					<version>3.6.3</version>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>build-helper-maven-plugin</artifactId>
-					<version>3.6.2</version>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>exec-maven-plugin</artifactId>
-					<version>3.6.4</version>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>flatten-maven-plugin</artifactId>
-					<version>1.8.0</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-source-plugin</artifactId>
-					<version>3.4.0</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>3.12.0</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-gpg-plugin</artifactId>
-					<version>3.2.8</version>
-				</plugin>
-				<plugin>
-					<groupId>org.sonatype.central</groupId>
-					<artifactId>central-publishing-maven-plugin</artifactId>
-					<version>0.12.0</version>
-				</plugin>
-				<plugin>
 					<groupId>org.openntf.maven</groupId>
 					<artifactId>p2-layout-resolver</artifactId>
 					<version>1.9.0</version>
@@ -202,27 +120,6 @@
 			</plugins>
 		</pluginManagement>
 		<plugins>
-			<plugin>
-				<artifactId>maven-enforcer-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>enforce-build-environment</id>
-						<goals>
-							<goal>enforce</goal>
-						</goals>
-						<configuration>
-							<rules>
-								<requireJavaVersion>
-									<version>[25,)</version>
-								</requireJavaVersion>
-								<requireMavenVersion>
-									<version>[3.9,)</version>
-								</requireMavenVersion>
-							</rules>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 			<!-- Publish consumer POMs without build configuration, parent and (p2) repositories -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -230,111 +127,15 @@
 				<executions>
 					<execution>
 						<id>flatten</id>
-						<phase>process-resources</phase>
-						<goals>
-							<goal>flatten</goal>
-						</goals>
 						<configuration>
-							<flattenMode>ossrh</flattenMode>
 							<outputDirectory>${project.build.directory}</outputDirectory>
 							<pomElements>
-								<repositories>remove</repositories>
 								<pluginRepositories>remove</pluginRepositories>
-								<build>remove</build>
 							</pomElements>
 						</configuration>
-					</execution>
-					<execution>
-						<id>flatten-clean</id>
-						<phase>clean</phase>
-						<goals>
-							<goal>clean</goal>
-						</goals>
 					</execution>
 				</executions>
 			</plugin>
 		</plugins>
 	</build>
-
-	<profiles>
-		<!-- Signs and publishes all artifacts to Maven Central -->
-		<profile>
-			<id>release</id>
-			<build>
-				<plugins>
-					<plugin>
-						<artifactId>maven-source-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>attach-sources</id>
-								<goals>
-									<goal>jar-no-fork</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<artifactId>maven-javadoc-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>attach-javadoc</id>
-								<goals>
-									<goal>jar</goal>
-								</goals>
-							</execution>
-						</executions>
-						<configuration>
-							<doclint>none</doclint>
-							<quiet>true</quiet>
-							<tags>
-								<tag>
-									<name>model</name>
-									<placement>a</placement>
-									<head>EMF model element</head>
-								</tag>
-								<tag>
-									<name>generated</name>
-									<placement>a</placement>
-									<head>EMF generated code</head>
-								</tag>
-								<tag>
-									<name>ordered</name>
-									<placement>a</placement>
-									<head>EMF ordered</head>
-								</tag>
-							</tags>
-						</configuration>
-					</plugin>
-					<plugin>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>sign-artifacts</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-						<configuration>
-							<gpgArguments>
-								<arg>--pinentry-mode</arg>
-								<arg>loopback</arg>
-							</gpgArguments>
-						</configuration>
-					</plugin>
-					<plugin>
-						<groupId>org.sonatype.central</groupId>
-						<artifactId>central-publishing-maven-plugin</artifactId>
-						<extensions>true</extensions>
-						<configuration>
-							<publishingServerId>central</publishingServerId>
-							<autoPublish>true</autoPublish>
-							<waitUntil>published</waitUntil>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
 </project>

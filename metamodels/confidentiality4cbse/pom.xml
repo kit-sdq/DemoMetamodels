@@ -110,7 +110,7 @@
 				<artifactId>exec-maven-plugin</artifactId>
 				<executions>
 					<execution>
-						<id>generate-ecore</id>
+						<id>execute-mwe2-generate</id>
 						<configuration>
 							<additionalClasspathElements>
 								<additionalClasspathElement>${project.build.directory}/codegen/org.eclipse.uml2.codegen.ecore.jar</additionalClasspathElement>
@@ -119,6 +119,54 @@
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+			<!-- javadoc does not consider the output directory with the bundled classes -->
+			<plugin>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<configuration>
+					<additionalDependencies>
+						<additionalDependency>
+							<groupId>palladio</groupId>
+							<artifactId>org.palladiosimulator.pcm</artifactId>
+							<version>5.1.0.202201251356</version>
+						</additionalDependency>
+						<additionalDependency>
+							<groupId>palladio</groupId>
+							<artifactId>de.uka.ipd.sdq.identifier</artifactId>
+							<version>5.1.0.202201251339</version>
+						</additionalDependency>
+						<additionalDependency>
+							<groupId>palladio</groupId>
+							<artifactId>de.uka.ipd.sdq.probfunction</artifactId>
+							<version>5.1.0.202201251339</version>
+						</additionalDependency>
+						<additionalDependency>
+							<groupId>palladio</groupId>
+							<artifactId>de.uka.ipd.sdq.stoex</artifactId>
+							<version>5.1.0.202201251339</version>
+						</additionalDependency>
+						<additionalDependency>
+							<groupId>palladio</groupId>
+							<artifactId>de.uka.ipd.sdq.units</artifactId>
+							<version>5.1.0.202201251339</version>
+						</additionalDependency>
+						<additionalDependency>
+							<groupId>eclipse</groupId>
+							<artifactId>org.eclipse.emf.cdo</artifactId>
+							<version>4.20.0.v20221124-1637</version>
+						</additionalDependency>
+						<additionalDependency>
+							<groupId>eclipse</groupId>
+							<artifactId>org.eclipse.emf.cdo.common</artifactId>
+							<version>4.20.0.v20221106-0628</version>
+						</additionalDependency>
+						<additionalDependency>
+							<groupId>eclipse</groupId>
+							<artifactId>org.eclipse.net4j.util</artifactId>
+							<version>3.21.0.v20221123-1721</version>
+						</additionalDependency>
+					</additionalDependencies>
+				</configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-failsafe-plugin</artifactId>
