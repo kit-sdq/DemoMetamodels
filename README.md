@@ -39,4 +39,4 @@ A new metamodel needs its own module with such a workflow and an entry in `metam
 ## Releasing
 
 Publishing a GitHub release publishes the metamodels to Maven Central, using the release tag (e.g., `2.0.0`) as the version.
-This requires the repository secrets `CENTRAL_USERNAME` and `CENTRAL_PASSWORD` (a Central Portal user token for the `tools.vitruv` namespace) as well as `OSSRH_GPG_SECRET_KEY` (the armored private signing key, without a passphrase), named as in the Vitruvius repositories.
+This requires the repository secrets `CENTRAL_USERNAME` and `CENTRAL_PASSWORD` (a Central Portal user token for the `tools.vitruv` namespace) as well as `OSSRH_GPG_SECRET_KEY` and `OSSRH_GPG_SECRET_KEY_PASSWORD` (the armored private signing key and its passphrase), named as in the Vitruvius repositories.
