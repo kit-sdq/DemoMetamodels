@@ -1,23 +1,20 @@
-# Eclipse/Java
+# Maven
+target/
+
+# Eclipse
 .metadata
+.project
+.classpath
+.settings/
 bin/
-tmp/
+
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
 *.tmp
 *.bak
 *.swp
-*.class
-
-# EMF
-src-gen/
-
-#Xtend
-xtend-gen/
-
-# Maven
-target/
-.polyglot.build.properties
-.mvn/wrapper/maven-wrapper.jar
-.polyglot.pom.tycho
-.polyglot.META-INF
-pom.tycho
-.polyglot.feature.xml

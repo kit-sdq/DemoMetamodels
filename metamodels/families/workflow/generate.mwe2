@@ -1,0 +1,23 @@
+module generate
+
+import org.eclipse.emf.mwe2.ecore.EcoreGenerator
+import org.eclipse.emf.mwe.utils.StandaloneSetup
+
+var projectName = "edu.kit.ipd.sdq.metamodels.families"
+var workspaceRoot = "."
+
+Workflow {
+	bean = StandaloneSetup {
+		scanClassPath = true
+		projectMapping = {
+			projectName = projectName
+			path = workspaceRoot
+		}
+	}
+
+	component = EcoreGenerator {
+		genModel = "platform:/resource/${projectName}/src/main/ecore/families.genmodel"
+		srcPath = "platform:/resource/${projectName}/target/generated-sources/ecore"
+		generateCustomClasses = false
+	}
+}

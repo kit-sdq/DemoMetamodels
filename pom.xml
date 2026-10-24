@@ -1,16 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project child.project.url.inherit.append.path="false" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
-		<groupId>edu.kit.ipd.sdq</groupId>
+		<groupId>tools.vitruv</groupId>
 		<artifactId>parent</artifactId>
-		<version>1.10.0-SNAPSHOT</version>
-		<relativePath>releng/edu.kit.ipd.sdq.metamodels.demo.parent</relativePath>
+		<version>4.0.0</version>
 	</parent>
-	<artifactId>edu.kit.ipd.sdq.metamodels.demo.main</artifactId>
+
+	<artifactId>edu.kit.ipd.sdq.metamodels.demo</artifactId>
+	<version>${revision}</version>
 	<packaging>pom</packaging>
+
+	<name>Demo Metamodels</name>
+	<description>Ecore metamodels based on EMF for demonstrating MDSD techniques</description>
+	<url>https://github.com/kit-sdq/DemoMetamodels</url>
+	<scm child.scm.connection.inherit.append.path="false" child.scm.developerConnection.inherit.append.path="false" child.scm.url.inherit.append.path="false">
+		<connection>scm:git:git://github.com/kit-sdq/DemoMetamodels.git</connection>
+		<developerConnection>scm:git:https://github.com/kit-sdq/DemoMetamodels.git</developerConnection>
+		<url>https://github.com/kit-sdq/DemoMetamodels/tree/main</url>
+	</scm>
+
 	<modules>
-		<module>releng/edu.kit.ipd.sdq.metamodels.demo.aggregator</module>
-		<module>releng/edu.kit.ipd.sdq.metamodels.demo.updatesite</module>
+		<module>metamodels</module>
 	</modules>
+
+	<properties>
+		<!-- the release workflow sets the version from the release tag via -Drevision=... -->
+		<revision>2.0.0-SNAPSHOT</revision>
+		<!-- Built with the current LTS JDK, but emitting Java 8 bytecode, which is the minimum EMF still supports -->
+		<maven.compiler.release>8</maven.compiler.release>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.eclipse.emf</groupId>
+				<artifactId>org.eclipse.emf.common</artifactId>
+				<version>2.46.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.emf</groupId>
+				<artifactId>org.eclipse.emf.ecore</artifactId>
+				<version>2.43.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.emf</groupId>
+				<artifactId>org.eclipse.emf.ecore.xmi</artifactId>
+				<version>2.41.0</version>
+			</dependency>
+			<!-- JUnit 5, as JUnit 6 requires Java 17 -->
+			<dependency>
+				<groupId>org.junit</groupId>
+				<artifactId>junit-bom</artifactId>
+				<version>5.14.4</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<compilerArgs>
+							<!-- javac warns that release 8 is obsolete -->
+							<arg>-Xlint:-options</arg>
+						</compilerArgs>
+					</configuration>
+				</plugin>
+				<!-- Runs the *IT tests against the packaged jar instead of target/classes. As bundled p2 artifacts are not
+					project dependencies, these tests prove that the jar is self-contained. -->
+				<plugin>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<version>3.6.0</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>integration-test</goal>
+								<goal>verify</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<classesDirectory>${project.build.directory}/${project.build.finalName}.jar</classesDirectory>
+					</configuration>
+				</plugin>
+				<!-- Bundles artifacts that are only available from p2 repositories: modules list them as artifactItems
+					(not as dependencies, so they do not appear in the published POM), and they are unpacked into the
+					output directory before code generation and compilation. -->
+				<plugin>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>3.11.0</version>
+					<executions>
+						<execution>
+							<id>bundle-p2-artifacts</id>
+							<phase>initialize</phase>
+							<goals>
+								<goal>unpack</goal>
+							</goals>
+							<configuration>
+								<outputDirectory>${project.build.outputDirectory}</outputDirectory>
+								<!-- manifests and signatures of the Eclipse bundles, OSGi and Eclipse plug-in descriptors,
+									Eclipse about files, and sources and documentation shipped inside some bundles -->
+								<excludes>META-INF/**,plugin.xml,plugin.properties,build.properties,.api_description,.options,about.html,about.ini,about.mappings,about.properties,about_files/**,schema/**,src/**,src-gen/**,documentation/**,templates/**</excludes>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.openntf.maven</groupId>
+					<artifactId>p2-layout-resolver</artifactId>
+					<version>1.9.0</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<!-- Publish consumer POMs without build configuration, parent and (p2) repositories -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>flatten-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>flatten</id>
+						<configuration>
+							<outputDirectory>${project.build.directory}</outputDirectory>
+							<pomElements>
+								<pluginRepositories>remove</pluginRepositories>
+							</pomElements>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

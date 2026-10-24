@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>tools.vitruv</groupId>
+		<artifactId>edu.kit.ipd.sdq.metamodels</artifactId>
+		<version>${revision}</version>
+	</parent>
+
+	<artifactId>edu.kit.ipd.sdq.metamodels.confidentiality4cbse</artifactId>
+
+	<name>Confidentiality Metamodel</name>
+	<description>Ecore metamodel for confidentiality specifications of component-based systems, including the Palladio Component Model it refers to</description>
+
+	<properties>
+		<!-- the bundled PCM is compiled for Java 11 -->
+		<maven.compiler.release>11</maven.compiler.release>
+		<p2.palladio.version>5.1.0</p2.palladio.version>
+		<p2.eclipse.version>2022-12</p2.eclipse.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.openntf.maven</groupId>
+				<artifactId>p2-layout-resolver</artifactId>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>bundle-p2-artifacts</id>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>palladio</groupId>
+									<artifactId>org.palladiosimulator.pcm</artifactId>
+									<version>5.1.0.202201251356</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>palladio</groupId>
+									<artifactId>de.uka.ipd.sdq.identifier</artifactId>
+									<version>5.1.0.202201251339</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>palladio</groupId>
+									<artifactId>de.uka.ipd.sdq.probfunction</artifactId>
+									<version>5.1.0.202201251339</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>palladio</groupId>
+									<artifactId>de.uka.ipd.sdq.stoex</artifactId>
+									<version>5.1.0.202201251339</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>palladio</groupId>
+									<artifactId>de.uka.ipd.sdq.units</artifactId>
+									<version>5.1.0.202201251339</version>
+								</artifactItem>
+								<!-- PCM model classes extend CDOObjectImpl -->
+								<artifactItem>
+									<groupId>eclipse</groupId>
+									<artifactId>org.eclipse.emf.cdo</artifactId>
+									<version>4.20.0.v20221124-1637</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>eclipse</groupId>
+									<artifactId>org.eclipse.emf.cdo.common</artifactId>
+									<version>4.20.0.v20221106-0628</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>eclipse</groupId>
+									<artifactId>org.eclipse.net4j.util</artifactId>
+									<version>3.21.0.v20221123-1721</version>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+					<!-- the code generator needs UML2 to read pcm.genmodel, which is a UML2 GenModel -->
+					<execution>
+						<id>codegen-classpath</id>
+						<phase>initialize</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/codegen</outputDirectory>
+							<stripVersion>true</stripVersion>
+							<artifactItems>
+								<artifactItem>
+									<groupId>eclipse</groupId>
+									<artifactId>org.eclipse.uml2.codegen.ecore</artifactId>
+									<version>2.5.2.v20221116-1811</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>eclipse</groupId>
+									<artifactId>org.eclipse.uml2.common</artifactId>
+									<version>2.5.0.v20221116-1811</version>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>execute-mwe2-generate</id>
+						<configuration>
+							<additionalClasspathElements>
+								<additionalClasspathElement>${project.build.directory}/codegen/org.eclipse.uml2.codegen.ecore.jar</additionalClasspathElement>
+								<additionalClasspathElement>${project.build.directory}/codegen/org.eclipse.uml2.common.jar</additionalClasspathElement>
+							</additionalClasspathElements>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- javadoc does not consider the output directory with the bundled classes -->
+			<plugin>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<configuration>
+					<additionalDependencies>
+						<additionalDependency>
+							<groupId>palladio</groupId>
+							<artifactId>org.palladiosimulator.pcm</artifactId>
+							<version>5.1.0.202201251356</version>
+						</additionalDependency>
+						<additionalDependency>
+							<groupId>palladio</groupId>
+							<artifactId>de.uka.ipd.sdq.identifier</artifactId>
+							<version>5.1.0.202201251339</version>
+						</additionalDependency>
+						<additionalDependency>
+							<groupId>palladio</groupId>
+							<artifactId>de.uka.ipd.sdq.probfunction</artifactId>
+							<version>5.1.0.202201251339</version>
+						</additionalDependency>
+						<additionalDependency>
+							<groupId>palladio</groupId>
+							<artifactId>de.uka.ipd.sdq.stoex</artifactId>
+							<version>5.1.0.202201251339</version>
+						</additionalDependency>
+						<additionalDependency>
+							<groupId>palladio</groupId>
+							<artifactId>de.uka.ipd.sdq.units</artifactId>
+							<version>5.1.0.202201251339</version>
+						</additionalDependency>
+						<additionalDependency>
+							<groupId>eclipse</groupId>
+							<artifactId>org.eclipse.emf.cdo</artifactId>
+							<version>4.20.0.v20221124-1637</version>
+						</additionalDependency>
+						<additionalDependency>
+							<groupId>eclipse</groupId>
+							<artifactId>org.eclipse.emf.cdo.common</artifactId>
+							<version>4.20.0.v20221106-0628</version>
+						</additionalDependency>
+						<additionalDependency>
+							<groupId>eclipse</groupId>
+							<artifactId>org.eclipse.net4j.util</artifactId>
+							<version>3.21.0.v20221123-1721</version>
+						</additionalDependency>
+					</additionalDependencies>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-failsafe-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>palladio</id>
+			<name>Palladio Simulator</name>
+			<layout>p2</layout>
+			<url>https://updatesite.palladio-simulator.com/palladio-build-updatesite/releases/${p2.palladio.version}/</url>
+		</repository>
+		<repository>
+			<id>eclipse</id>
+			<name>Eclipse</name>
+			<layout>p2</layout>
+			<url>https://download.eclipse.org/releases/${p2.eclipse.version}/</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<!-- required for the p2-layout-resolver plugin -->
+		<pluginRepository>
+			<id>artifactory.openntf.org</id>
+			<name>artifactory.openntf.org</name>
+			<url>https://artifactory.openntf.org/openntf</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<dependencies>
+		<!-- CDO objects are IAdaptable. Newer versions require Java 17. -->
+		<dependency>
+			<groupId>org.eclipse.platform</groupId>
+			<artifactId>org.eclipse.equinox.common</artifactId>
+			<version>3.18.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.ecore.xmi</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>

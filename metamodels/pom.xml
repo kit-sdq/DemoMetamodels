@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>tools.vitruv</groupId>
+		<artifactId>edu.kit.ipd.sdq.metamodels.demo</artifactId>
+		<version>${revision}</version>
+	</parent>
+
+	<artifactId>edu.kit.ipd.sdq.metamodels</artifactId>
+	<packaging>pom</packaging>
+
+	<name>Demo Metamodels Parent</name>
+	<description>Common build of the demo metamodels: generates EMF code from each module's genmodel via workflow/generate.mwe2</description>
+
+	<modules>
+		<module>addresses</module>
+		<module>autosar</module>
+		<module>confidentiality4cbse</module>
+		<module>families</module>
+		<module>insurance</module>
+		<module>joana</module>
+		<module>persons</module>
+		<module>recipients</module>
+		<module>simulink</module>
+		<module>smarthome</module>
+	</modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.ecore</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifestEntries>
+							<Automatic-Module-Name>${project.artifactId}</Automatic-Module-Name>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<!-- Generates the model code with workflow/generate.mwe2 in every module that has one -->
+		<profile>
+			<id>generate-ecore</id>
+			<activation>
+				<file>
+					<exists>${project.basedir}/workflow/generate.mwe2</exists>
+				</file>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+					</plugin>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>build-helper-maven-plugin</artifactId>
+					</plugin>
+					<!-- The EMF generator also writes Eclipse plug-in files into the module, which this build does not use -->
+					<plugin>
+						<artifactId>maven-clean-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>remove-plugin-files</id>
+								<phase>generate-sources</phase>
+								<goals>
+									<goal>clean</goal>
+								</goals>
+								<configuration>
+									<excludeDefaultDirectories>true</excludeDefaultDirectories>
+									<filesets>
+										<fileset>
+											<directory>${project.basedir}</directory>
+											<includes>
+												<include>META-INF/**</include>
+												<include>plugin.xml</include>
+												<include>plugin.properties</include>
+												<include>build.properties</include>
+											</includes>
+										</fileset>
+									</filesets>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>

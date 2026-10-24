@@ -1,0 +1,12 @@
+This jar bundles the following third-party components, which are not available from Maven Central:
+
+- Palladio Component Model (org.palladiosimulator.pcm 5.1.0.202201251356)
+  and its metamodels de.uka.ipd.sdq.identifier, de.uka.ipd.sdq.probfunction, de.uka.ipd.sdq.stoex and
+  de.uka.ipd.sdq.units (5.1.0.202201251339), https://www.palladio-simulator.com,
+  licensed under the Apache License, Version 2.0 (as declared in their bundle manifests),
+  https://www.apache.org/licenses/LICENSE-2.0.txt
+
+- Eclipse CDO (org.eclipse.emf.cdo 4.20.0.v20221124-1637, org.eclipse.emf.cdo.common 4.20.0.v20221106-0628)
+  and Eclipse Net4j utilities (org.eclipse.net4j.util 3.21.0.v20221123-1721), https://eclipse.dev/cdo/,
+  licensed under the Eclipse Public License 1.0 (as declared in their about.html),
+  https://www.eclipse.org/legal/epl-v10.html

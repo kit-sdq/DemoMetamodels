@@ -1,0 +1,52 @@
+module generate
+
+import org.eclipse.emf.mwe2.ecore.EcoreGenerator
+import org.eclipse.emf.mwe.utils.StandaloneSetup
+
+var projectName = "edu.kit.ipd.sdq.metamodels.confidentiality4cbse"
+var workspaceRoot = "."
+
+Workflow {
+	bean = StandaloneSetup {
+		scanClassPath = true
+		projectMapping = {
+			projectName = projectName
+			path = workspaceRoot
+		}
+
+		// scanClassPath registers the EMF jar as platform:/resource only
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.emf.ecore/"
+			to = "platform:/resource/org.eclipse.emf.ecore/"
+		}
+		// the bundled PCM metamodels are unpacked into target/classes
+		uriMap = {
+			from = "platform:/plugin/org.palladiosimulator.pcm/model/"
+			to = "platform:/resource/${projectName}/target/classes/model/"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.identifier/model/"
+			to = "platform:/resource/${projectName}/target/classes/model/"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.probfunction/model/"
+			to = "platform:/resource/${projectName}/target/classes/model/"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.stoex/model/"
+			to = "platform:/resource/${projectName}/target/classes/model/"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.units/model/"
+			to = "platform:/resource/${projectName}/target/classes/model/"
+		}
+		// pcm.genmodel is a UML2 GenModel
+		registerGeneratedEPackage = "org.eclipse.uml2.codegen.ecore.genmodel.GenModelPackage"
+	}
+
+	component = EcoreGenerator {
+		genModel = "platform:/resource/${projectName}/src/main/ecore/confidentiality4cbse.genmodel"
+		srcPath = "platform:/resource/${projectName}/target/generated-sources/ecore"
+		generateCustomClasses = false
+	}
+}

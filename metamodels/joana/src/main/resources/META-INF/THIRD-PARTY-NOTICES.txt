@@ -1,0 +1,6 @@
+This jar bundles the following third-party components, which are not available from Maven Central:
+
+- JaMoPP Java metamodel (org.emftext.language.java 1.4.1.v201901100335)
+  and EMFText layout metamodel (org.emftext.commons.layout 1.4.1.v201207310007),
+  https://github.com/DevBoost/JaMoPP, licensed under the Eclipse Public License 1.0,
+  https://www.eclipse.org/legal/epl-v10.html

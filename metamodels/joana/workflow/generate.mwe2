@@ -1,0 +1,35 @@
+module generate
+
+import org.eclipse.emf.mwe2.ecore.EcoreGenerator
+import org.eclipse.emf.mwe.utils.StandaloneSetup
+
+var projectName = "edu.kit.ipd.sdq.metamodels.joana"
+var workspaceRoot = "."
+
+Workflow {
+	bean = StandaloneSetup {
+		scanClassPath = true
+		projectMapping = {
+			projectName = projectName
+			path = workspaceRoot
+		}
+
+		// the bundled JaMoPP metamodels are unpacked into target/classes
+		uriMap = {
+			from = "platform:/plugin/org.emftext.language.java/metamodel/"
+			to = "platform:/resource/${projectName}/target/classes/metamodel/"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.emftext.commons.layout/metamodel/"
+			to = "platform:/resource/${projectName}/target/classes/metamodel/"
+		}
+		registerGenModelFile = "platform:/plugin/org.emftext.commons.layout/metamodel/layout.genmodel"
+		registerGenModelFile = "platform:/plugin/org.emftext.language.java/metamodel/java.genmodel"
+	}
+
+	component = EcoreGenerator {
+		genModel = "platform:/resource/${projectName}/src/main/ecore/joanamodel.genmodel"
+		srcPath = "platform:/resource/${projectName}/target/generated-sources/ecore"
+		generateCustomClasses = false
+	}
+}
