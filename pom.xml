@@ -129,6 +129,8 @@
 						<id>flatten</id>
 						<configuration>
 							<outputDirectory>${project.build.directory}</outputDirectory>
+							<!-- also publish the flattened POM of pom-packaged modules, which would otherwise contain ${revision} -->
+							<updatePomFile>true</updatePomFile>
 							<pomElements>
 								<pluginRepositories>remove</pluginRepositories>
 							</pomElements>
