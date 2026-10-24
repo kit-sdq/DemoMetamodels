@@ -1,11 +1,11 @@
-import 'smartHomeSystems.ecore'
+import 'smarthome.ecore'
 
-package smartHomeSystems
+package smarthome
 
 context Device
 --
 -- example invariant with a custom error message to verify that
--- the 'supportedProtocols' property of all 'lcintegration::Device' instances is non-null
+-- the 'supportedProtocols' property of all 'smarthome::Device' instances is non-null
 --
 inv NonNull_supportedProtocols('The \'supportedProtocols\' property of "' + self.toString() + '" is null'):
 	supportedProtocols <> null
